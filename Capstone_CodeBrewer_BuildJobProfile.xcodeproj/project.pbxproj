@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		394B56C626261FC900702F72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 394B56C526261FC900702F72 /* GoogleService-Info.plist */; };
 		39E886042624CF6A00FF10BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E886032624CF6A00FF10BC /* AppDelegate.swift */; };
 		39E886062624CF6A00FF10BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E886052624CF6A00FF10BC /* SceneDelegate.swift */; };
 		39E886082624CF6A00FF10BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E886072624CF6A00FF10BC /* ViewController.swift */; };
 		39E8860B2624CF6A00FF10BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E886092624CF6A00FF10BC /* Main.storyboard */; };
 		39E8860D2624CF7000FF10BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E8860C2624CF7000FF10BC /* Assets.xcassets */; };
 		39E886102624CF7000FF10BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E8860E2624CF7000FF10BC /* LaunchScreen.storyboard */; };
+		8CC3786EEB7842B015C2AD2C /* Pods_Capstone_CodeBrewer_BuildJobProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280BF69109C912B97AA30C86 /* Pods_Capstone_CodeBrewer_BuildJobProfile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0976D90B81460B94EECCE6A6 /* Pods-Capstone_CodeBrewer_BuildJobProfile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_CodeBrewer_BuildJobProfile.debug.xcconfig"; path = "Target Support Files/Pods-Capstone_CodeBrewer_BuildJobProfile/Pods-Capstone_CodeBrewer_BuildJobProfile.debug.xcconfig"; sourceTree = "<group>"; };
+		280BF69109C912B97AA30C86 /* Pods_Capstone_CodeBrewer_BuildJobProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capstone_CodeBrewer_BuildJobProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		394B56C526261FC900702F72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		39E886002624CF6A00FF10BC /* Capstone_CodeBrewer_BuildJobProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone_CodeBrewer_BuildJobProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E886032624CF6A00FF10BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39E886052624CF6A00FF10BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		39E8860C2624CF7000FF10BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39E8860F2624CF7000FF10BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39E886112624CF7000FF10BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB7269D0D3CC20860A0456B4 /* Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig"; path = "Target Support Files/Pods-Capstone_CodeBrewer_BuildJobProfile/Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC3786EEB7842B015C2AD2C /* Pods_Capstone_CodeBrewer_BuildJobProfile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				39E886022624CF6A00FF10BC /* Capstone_CodeBrewer_BuildJobProfile */,
 				39E886012624CF6A00FF10BC /* Products */,
+				C8903494D012AEF96D55382E /* Pods */,
+				F0B1EE11779E55D19908DBD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +72,27 @@
 				39E8860C2624CF7000FF10BC /* Assets.xcassets */,
 				39E8860E2624CF7000FF10BC /* LaunchScreen.storyboard */,
 				39E886112624CF7000FF10BC /* Info.plist */,
+				394B56C526261FC900702F72 /* GoogleService-Info.plist */,
 			);
 			path = Capstone_CodeBrewer_BuildJobProfile;
+			sourceTree = "<group>";
+		};
+		C8903494D012AEF96D55382E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0976D90B81460B94EECCE6A6 /* Pods-Capstone_CodeBrewer_BuildJobProfile.debug.xcconfig */,
+				AB7269D0D3CC20860A0456B4 /* Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F0B1EE11779E55D19908DBD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				280BF69109C912B97AA30C86 /* Pods_Capstone_CodeBrewer_BuildJobProfile.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39E886142624CF7000FF10BC /* Build configuration list for PBXNativeTarget "Capstone_CodeBrewer_BuildJobProfile" */;
 			buildPhases = (
+				EAE251ADDAFC47F2E738D82A /* [CP] Check Pods Manifest.lock */,
 				39E885FC2624CF6A00FF10BC /* Sources */,
 				39E885FD2624CF6A00FF10BC /* Frameworks */,
 				39E885FE2624CF6A00FF10BC /* Resources */,
+				A0E14AA9CCECF084846C38D7 /* [CP] Embed Pods Frameworks */,
+				0A664FAFC53A0B611DDED613 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,12 +156,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E886102624CF7000FF10BC /* LaunchScreen.storyboard in Resources */,
+				394B56C626261FC900702F72 /* GoogleService-Info.plist in Resources */,
 				39E8860D2624CF7000FF10BC /* Assets.xcassets in Resources */,
 				39E8860B2624CF6A00FF10BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A664FAFC53A0B611DDED613 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Capstone_CodeBrewer_BuildJobProfile/Pods-Capstone_CodeBrewer_BuildJobProfile-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Capstone_CodeBrewer_BuildJobProfile/Pods-Capstone_CodeBrewer_BuildJobProfile-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Capstone_CodeBrewer_BuildJobProfile/Pods-Capstone_CodeBrewer_BuildJobProfile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0E14AA9CCECF084846C38D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Capstone_CodeBrewer_BuildJobProfile/Pods-Capstone_CodeBrewer_BuildJobProfile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Capstone_CodeBrewer_BuildJobProfile/Pods-Capstone_CodeBrewer_BuildJobProfile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Capstone_CodeBrewer_BuildJobProfile/Pods-Capstone_CodeBrewer_BuildJobProfile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAE251ADDAFC47F2E738D82A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Capstone_CodeBrewer_BuildJobProfile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		39E885FC2624CF6A00FF10BC /* Sources */ = {
@@ -283,6 +374,7 @@
 		};
 		39E886152624CF7000FF10BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0976D90B81460B94EECCE6A6 /* Pods-Capstone_CodeBrewer_BuildJobProfile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +394,7 @@
 		};
 		39E886162624CF7000FF10BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB7269D0D3CC20860A0456B4 /* Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
