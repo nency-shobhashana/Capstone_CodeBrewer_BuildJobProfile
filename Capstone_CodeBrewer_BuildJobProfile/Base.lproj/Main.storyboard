@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,18 +49,27 @@
                                     <constraint firstItem="UHm-nV-1Hv" firstAttribute="height" secondItem="5L4-Cr-s2F" secondAttribute="height" id="7jG-Ia-raD"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lFO-K4-l0u" customClass="GIDSignInButton">
+                                <rect key="frame" x="24" y="562" width="366" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="lFO-K4-l0u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="38f-hV-Ocx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZjG-Ea-L7C" secondAttribute="bottom" constant="24" id="OCl-1l-slL"/>
                             <constraint firstItem="Mjq-Jt-nep" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sbf-3p-e4c"/>
                             <constraint firstItem="ZjG-Ea-L7C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ShX-bT-n6f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZjG-Ea-L7C" secondAttribute="trailing" constant="24" id="Ym9-re-A6Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFO-K4-l0u" secondAttribute="trailing" constant="24" id="oxc-RR-Njh"/>
                             <constraint firstItem="Mjq-Jt-nep" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r0s-5A-6A0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4CM-b4-N5t"/>
+                    <connections>
+                        <outlet property="signInButton" destination="lFO-K4-l0u" id="zKr-lZ-ShZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,5 +126,8 @@
     </scenes>
     <resources>
         <image name="app_logo" width="48" height="48"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

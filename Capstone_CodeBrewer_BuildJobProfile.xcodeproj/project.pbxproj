@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -83,7 +83,6 @@
 				0976D90B81460B94EECCE6A6 /* Pods-Capstone_CodeBrewer_BuildJobProfile.debug.xcconfig */,
 				AB7269D0D3CC20860A0456B4 /* Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
