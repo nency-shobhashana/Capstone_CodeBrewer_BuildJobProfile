@@ -11,5 +11,10 @@ pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 
+pod 'FacebookCore'
+pod 'FacebookLogin'
+
+
+
 
 end

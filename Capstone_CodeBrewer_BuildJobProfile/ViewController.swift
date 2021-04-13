@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Firebase google sign up
         if GIDSignIn.sharedInstance()?.currentUser != nil {
             // Signed In
         } else {

@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FBSDKCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -18,10 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        
+        // Firebase google signup
         GIDSignIn.sharedInstance()?.clientID = "402578668828-oe7pr8d0a5vqg7hdmlsiphop3cpdthmv.apps.googleusercontent.com"
         GIDSignIn.sharedInstance()?.delegate = self
         
-        
+        // Firebase facebook signup
+//        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         return true
     }
@@ -32,7 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return GIDSignIn.sharedInstance().handle(url)
+
     }
+    
+    
 
     // MARK: UISceneSession Lifecycle
 
