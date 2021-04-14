@@ -27,6 +27,10 @@ class LoginAuthViewController: UIViewController {
         self.authIdentify()
     }
     
+    private func moveToDashboard(){
+        self.performSegue(withIdentifier: "DashBoard", sender: nil)
+    }
+    
     func authIdentify() {
         var error:NSError?
         
@@ -50,8 +54,10 @@ class LoginAuthViewController: UIViewController {
         
         self.context.evaluatePolicy(LAPolicy.deviceOwnerAuthentication, localizedReason: reason) { (isSuccess, error) in
             if isSuccess {
-                //Success
-                print("Success")
+                DispatchQueue.main.async {
+                    self.moveToDashboard()
+                    print("Success")
+                }
             }else{
                 //Error
                 showLAError(laError: error!)

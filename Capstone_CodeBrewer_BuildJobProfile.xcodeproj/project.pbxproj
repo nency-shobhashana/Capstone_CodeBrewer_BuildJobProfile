@@ -16,6 +16,7 @@
 		39E8860D2624CF7000FF10BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E8860C2624CF7000FF10BC /* Assets.xcassets */; };
 		39E886102624CF7000FF10BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E8860E2624CF7000FF10BC /* LaunchScreen.storyboard */; };
 		8CC3786EEB7842B015C2AD2C /* Pods_Capstone_CodeBrewer_BuildJobProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280BF69109C912B97AA30C86 /* Pods_Capstone_CodeBrewer_BuildJobProfile.framework */; };
+		C86710DF262761E90071B54C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86710DE262761E90071B54C /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		39E8860F2624CF7000FF10BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39E886112624CF7000FF10BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB7269D0D3CC20860A0456B4 /* Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig"; path = "Target Support Files/Pods-Capstone_CodeBrewer_BuildJobProfile/Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig"; sourceTree = "<group>"; };
+		C86710DE262761E90071B54C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				39E8860E2624CF7000FF10BC /* LaunchScreen.storyboard */,
 				39E886112624CF7000FF10BC /* Info.plist */,
 				394B56C526261FC900702F72 /* GoogleService-Info.plist */,
+				C86710DE262761E90071B54C /* DashboardViewController.swift */,
 			);
 			path = Capstone_CodeBrewer_BuildJobProfile;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				39E886082624CF6A00FF10BC /* ViewController.swift in Sources */,
 				39E886042624CF6A00FF10BC /* AppDelegate.swift in Sources */,
+				C86710DF262761E90071B54C /* DashboardViewController.swift in Sources */,
 				394B570626265E0200702F72 /* LoginAuthViewController.swift in Sources */,
 				39E886062624CF6A00FF10BC /* SceneDelegate.swift in Sources */,
 			);
