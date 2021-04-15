@@ -14,7 +14,10 @@ pod 'GoogleSignIn'
 pod 'FacebookCore'
 pod 'FacebookLogin'
 
+pod 'MaterialComponents/TextControls+OutlinedTextAreas'
+pod 'MaterialComponents/TextControls+OutlinedTextFields'
 
-
+pod 'MaterialComponents/TextControls+OutlinedTextAreasTheming'
+pod 'MaterialComponents/TextControls+OutlinedTextFieldsTheming'
 
 end

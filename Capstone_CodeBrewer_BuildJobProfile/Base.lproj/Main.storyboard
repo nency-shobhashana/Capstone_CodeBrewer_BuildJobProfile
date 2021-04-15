@@ -260,21 +260,35 @@
                                     <constraint firstItem="0HU-Ot-eEv" firstAttribute="top" secondItem="bXk-rZ-oZ5" secondAttribute="bottom" constant="24" id="wyg-Le-nXt"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyK-wb-ljo">
+                                <rect key="frame" x="337" y="0.0" width="30" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gKw-Ic-PRV" kind="show" id="ssJ-qO-90V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pJT-gD-FLv"/>
                         <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="hyK-wb-ljo" firstAttribute="top" secondItem="pJT-gD-FLv" secondAttribute="top" id="9ei-oT-yvm"/>
                             <constraint firstItem="obv-dF-Lt8" firstAttribute="top" secondItem="aw2-yH-HZc" secondAttribute="bottom" constant="12" id="B0D-hY-Iio"/>
                             <constraint firstItem="pJT-gD-FLv" firstAttribute="bottom" secondItem="HtQ-se-VW6" secondAttribute="bottom" id="S3t-RO-HaK"/>
                             <constraint firstItem="HtQ-se-VW6" firstAttribute="top" secondItem="obv-dF-Lt8" secondAttribute="bottom" constant="40" id="Xta-3l-YI8"/>
                             <constraint firstItem="pJT-gD-FLv" firstAttribute="trailing" secondItem="HtQ-se-VW6" secondAttribute="trailing" id="gWA-KK-gUf"/>
                             <constraint firstItem="obv-dF-Lt8" firstAttribute="leading" secondItem="pJT-gD-FLv" secondAttribute="leading" constant="24" id="jic-OQ-aXx"/>
+                            <constraint firstItem="pJT-gD-FLv" firstAttribute="trailing" secondItem="hyK-wb-ljo" secondAttribute="trailing" constant="8" id="l6F-fp-Ray"/>
                             <constraint firstItem="aw2-yH-HZc" firstAttribute="leading" secondItem="pJT-gD-FLv" secondAttribute="leading" constant="24" id="ohg-Ed-KNr"/>
                             <constraint firstItem="aw2-yH-HZc" firstAttribute="top" secondItem="pJT-gD-FLv" secondAttribute="top" constant="80" id="qHC-fG-Ybn"/>
                             <constraint firstItem="HtQ-se-VW6" firstAttribute="leading" secondItem="pJT-gD-FLv" secondAttribute="leading" id="wHY-d0-fch"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0jF-GD-OmL"/>
+                    <connections>
+                        <outlet property="resumeCollectionView" destination="0HU-Ot-eEv" id="6Aw-Tg-gXp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGL-vh-hXD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,12 +370,12 @@
             </objects>
             <point key="canvasLocation" x="1902.8985507246377" y="119.86607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Resume Personal View Controller-->
         <scene sceneID="fTV-Qi-8iT">
             <objects>
-                <viewController id="gKw-Ic-PRV" sceneMemberID="viewController">
+                <viewController id="gKw-Ic-PRV" customClass="ResumePersonalViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WhH-tF-2NI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzo-Ee-J3X">
@@ -370,32 +384,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pyG-v2-hMr">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pyG-v2-hMr" customClass="MDCOutlinedTextField">
                                 <rect key="frame" x="24" y="69" width="327" height="50"/>
+                                <accessibility key="accessibilityConfiguration" label="First Name"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="h1a-Op-qtg"/>
                                 </constraints>
-                                <attributedString key="attributedText"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0a-BT-AwC">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0a-BT-AwC" customClass="MDCOutlinedTextField">
                                 <rect key="frame" x="24" y="135" width="327" height="50"/>
-                                <attributedString key="attributedText"/>
+                                <accessibility key="accessibilityConfiguration" label="Last Name"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-2c-wt6">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-2c-wt6" customClass="MDCOutlinedTextField">
                                 <rect key="frame" x="24" y="201" width="327" height="50"/>
-                                <attributedString key="attributedText"/>
+                                <accessibility key="accessibilityConfiguration" label="Email"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbU-wx-jym">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbU-wx-jym" customClass="MDCOutlinedTextField">
                                 <rect key="frame" x="24" y="267" width="327" height="50"/>
-                                <attributedString key="attributedText"/>
+                                <accessibility key="accessibilityConfiguration" label="Phone number"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9dx-m8-K5V">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9dx-m8-K5V" customClass="MDCOutlinedTextField">
                                 <rect key="frame" x="24" y="333" width="327" height="50"/>
-                                <attributedString key="attributedText"/>
+                                <accessibility key="accessibilityConfiguration" label="Address"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qat-a2-Gls">
@@ -439,6 +463,14 @@
                             <constraint firstItem="Qat-a2-Gls" firstAttribute="top" secondItem="9dx-m8-K5V" secondAttribute="bottom" constant="24" id="vMQ-0l-HCg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="EkW-33-4Fo"/>
+                    <connections>
+                        <outlet property="addressTF" destination="9dx-m8-K5V" id="hMC-nB-ZH0"/>
+                        <outlet property="emailTF" destination="BHa-2c-wt6" id="bQZ-uc-pZt"/>
+                        <outlet property="firstNameTF" destination="pyG-v2-hMr" id="A1Q-4f-vxu"/>
+                        <outlet property="lastNameTF" destination="A0a-BT-AwC" id="Fxw-DT-4GZ"/>
+                        <outlet property="phoneTF" destination="dbU-wx-jym" id="OXe-tl-kx6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvR-wF-vFT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
