@@ -73,12 +73,12 @@
 				39E886052624CF6A00FF10BC /* SceneDelegate.swift */,
 				39E886072624CF6A00FF10BC /* ViewController.swift */,
 				394B570526265E0200702F72 /* LoginAuthViewController.swift */,
+				C86710DE262761E90071B54C /* DashboardViewController.swift */,
 				39E886092624CF6A00FF10BC /* Main.storyboard */,
 				39E8860C2624CF7000FF10BC /* Assets.xcassets */,
 				39E8860E2624CF7000FF10BC /* LaunchScreen.storyboard */,
 				39E886112624CF7000FF10BC /* Info.plist */,
 				394B56C526261FC900702F72 /* GoogleService-Info.plist */,
-				C86710DE262761E90071B54C /* DashboardViewController.swift */,
 			);
 			path = Capstone_CodeBrewer_BuildJobProfile;
 			sourceTree = "<group>";
