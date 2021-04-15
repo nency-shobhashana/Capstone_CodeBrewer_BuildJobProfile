@@ -9,17 +9,32 @@ import UIKit
 
 class DashboardViewController: UIViewController {
 
+    @IBOutlet weak var resumeCollectionView: UICollectionViewCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+//        collectionView.dataSource = self
+        
     }
     
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             // Resume
+            
         } else {
             // Cover Letter
         }
+    }
+}
+
+extension ViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return resumes.count
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ResumeCollectionViewCell, for: indexPath) as! ResumeCollectionViewCell
+        
+        return cell
     }
 }
