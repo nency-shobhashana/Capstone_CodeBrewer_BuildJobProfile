@@ -1,6 +1,0 @@
-framework module Pods_Capstone_CodeBrewer_BuildJobProfile {
-  umbrella header "Pods-Capstone_CodeBrewer_BuildJobProfile-umbrella.h"
-
-  export *
-  module * { export * }
-}
