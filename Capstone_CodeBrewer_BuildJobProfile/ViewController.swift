@@ -10,6 +10,7 @@ import GoogleSignIn
 import FBSDKLoginKit
 import FirebaseAuth
 
+
 class ViewController: UIViewController {
     
     // Delegate method of facebook
