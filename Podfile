@@ -22,4 +22,6 @@ pod 'MaterialComponents/TextControls+OutlinedTextFieldsTheming'
 
 pod 'MaterialComponents/BottomSheet'
 
+pod 'MaterialComponents/Cards'
+
 end
