@@ -25,34 +25,12 @@ class ResumePersonalViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    // bottomsheet
-    func prepareBackgroundView(){
-            let blurEffect = UIBlurEffect.init(style: .light)
-            let visualEffect = UIVisualEffectView.init(effect: blurEffect)
-            let bluredView = UIVisualEffectView.init(effect: blurEffect)
-            bluredView.contentView.addSubview(visualEffect)
-            
-            visualEffect.frame = UIScreen.main.bounds
-            bluredView.frame = UIScreen.main.bounds
-            
-            view.insertSubview(bluredView, at: 0)
-        }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        prepareBackgroundView()
         configTextField()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        UIView.animate(withDuration: 0.3) { [weak self] in
-                    let frame = self?.view.frame
-                    let yComponent = UIScreen.main.bounds.height - 400
-                    self?.view.frame = CGRect(x: 0, y: yComponent, width: frame!.width, height: frame!.height)
-                }
-    }
     
     private func configTextField(){
         firstNameTF.label.text = "First Name"
@@ -80,13 +58,7 @@ class ResumePersonalViewController: UIViewController {
         addressTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
         addressTF.sizeToFit()
     }
-    
-    @IBAction func closeClicked(_ sender: Any) {
-        willMove(toParent: nil)
-               view.removeFromSuperview()
-               removeFromParent()
-        
-    }
+
     
     /*
     // MARK: - Navigation

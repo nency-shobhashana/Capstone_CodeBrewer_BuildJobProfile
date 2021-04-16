@@ -20,4 +20,6 @@ pod 'MaterialComponents/TextControls+OutlinedTextFields'
 pod 'MaterialComponents/TextControls+OutlinedTextAreasTheming'
 pod 'MaterialComponents/TextControls+OutlinedTextFieldsTheming'
 
+pod 'MaterialComponents/BottomSheet'
+
 end
