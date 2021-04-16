@@ -26,6 +26,7 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumePersonalViewController") as! ResumePersonalViewController
         bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
+        bottomSheet?.trackingScrollView = bottomSheetVC.scrollView
         present(bottomSheet!,animated: true, completion: nil)
         bottomSheet?.delegate = self
     }

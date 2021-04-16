@@ -19,6 +19,7 @@ class ResumePersonalViewController: UIViewController {
     @IBOutlet weak var phoneTF: MDCOutlinedTextField!
     @IBOutlet weak var addressTF: MDCOutlinedTextField!
 
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
        
