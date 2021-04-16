@@ -34,7 +34,7 @@
                                             <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHm-nV-1Hv">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHm-nV-1Hv" customClass="FBSDKLoginButton">
                                         <rect key="frame" x="0.0" y="70" width="327" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -71,6 +71,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="4CM-b4-N5t"/>
                     <connections>
+                        <outlet property="fbLoginButton" destination="UHm-nV-1Hv" id="0O6-c6-p0t"/>
                         <outlet property="signInButton" destination="lFO-K4-l0u" id="zKr-lZ-ShZ"/>
                         <segue destination="Q5m-DF-vW2" kind="presentation" identifier="bioAuth" modalPresentationStyle="fullScreen" id="Vtx-WN-dvG"/>
                     </connections>
