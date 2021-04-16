@@ -42,4 +42,13 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
     }
     
     
+    // MARK: - Resume Profile Link
+    @IBAction func resumeSummaryClicked(_ sender: Any) {
+        bottomSheet?.dismiss(animated: true, completion: nil)
+        let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeSummaryViewController") as! ResumeSummaryViewController
+        bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
+        present(bottomSheet!,animated: true, completion: nil)
+        bottomSheet?.delegate = self
+    }
+    
 }
