@@ -35,7 +35,6 @@ class ViewController: UIViewController, LoginButtonDelegate {
                 print(uid)
             }
         }
-        
     }
     
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
@@ -43,11 +42,17 @@ class ViewController: UIViewController, LoginButtonDelegate {
     }
     
     
+    @IBOutlet weak var fbLoginPlace: UIView!
     @IBOutlet var signInButton: GIDSignInButton!
     
-    @IBOutlet weak var fbLoginButton: FBLoginButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        do {
+            try Auth.auth().signOut()
+        } catch let error as NSError {
+            print(error)
+        }
         
         handler = Auth.auth().addStateDidChangeListener { (auth, user) in
             if user != nil {
@@ -56,6 +61,10 @@ class ViewController: UIViewController, LoginButtonDelegate {
         }
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
+        
+        let fbLoginButton = FBLoginButton()
+//        fbLoginButton.center = fbLoginPlace.center
+        fbLoginPlace.addSubview(fbLoginButton)
         
         //Firebase facebook sign up
         fbLoginButton.delegate = self

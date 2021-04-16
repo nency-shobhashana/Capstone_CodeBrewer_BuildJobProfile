@@ -18,60 +18,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Mjq-Jt-nep">
-                                <rect key="frame" x="163.5" y="309.5" width="48" height="48"/>
+                                <rect key="frame" x="137.5" y="258.5" width="100" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="PD2-ZA-akR"/>
+                                    <constraint firstAttribute="width" constant="100" id="iYj-la-EcG"/>
+                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZjG-Ea-L7C">
                                 <rect key="frame" x="24" y="523" width="327" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5L4-Cr-s2F">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFO-K4-l0u" customClass="GIDSignInButton">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="gDB-JE-TYJ"/>
+                                            <constraint firstAttribute="height" constant="50" id="B4z-Pr-a7R"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="Login with Google">
-                                            <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHm-nV-1Hv" customClass="FBSDKLoginButton">
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Jx-Vb-lGR">
                                         <rect key="frame" x="0.0" y="70" width="327" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="ySG-RS-GTw"/>
+                                            <constraint firstAttribute="height" constant="50" id="0A8-P9-mdJ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="Login with Facebook">
-                                            <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
+                                    </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="UHm-nV-1Hv" firstAttribute="height" secondItem="5L4-Cr-s2F" secondAttribute="height" id="7jG-Ia-raD"/>
-                                </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFO-K4-l0u" customClass="GIDSignInButton">
-                                <rect key="frame" x="24" y="447.5" width="327" height="47.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.058823529411764705" green="0.33725490196078434" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lFO-K4-l0u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="38f-hV-Ocx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZjG-Ea-L7C" secondAttribute="bottom" constant="24" id="OCl-1l-slL"/>
+                            <constraint firstAttribute="bottom" secondItem="ZjG-Ea-L7C" secondAttribute="bottom" constant="24" id="BXS-W1-SVp"/>
                             <constraint firstItem="Mjq-Jt-nep" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sbf-3p-e4c"/>
                             <constraint firstItem="ZjG-Ea-L7C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ShX-bT-n6f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZjG-Ea-L7C" secondAttribute="trailing" constant="24" id="Ym9-re-A6Y"/>
-                            <constraint firstItem="lFO-K4-l0u" firstAttribute="top" secondItem="Mjq-Jt-nep" secondAttribute="bottom" constant="90" id="agQ-66-fhL"/>
-                            <constraint firstItem="ZjG-Ea-L7C" firstAttribute="top" secondItem="lFO-K4-l0u" secondAttribute="bottom" constant="28" id="hg5-zn-xsG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFO-K4-l0u" secondAttribute="trailing" constant="24" id="oxc-RR-Njh"/>
                             <constraint firstItem="Mjq-Jt-nep" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r0s-5A-6A0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4CM-b4-N5t"/>
                     <connections>
-                        <outlet property="fbLoginButton" destination="UHm-nV-1Hv" id="0O6-c6-p0t"/>
+                        <outlet property="fbLoginPlace" destination="6Jx-Vb-lGR" id="Urz-nT-MVc"/>
                         <outlet property="signInButton" destination="lFO-K4-l0u" id="zKr-lZ-ShZ"/>
                         <segue destination="Q5m-DF-vW2" kind="presentation" identifier="bioAuth" modalPresentationStyle="fullScreen" id="Vtx-WN-dvG"/>
                     </connections>
