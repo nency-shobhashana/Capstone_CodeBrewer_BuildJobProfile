@@ -303,7 +303,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rfo-GU-HtH">
-                                <rect key="frame" x="24" y="124" width="327" height="235.5"/>
+                                <rect key="frame" x="24" y="124" width="327" height="298"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Te-NE-dij">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="33"/>
@@ -315,36 +315,57 @@
                                             <action selector="personalClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="LMh-Ua-QMY"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnC-iM-9jW">
-                                        <rect key="frame" x="0.0" y="53" width="327" height="20.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkL-Dr-yGU">
+                                        <rect key="frame" x="0.0" y="53" width="327" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proffesinal Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOS-DE-95w">
-                                        <rect key="frame" x="0.0" y="93.5" width="327" height="20.5"/>
+                                        <state key="normal" title="Profile Links">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="personalClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="402-cQ-Rgl"/>
+                                            <action selector="profileLinksClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="PxH-aV-8qZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efB-Ii-5G3" userLabel="Proffesinal Summary">
+                                        <rect key="frame" x="0.0" y="106" width="327" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fa-cu-cND">
-                                        <rect key="frame" x="0.0" y="134" width="327" height="20.5"/>
+                                        <state key="normal" title="Proffesinal Summary">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="personalClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="gGQ-EM-RpD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LR-V9-nxc">
+                                        <rect key="frame" x="0.0" y="159" width="327" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experince" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98i-96-uZJ">
-                                        <rect key="frame" x="0.0" y="174.5" width="327" height="20.5"/>
+                                        <state key="normal" title="Education">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="personalClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="bQJ-7q-VNo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJ4-of-NyK">
+                                        <rect key="frame" x="0.0" y="212" width="327" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDr-F0-MoM">
-                                        <rect key="frame" x="0.0" y="215" width="327" height="20.5"/>
+                                        <state key="normal" title="Experince">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="personalClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="deU-Wo-U49"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQh-7K-6dx">
+                                        <rect key="frame" x="0.0" y="265" width="327" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="skills">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="personalClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="xze-ju-6dZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQe-u7-yDp">
@@ -490,7 +511,105 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvR-wF-vFT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="818"/>
+            <point key="canvasLocation" x="2841" y="-573"/>
+        </scene>
+        <!--Resume Profile Link View Controller-->
+        <scene sceneID="waN-3f-YFZ">
+            <objects>
+                <viewController id="Cxj-Gy-lJP" customClass="ResumeProfileLinkViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RQM-mE-5ED">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piV-v0-MXP">
+                                <rect key="frame" x="24" y="24" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBH-Bx-Aft">
+                                <rect key="frame" x="319" y="17" width="32" height="29.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="722-ON-241"/>
+                                    <constraint firstAttribute="height" constant="32" id="QYL-1u-8mM"/>
+                                </constraints>
+                                <color key="tintColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="clear" catalog="system">
+                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeClicked:" destination="gKw-Ic-PRV" eventType="touchUpInside" id="bgQ-9e-13W"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Protfolio Link" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7sG-nk-x2a" customClass="MDCOutlinedTextField">
+                                <rect key="frame" x="24" y="72" width="327" height="50"/>
+                                <accessibility key="accessibilityConfiguration" label="Last Name"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="L3m-1j-bhN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LinkedIn Profile Link" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="40n-Sw-DKG" customClass="MDCOutlinedTextField">
+                                <rect key="frame" x="24" y="138" width="327" height="50"/>
+                                <accessibility key="accessibilityConfiguration" label="Last Name"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mBv-qe-2RG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GitHub Link" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdQ-fK-Ggr" customClass="MDCOutlinedTextField">
+                                <rect key="frame" x="24" y="204" width="327" height="50"/>
+                                <accessibility key="accessibilityConfiguration" label="Last Name"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="t4G-Kz-yps"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yc-9J-ttP">
+                                <rect key="frame" x="24" y="278" width="327" height="50"/>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TZp-kq-yFH"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RuU-Nb-4k8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Yc-9J-ttP" firstAttribute="top" secondItem="tdQ-fK-Ggr" secondAttribute="bottom" constant="24" id="AIG-50-BQZ"/>
+                            <constraint firstItem="tdQ-fK-Ggr" firstAttribute="leading" secondItem="RuU-Nb-4k8" secondAttribute="leading" constant="24" id="H90-c8-juj"/>
+                            <constraint firstItem="9Yc-9J-ttP" firstAttribute="leading" secondItem="RuU-Nb-4k8" secondAttribute="leading" constant="24" id="HYp-lk-pZp"/>
+                            <constraint firstItem="40n-Sw-DKG" firstAttribute="top" secondItem="7sG-nk-x2a" secondAttribute="bottom" constant="16" id="KBB-gd-nc6"/>
+                            <constraint firstItem="RuU-Nb-4k8" firstAttribute="trailing" secondItem="7sG-nk-x2a" secondAttribute="trailing" constant="24" id="N6O-G1-pvx"/>
+                            <constraint firstItem="7sG-nk-x2a" firstAttribute="leading" secondItem="RuU-Nb-4k8" secondAttribute="leading" constant="24" id="SUw-Jy-sQi"/>
+                            <constraint firstItem="RuU-Nb-4k8" firstAttribute="trailing" secondItem="40n-Sw-DKG" secondAttribute="trailing" constant="24" id="Xgo-fs-S9g"/>
+                            <constraint firstItem="40n-Sw-DKG" firstAttribute="leading" secondItem="RuU-Nb-4k8" secondAttribute="leading" constant="24" id="ZOg-3l-y5X"/>
+                            <constraint firstItem="piV-v0-MXP" firstAttribute="leading" secondItem="RQM-mE-5ED" secondAttribute="leading" constant="24" id="d1i-dr-q2f"/>
+                            <constraint firstItem="tdQ-fK-Ggr" firstAttribute="top" secondItem="40n-Sw-DKG" secondAttribute="bottom" constant="16" id="eob-NE-YgF"/>
+                            <constraint firstItem="7sG-nk-x2a" firstAttribute="top" secondItem="lBH-Bx-Aft" secondAttribute="bottom" constant="24" id="f8G-UZ-LRz"/>
+                            <constraint firstItem="RuU-Nb-4k8" firstAttribute="trailing" secondItem="9Yc-9J-ttP" secondAttribute="trailing" constant="24" id="k0f-ay-b71"/>
+                            <constraint firstItem="RuU-Nb-4k8" firstAttribute="trailing" secondItem="lBH-Bx-Aft" secondAttribute="trailing" constant="24" id="kGS-q0-1yb"/>
+                            <constraint firstItem="lBH-Bx-Aft" firstAttribute="top" secondItem="RuU-Nb-4k8" secondAttribute="top" constant="16" id="lIy-UJ-bYE"/>
+                            <constraint firstItem="RuU-Nb-4k8" firstAttribute="trailing" secondItem="tdQ-fK-Ggr" secondAttribute="trailing" constant="24" id="naU-Kr-6Xn"/>
+                            <constraint firstItem="piV-v0-MXP" firstAttribute="top" secondItem="RuU-Nb-4k8" secondAttribute="top" constant="24" id="vUo-NZ-xu0"/>
+                            <constraint firstItem="RuU-Nb-4k8" firstAttribute="trailing" secondItem="piV-v0-MXP" secondAttribute="trailing" constant="24" id="zK4-DZ-BPL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gitHubTF" destination="tdQ-fK-Ggr" id="VM5-Vp-GuW"/>
+                        <outlet property="linkedInTF" destination="40n-Sw-DKG" id="goQ-wc-QbB"/>
+                        <outlet property="portfolioTF" destination="7sG-nk-x2a" id="WK1-bx-RaI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qFc-to-ieL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3532" y="-573"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VpC-fv-PEM">

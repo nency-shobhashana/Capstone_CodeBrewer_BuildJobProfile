@@ -25,6 +25,8 @@ class ResumePersonalViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    // bottomsheet
     func prepareBackgroundView(){
             let blurEffect = UIBlurEffect.init(style: .light)
             let visualEffect = UIVisualEffectView.init(effect: blurEffect)
