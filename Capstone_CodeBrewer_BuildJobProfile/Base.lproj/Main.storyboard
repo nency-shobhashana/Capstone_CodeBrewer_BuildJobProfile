@@ -801,7 +801,7 @@
         <!--Resume Experiance View Controller-->
         <scene sceneID="noa-dT-BPn">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="zQB-Qi-O7L" customClass="ResumeExperianceViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResumeExperianceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zQB-Qi-O7L" customClass="ResumeExperianceViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Utg-hG-jsa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -812,19 +812,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-D6-cEP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="410" estimatedRowHeight="410" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-D6-cEP">
                                 <rect key="frame" x="0.0" y="64.5" width="375" height="602.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="430" id="ghH-0G-E6H" customClass="ExperianceTableViewCell" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="430"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExperianceTableViewCell" id="ghH-0G-E6H" customClass="ExperianceTableViewCell" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="410"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ghH-0G-E6H" id="sf0-Ej-sfy" customClass="MDCCard">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2KZ-zW-wkP">
-                                                    <rect key="frame" x="16" y="11" width="343" height="384"/>
+                                                    <rect key="frame" x="16" y="11" width="343" height="388"/>
                                                     <subviews>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLx-r4-weg" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -850,7 +850,7 @@
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzb-n2-Qn9" customClass="MDCOutlinedTextArea">
-                                                            <rect key="frame" x="0.0" y="264" width="343" height="120"/>
+                                                            <rect key="frame" x="0.0" y="264" width="343" height="124"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="120" id="N5h-j1-Ofa"/>
@@ -865,12 +865,14 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2KZ-zW-wkP" secondAttribute="bottom" id="hr0-m3-pVB"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="2KZ-zW-wkP" secondAttribute="trailing" id="n5r-qe-5Il"/>
                                                 <constraint firstItem="2KZ-zW-wkP" firstAttribute="top" secondItem="sf0-Ej-sfy" secondAttribute="topMargin" id="uu9-5d-95w"/>
                                                 <constraint firstItem="2KZ-zW-wkP" firstAttribute="leading" secondItem="sf0-Ej-sfy" secondAttribute="leadingMargin" id="vZ1-e9-19J"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cardView" destination="sf0-Ej-sfy" id="5Ed-eG-tc3"/>
                                             <outlet property="companyNameTF" destination="bLx-r4-weg" id="LXr-lt-dS6"/>
                                             <outlet property="designationTF" destination="8nz-wP-mUA" id="caA-BY-axv"/>
                                             <outlet property="endYearTF" destination="GRp-en-s4T" id="vdJ-pv-8dx"/>
@@ -879,9 +881,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBg-CU-iYf">
-                                <rect key="frame" x="333" y="18" width="18" height="18"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBg-CU-iYf">
+                                <rect key="frame" x="333" y="40" width="18" height="230"/>
                                 <state key="normal" backgroundImage="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="addEducationClicked:" destination="zQB-Qi-O7L" eventType="touchUpInside" id="sz0-Pg-Z9c"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -897,6 +902,9 @@
                             <constraint firstItem="igs-Ly-8WL" firstAttribute="leading" secondItem="Utg-hG-jsa" secondAttribute="leadingMargin" id="ztC-XQ-9rd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="experinceTableView" destination="bgP-D6-cEP" id="4os-Bi-Qg9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8y-oC-hBO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

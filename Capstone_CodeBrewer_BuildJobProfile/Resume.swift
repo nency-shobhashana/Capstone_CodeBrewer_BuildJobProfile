@@ -26,4 +26,11 @@ struct ResumeEducation {
     var endYear: String
 }
 
+struct ResumeExperince {
+    var name: String
+    var role: String
+    var startYear: String
+    var endYear: String
+}
+
 

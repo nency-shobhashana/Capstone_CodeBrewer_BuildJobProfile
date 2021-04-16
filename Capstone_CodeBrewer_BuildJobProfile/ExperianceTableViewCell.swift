@@ -21,6 +21,7 @@ class ExperianceTableViewCell: UITableViewCell {
     @IBOutlet weak var startYearTF: MDCOutlinedTextField!
     @IBOutlet weak var endYearTF: MDCOutlinedTextField!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,6 +34,19 @@ class ExperianceTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    var experince: ResumeExperince? = nil
+    
+    func initCell(experince: ResumeExperince){
+        saveData()
+        self.experince = experince
+    }
+    
+    func saveData(){
+        self.experince?.name = companyNameTF.text ?? ""
+        self.experince?.role = designationTF.text ?? ""
+        self.experince?.startYear = startYearTF.text ?? ""
+        self.experince?.endYear = endYearTF.text ?? ""
+    }
     
     
     private func configTextField(){
