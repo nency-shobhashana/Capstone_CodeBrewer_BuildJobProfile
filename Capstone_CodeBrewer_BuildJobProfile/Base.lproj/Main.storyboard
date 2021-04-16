@@ -335,6 +335,9 @@
                                         <state key="normal" title="Experince">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="resumeExperinceClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="JGM-cc-T2t"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQh-7K-6dx">
                                         <rect key="frame" x="0.0" y="265" width="327" height="33"/>
@@ -789,7 +792,7 @@
         <!--Resume Experiance View Controller-->
         <scene sceneID="noa-dT-BPn">
             <objects>
-                <viewController id="zQB-Qi-O7L" customClass="ResumeExperianceViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="zQB-Qi-O7L" customClass="ResumeExperianceViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Utg-hG-jsa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -832,7 +835,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Year (or expected)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRp-en-s4T" customClass="MDCOutlinedTextField">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Year or current" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRp-en-s4T" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="198" width="343" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -858,6 +861,12 @@
                                                 <constraint firstItem="2KZ-zW-wkP" firstAttribute="leading" secondItem="sf0-Ej-sfy" secondAttribute="leadingMargin" id="vZ1-e9-19J"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="companyNameTF" destination="bLx-r4-weg" id="LXr-lt-dS6"/>
+                                            <outlet property="designationTF" destination="8nz-wP-mUA" id="caA-BY-axv"/>
+                                            <outlet property="endYearTF" destination="GRp-en-s4T" id="vdJ-pv-8dx"/>
+                                            <outlet property="startYearTF" destination="iPa-RJ-BzD" id="VnK-Qg-PnH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
