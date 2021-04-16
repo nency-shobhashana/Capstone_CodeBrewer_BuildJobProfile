@@ -25,7 +25,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZjG-Ea-L7C">
-                                <rect key="frame" x="24" y="523" width="327" height="120"/>
+                                <rect key="frame" x="24" y="573" width="327" height="70"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFO-K4-l0u" customClass="GIDSignInButton">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
@@ -34,12 +34,10 @@
                                             <constraint firstAttribute="height" constant="50" id="B4z-Pr-a7R"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Jx-Vb-lGR">
-                                        <rect key="frame" x="0.0" y="70" width="327" height="50"/>
+                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Jx-Vb-lGR" customClass="FBSDKLoginButton">
+                                        <rect key="frame" x="0.0" y="70" width="327" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="0A8-P9-mdJ"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -328,7 +326,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="personalClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="bQJ-7q-VNo"/>
+                                            <action selector="resumeEducationClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="oBQ-Fy-nla"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJ4-of-NyK">
@@ -337,9 +335,6 @@
                                         <state key="normal" title="Experince">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="personalClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="deU-Wo-U49"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQh-7K-6dx">
                                         <rect key="frame" x="0.0" y="265" width="327" height="33"/>
@@ -347,9 +342,6 @@
                                         <state key="normal" title="skills">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="personalClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="xze-ju-6dZ"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -700,7 +692,7 @@
         <!--Resume Education View Controller-->
         <scene sceneID="RKH-uX-tea">
             <objects>
-                <viewController id="YjJ-6G-7at" customClass="ResumeEducationViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResumeEducationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YjJ-6G-7at" customClass="ResumeEducationViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mco-el-7oY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -729,7 +721,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JpM-yq-up8">
                                                     <rect key="frame" x="16" y="11" width="343" height="248"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Institute Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PfV-gh-LEx">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Institute Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PfV-gh-LEx" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="OXQ-aO-foj"/>
@@ -737,17 +729,17 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Major" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVA-bJ-FI2">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Major" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVA-bJ-FI2" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="66" width="343" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FEN-IP-RKx">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FEN-IP-RKx" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="132" width="343" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Year (or expected)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3o4-uW-1BK">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Year (or expected)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3o4-uW-1BK" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="198" width="343" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -766,6 +758,12 @@
                                                 <constraint firstItem="JpM-yq-up8" firstAttribute="leading" secondItem="lTw-R2-rUv" secondAttribute="leadingMargin" id="ylE-Rk-f7b"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="endYearTF" destination="3o4-uW-1BK" id="3c9-Yt-hqN"/>
+                                            <outlet property="instituteNameTF" destination="PfV-gh-LEx" id="kha-aU-f7L"/>
+                                            <outlet property="majorTF" destination="wVA-bJ-FI2" id="Bwj-vC-mk7"/>
+                                            <outlet property="startYearTF" destination="FEN-IP-RKx" id="zXC-sa-Vld"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -816,7 +814,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2KZ-zW-wkP">
                                                     <rect key="frame" x="16" y="11" width="343" height="384"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLx-r4-weg">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLx-r4-weg" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="a5h-hr-M4n"/>
@@ -824,17 +822,17 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Degination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8nz-wP-mUA">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Degination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8nz-wP-mUA" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="66" width="343" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPa-RJ-BzD">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPa-RJ-BzD" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="132" width="343" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Year (or expected)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRp-en-s4T">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Year (or expected)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRp-en-s4T" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="198" width="343" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>

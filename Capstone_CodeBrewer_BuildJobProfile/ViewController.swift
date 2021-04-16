@@ -42,7 +42,7 @@ class ViewController: UIViewController, LoginButtonDelegate {
     }
     
     
-    @IBOutlet weak var fbLoginPlace: UIView!
+    @IBOutlet weak var fbLoginPlace: FBLoginButton!
     @IBOutlet var signInButton: GIDSignInButton!
     
     override func viewDidLoad() {
@@ -62,12 +62,12 @@ class ViewController: UIViewController, LoginButtonDelegate {
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         
-        let fbLoginButton = FBLoginButton()
-//        fbLoginButton.center = fbLoginPlace.center
-        fbLoginPlace.addSubview(fbLoginButton)
+//        let fbLoginButton = FBLoginButton()
+//        fbLoginButton.center.x = fbLoginPlace.center.x
+//        fbLoginPlace.addSubview(fbLoginButton)
         
         //Firebase facebook sign up
-        fbLoginButton.delegate = self
+        fbLoginPlace.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
