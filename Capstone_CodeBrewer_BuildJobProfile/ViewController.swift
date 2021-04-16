@@ -48,11 +48,11 @@ class ViewController: UIViewController, LoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        do {
-            try Auth.auth().signOut()
-        } catch let error as NSError {
-            print(error)
-        }
+//        do {
+//            try Auth.auth().signOut()
+//        } catch let error as NSError {
+//            print(error)
+//        }
         
         handler = Auth.auth().addStateDidChangeListener { (auth, user) in
             if user != nil {

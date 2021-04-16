@@ -7,13 +7,15 @@
 
 import UIKit
 import MaterialComponents.MaterialCards
+import MaterialComponents.MaterialCards_Theming
 import MaterialComponents.MaterialTextControls_OutlinedTextAreas
 import MaterialComponents.MaterialTextControls_OutlinedTextFields
 import MaterialComponents.MaterialTextControls_OutlinedTextAreasTheming
 import MaterialComponents.MaterialTextControls_OutlinedTextFieldsTheming
 
 class ExperianceTableViewCell: UITableViewCell {
- 
+    
+    @IBOutlet weak var cardView: MDCCard!
     @IBOutlet weak var companyNameTF: MDCOutlinedTextField!
     @IBOutlet weak var designationTF: MDCOutlinedTextField!
     @IBOutlet weak var startYearTF: MDCOutlinedTextField!
@@ -24,14 +26,18 @@ class ExperianceTableViewCell: UITableViewCell {
         // Initialization code
         configTextField()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
+    
+    
     private func configTextField(){
+        let containerScheme = MDCContainerScheme()
+        cardView.applyTheme(withScheme: containerScheme)
         companyNameTF.label.text = "Company Name"
         companyNameTF.placeholder = "Company Name"
         companyNameTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
@@ -53,5 +59,5 @@ class ExperianceTableViewCell: UITableViewCell {
         endYearTF.sizeToFit()
         
     }
-
+    
 }

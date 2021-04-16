@@ -19,3 +19,11 @@ let resumes: [Resume] = [
     Resume(title: "iOS Developer", image: UIImage(named: "resume2")!)
 ]
 
+struct ResumeEducation {
+    var name: String
+    var major: String
+    var startYear: String
+    var endYear: String
+}
+
+

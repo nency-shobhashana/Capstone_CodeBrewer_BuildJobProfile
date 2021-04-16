@@ -7,6 +7,7 @@
 
 import UIKit
 import MaterialComponents.MaterialCards
+import MaterialComponents.MaterialCards_Theming
 import MaterialComponents.MaterialTextControls_OutlinedTextAreas
 import MaterialComponents.MaterialTextControls_OutlinedTextFields
 import MaterialComponents.MaterialTextControls_OutlinedTextAreasTheming
@@ -15,6 +16,7 @@ import MaterialComponents.MaterialTextControls_OutlinedTextFieldsTheming
 
 class EducationTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var cardView: MDCCard!
     @IBOutlet weak var instituteNameTF: MDCOutlinedTextField!
     @IBOutlet weak var majorTF: MDCOutlinedTextField!
     @IBOutlet weak var startYearTF: MDCOutlinedTextField!
@@ -32,10 +34,25 @@ class EducationTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
         
-        
+    }
+    
+    var education: ResumeEducation? = nil
+    
+    func initCell(education: ResumeEducation!){
+        saveData()
+        self.education = education
+    }
+    
+    func saveData(){
+        self.education?.name = instituteNameTF.text ?? ""
+        self.education?.major = majorTF.text ?? ""
+        self.education?.startYear = startYearTF.text ?? ""
+        self.education?.endYear = endYearTF.text ?? ""
     }
     
     private func configTextField(){
+        let containerScheme = MDCContainerScheme()
+        cardView.applyTheme(withScheme: containerScheme)
         instituteNameTF.label.text = "Institute Name"
         instituteNameTF.placeholder = "Institute Name"
         instituteNameTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)

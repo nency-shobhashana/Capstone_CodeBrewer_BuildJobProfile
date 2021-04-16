@@ -8,12 +8,23 @@
 import UIKit
 
 class ResumeEducationViewController: UIViewController {
+    
+    var education:[ResumeEducation] = [ResumeEducation(name: "", major: "", startYear: "", endYear: "")]
+        
+        @IBOutlet weak var educationTableView: UITableView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+                educationTableView.dataSource = self
     }
+    
+    @IBAction func addEducationClicked(_ sender: Any) {
+            education.append(ResumeEducation(name: "", major: "", startYear: "", endYear: ""))
+            educationTableView.reloadData()
+        }
     
 
     /*
@@ -26,4 +37,21 @@ class ResumeEducationViewController: UIViewController {
     }
     */
 
+}
+
+extension ResumeEducationViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return education.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let tbcell = tableView.dequeueReusableCell(withIdentifier: "EducationTableViewCell", for: indexPath) as! EducationTableViewCell
+        
+        let resumeEducation: ResumeEducation = education[indexPath.row]
+        tbcell.initCell(education:resumeEducation)
+        
+        return tbcell
+    }
+    
+    
 }
