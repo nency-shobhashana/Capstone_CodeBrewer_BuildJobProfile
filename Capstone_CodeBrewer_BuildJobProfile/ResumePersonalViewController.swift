@@ -26,15 +26,18 @@ class ResumePersonalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // load data from core data to UI component
         firstNameTF.text = resumeData.firstName ?? ""
         lastNameTF.text = resumeData.lastName ?? ""
         emailTF.text = resumeData.email ?? ""
         phoneTF.text = resumeData.phone ?? ""
         addressTF.text = resumeData.address ?? ""
-        // Do any additional setup after loading the view.
     }
     
+    // store user data in to core data component
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
         resumeData.firstName = firstNameTF.text ?? ""
         resumeData.lastName = lastNameTF.text ?? ""
         resumeData.email = emailTF.text ?? ""

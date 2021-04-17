@@ -23,8 +23,21 @@ class ResumeProfileLinkViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // load data from core data to UI component
+        portfolioTF.text = resumeData.portfolioLink ?? ""
+        linkedInTF.text = resumeData.linkedInLink ?? ""
+        gitHubTF.text = resumeData.githubLink ?? ""
+       
+    }
+    
+    // store user data in to core data component
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        resumeData.portfolioLink = portfolioTF.text ?? ""
+        resumeData.linkedInLink = linkedInTF.text ?? ""
+        resumeData.githubLink = gitHubTF.text ?? ""
     }
     
 
