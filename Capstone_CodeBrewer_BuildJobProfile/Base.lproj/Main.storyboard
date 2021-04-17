@@ -345,6 +345,9 @@
                                         <state key="normal" title="skills">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="resumeSkilsClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="s85-m0-USd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1082,7 +1085,7 @@
         <!--Resume Skils View Controller-->
         <scene sceneID="P1i-az-ekY">
             <objects>
-                <viewController id="yzx-Vt-p3x" customClass="ResumeSkilsViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResumeSkilsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yzx-Vt-p3x" customClass="ResumeSkilsViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pRc-SQ-ePQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1093,48 +1096,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sth-9V-ZW6">
-                                <rect key="frame" x="4" y="61" width="367" height="606"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXL-c0-7jn">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z8u-HG-NEG" customClass="MDCChipFieldTextField">
-                                                <rect key="frame" x="24" y="24" width="327" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="Z8u-HG-NEG" firstAttribute="top" secondItem="LXL-c0-7jn" secondAttribute="top" constant="24" id="0yU-Uo-psP"/>
-                                            <constraint firstAttribute="trailing" secondItem="Z8u-HG-NEG" secondAttribute="trailing" constant="24" id="Woc-lj-I90"/>
-                                            <constraint firstItem="Z8u-HG-NEG" firstAttribute="leading" secondItem="LXL-c0-7jn" secondAttribute="leading" constant="24" id="bfW-MB-JuO"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfh-bo-L1O">
+                                <rect key="frame" x="24" y="41" width="327" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="LXL-c0-7jn" secondAttribute="bottom" id="0su-f7-G31"/>
-                                    <constraint firstItem="LXL-c0-7jn" firstAttribute="leading" secondItem="Sth-9V-ZW6" secondAttribute="leading" id="8fi-m1-EwM"/>
-                                    <constraint firstItem="LXL-c0-7jn" firstAttribute="top" secondItem="Sth-9V-ZW6" secondAttribute="top" id="PRM-P5-oSw"/>
-                                    <constraint firstAttribute="trailing" secondItem="LXL-c0-7jn" secondAttribute="trailing" id="hxd-4s-TaB"/>
+                                    <constraint firstAttribute="height" constant="150" id="eoq-S7-YVg"/>
                                 </constraints>
-                            </scrollView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pyh-1z-MsA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Sth-9V-ZW6" secondAttribute="trailing" constant="4" id="6Hl-5a-hPk"/>
-                            <constraint firstItem="Sth-9V-ZW6" firstAttribute="top" secondItem="6JG-Ei-IHE" secondAttribute="bottom" constant="20" id="7nY-gS-QO3"/>
-                            <constraint firstItem="Sth-9V-ZW6" firstAttribute="leading" secondItem="pRc-SQ-ePQ" secondAttribute="leading" constant="4" id="BtB-aM-Eby"/>
-                            <constraint firstItem="LXL-c0-7jn" firstAttribute="width" secondItem="pRc-SQ-ePQ" secondAttribute="width" id="TU1-VN-4xj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6JG-Ei-IHE" secondAttribute="trailing" constant="16" id="W4k-tx-mDq"/>
                             <constraint firstItem="6JG-Ei-IHE" firstAttribute="leading" secondItem="pRc-SQ-ePQ" secondAttribute="leadingMargin" id="YxE-hn-yZd"/>
-                            <constraint firstItem="LXL-c0-7jn" firstAttribute="height" secondItem="pRc-SQ-ePQ" secondAttribute="height" priority="250" id="Zen-Fg-iDL"/>
+                            <constraint firstItem="tfh-bo-L1O" firstAttribute="top" secondItem="6JG-Ei-IHE" secondAttribute="bottom" id="ZLR-Gd-hS6"/>
+                            <constraint firstItem="pyh-1z-MsA" firstAttribute="trailing" secondItem="tfh-bo-L1O" secondAttribute="trailing" constant="24" id="al3-Qm-N3o"/>
+                            <constraint firstItem="tfh-bo-L1O" firstAttribute="leading" secondItem="pyh-1z-MsA" secondAttribute="leading" constant="24" id="mnH-6X-kVe"/>
                             <constraint firstItem="6JG-Ei-IHE" firstAttribute="top" secondItem="pRc-SQ-ePQ" secondAttribute="top" constant="20" symbolic="YES" id="u8W-aW-1F0"/>
-                            <constraint firstAttribute="bottom" secondItem="Sth-9V-ZW6" secondAttribute="bottom" id="yud-bg-Cmm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chipFieldView" destination="tfh-bo-L1O" id="tm7-Ix-3ot"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPs-0N-PBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1218,7 +1201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mp9-p2-dhe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6949.6000000000004" y="-582.45877061469275"/>
+            <point key="canvasLocation" x="3532" y="119"/>
         </scene>
         <!--Resume Save Download View Controller-->
         <scene sceneID="Lpe-To-RUa">
@@ -1271,7 +1254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDb-sU-rg5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7641" y="-582"/>
+            <point key="canvasLocation" x="4223" y="119"/>
         </scene>
     </scenes>
     <resources>

@@ -69,4 +69,14 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
         bottomSheet?.delegate = self
     }
     
+    // MARK: - Resume Skills
+        @IBAction func resumeSkilsClicked(_ sender: Any) {
+            bottomSheet?.dismiss(animated: true, completion: nil)
+            let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeSkilsViewController") as! ResumeSkilsViewController
+            bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
+            present(bottomSheet!,animated: true, completion: nil)
+            bottomSheet?.delegate = self
+        }
+
+    
 }

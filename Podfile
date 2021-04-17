@@ -26,5 +26,6 @@ pod 'MaterialComponents/Cards'
 pod 'MaterialComponents/Cards+Theming'
 
 pod 'MaterialComponents/Chips'
+pod 'MaterialComponents/Chips+Theming'
 
 end
