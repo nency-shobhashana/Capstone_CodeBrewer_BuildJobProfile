@@ -84,5 +84,8 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
             bottomSheet?.delegate = self
         }
 
+    @IBAction func nextClicked(_ sender: Any) {
+        performSegue(withIdentifier: "ResumeTemplateChoose", sender: self)
+    }
     
 }

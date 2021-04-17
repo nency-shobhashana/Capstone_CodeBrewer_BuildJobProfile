@@ -25,5 +25,10 @@ class ResumeChooseTemplateViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
+    @IBAction func previewClicked(_ sender: Any) {
+        performSegue(withIdentifier: "ResumePreview", sender: self)
+    }
+    
 }

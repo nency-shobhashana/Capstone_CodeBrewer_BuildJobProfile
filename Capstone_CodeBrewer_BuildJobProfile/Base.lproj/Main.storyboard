@@ -360,6 +360,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="HUa-MK-Fiv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9D6-e2-Gfu">
                                 <rect key="frame" x="24" y="68" width="327" height="41"/>
@@ -383,10 +386,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oaF-1u-8tc"/>
+                    <connections>
+                        <segue destination="jv0-aY-PCB" kind="show" identifier="ResumeTemplateChoose" id="dFi-DE-pP9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avJ-0d-5KH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2840.8000000000002" y="119.1904047976012"/>
+            <point key="canvasLocation" x="2841" y="118"/>
         </scene>
         <!--Subscription View Controller-->
         <scene sceneID="IHJ-Oz-iPJ">
@@ -1221,13 +1227,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Template" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOR-Vp-mNo">
-                                <rect key="frame" x="24" y="24" width="327" height="21"/>
+                                <rect key="frame" x="24" y="68" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaX-AP-2fc">
-                                <rect key="frame" x="0.0" y="69" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="113" width="375" height="554"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ymz-vt-LSm">
                                         <rect key="frame" x="24" y="24" width="327" height="466"/>
@@ -1270,6 +1276,9 @@
                                 <state key="normal" title="Preview">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="previewClicked:" destination="jv0-aY-PCB" eventType="touchUpInside" id="lb2-RB-fuj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vjo-6F-3Bk"/>
@@ -1287,6 +1296,10 @@
                             <constraint firstItem="Vjo-6F-3Bk" firstAttribute="trailing" secondItem="iaX-AP-2fc" secondAttribute="trailing" id="yuc-ir-gmu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Cn3-7E-PRu"/>
+                    <connections>
+                        <segue destination="krG-ec-wzO" kind="show" identifier="ResumePreview" id="M2b-dT-n2p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mp9-p2-dhe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1301,7 +1314,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iix-uh-rbv">
-                                <rect key="frame" x="24" y="24" width="327" height="471"/>
+                                <rect key="frame" x="24" y="68" width="327" height="427"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-rs-nbn">
@@ -1340,6 +1353,7 @@
                             <constraint firstItem="Ldx-rs-nbn" firstAttribute="top" secondItem="Z1p-wi-iQQ" secondAttribute="bottom" constant="24" id="yKM-fp-NB9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Oha-te-OrI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDb-sU-rg5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
