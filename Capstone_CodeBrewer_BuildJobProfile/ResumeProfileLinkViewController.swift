@@ -28,7 +28,6 @@ class ResumeProfileLinkViewController: UIViewController {
         portfolioTF.text = resumeData.portfolioLink ?? ""
         linkedInTF.text = resumeData.linkedInLink ?? ""
         gitHubTF.text = resumeData.githubLink ?? ""
-       
     }
     
     // store user data in to core data component
