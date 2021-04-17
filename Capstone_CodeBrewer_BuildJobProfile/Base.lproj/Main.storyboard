@@ -287,7 +287,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rfo-GU-HtH">
-                                <rect key="frame" x="24" y="124" width="327" height="298"/>
+                                <rect key="frame" x="24" y="133" width="327" height="298"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Te-NE-dij">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="33"/>
@@ -358,16 +358,25 @@
                                     <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9D6-e2-Gfu">
+                                <rect key="frame" x="24" y="68" width="327" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gEU-oX-aCm"/>
                         <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gEU-oX-aCm" firstAttribute="trailing" secondItem="9D6-e2-Gfu" secondAttribute="trailing" constant="24" id="2fY-ad-GKx"/>
                             <constraint firstItem="gEU-oX-aCm" firstAttribute="trailing" secondItem="HQe-u7-yDp" secondAttribute="trailing" constant="24" id="6Tr-0u-4Ys"/>
                             <constraint firstItem="rfo-GU-HtH" firstAttribute="leading" secondItem="gEU-oX-aCm" secondAttribute="leading" constant="24" id="7Xf-oT-S19"/>
                             <constraint firstItem="gEU-oX-aCm" firstAttribute="trailing" secondItem="rfo-GU-HtH" secondAttribute="trailing" constant="24" id="9bw-Ki-J64"/>
                             <constraint firstItem="gEU-oX-aCm" firstAttribute="bottom" secondItem="HQe-u7-yDp" secondAttribute="bottom" constant="24" id="Ctf-9t-2Zo"/>
-                            <constraint firstItem="rfo-GU-HtH" firstAttribute="top" secondItem="gEU-oX-aCm" secondAttribute="top" constant="80" id="bp4-pM-0Xb"/>
+                            <constraint firstItem="rfo-GU-HtH" firstAttribute="top" secondItem="9D6-e2-Gfu" secondAttribute="bottom" constant="24" id="JOM-Rm-g5A"/>
+                            <constraint firstItem="9D6-e2-Gfu" firstAttribute="top" secondItem="gEU-oX-aCm" secondAttribute="top" constant="24" id="eqs-dp-fbX"/>
                             <constraint firstItem="HQe-u7-yDp" firstAttribute="leading" secondItem="gEU-oX-aCm" secondAttribute="leading" constant="24" id="kYg-cb-VbM"/>
+                            <constraint firstItem="9D6-e2-Gfu" firstAttribute="leading" secondItem="gEU-oX-aCm" secondAttribute="leading" constant="24" id="qKW-Km-mY5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oaF-1u-8tc"/>
@@ -438,6 +447,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfp-yN-zVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2840.8000000000002" y="809.14542728635683"/>
+        </scene>
+        <!--Cover Letter Detail View Controller-->
+        <scene sceneID="QLz-6Z-zSY">
+            <objects>
+                <viewController id="wjq-Rg-rgW" customClass="CoverLetterDetailViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vva-hB-xO4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap4-Ky-1bz">
+                                <rect key="frame" x="24" y="593" width="327" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="44W-2L-rxZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="7sh-e9-9hU"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cover Letter Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caT-ND-Jcm">
+                                <rect key="frame" x="24" y="24" width="327" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rxH-G2-Tzx">
+                                <rect key="frame" x="24" y="89" width="327" height="298"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUT-eZ-8FH">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Personal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iV9-R4-cTr">
+                                        <rect key="frame" x="0.0" y="53" width="327" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Profile Links">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaM-y1-YNT" userLabel="Proffesinal Summary">
+                                        <rect key="frame" x="0.0" y="106" width="327" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Proffesinal Summary">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4i-Az-I96">
+                                        <rect key="frame" x="0.0" y="159" width="327" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Education">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMi-eg-PQA">
+                                        <rect key="frame" x="0.0" y="212" width="327" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Experince">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAC-LV-k3l">
+                                        <rect key="frame" x="0.0" y="265" width="327" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="skills">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LMf-ma-Jra"/>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LMf-ma-Jra" firstAttribute="bottom" secondItem="Ap4-Ky-1bz" secondAttribute="bottom" constant="24" id="0yW-fX-XmP"/>
+                            <constraint firstItem="caT-ND-Jcm" firstAttribute="top" secondItem="Vva-hB-xO4" secondAttribute="top" constant="24" id="3h2-Gc-Zff"/>
+                            <constraint firstItem="Ap4-Ky-1bz" firstAttribute="leading" secondItem="LMf-ma-Jra" secondAttribute="leading" constant="24" id="4QT-lJ-ppE"/>
+                            <constraint firstItem="rxH-G2-Tzx" firstAttribute="top" secondItem="caT-ND-Jcm" secondAttribute="bottom" constant="24" id="Sv4-kE-Ei9"/>
+                            <constraint firstAttribute="trailing" secondItem="caT-ND-Jcm" secondAttribute="trailing" constant="24" id="aKc-Em-hTq"/>
+                            <constraint firstItem="caT-ND-Jcm" firstAttribute="leading" secondItem="Vva-hB-xO4" secondAttribute="leading" constant="24" id="i3T-qR-01R"/>
+                            <constraint firstItem="LMf-ma-Jra" firstAttribute="trailing" secondItem="rxH-G2-Tzx" secondAttribute="trailing" constant="24" id="o1t-c5-b6b"/>
+                            <constraint firstItem="LMf-ma-Jra" firstAttribute="trailing" secondItem="Ap4-Ky-1bz" secondAttribute="trailing" constant="24" id="qNs-Ip-0e5"/>
+                            <constraint firstItem="rxH-G2-Tzx" firstAttribute="leading" secondItem="LMf-ma-Jra" secondAttribute="leading" constant="24" id="ydh-mb-kcK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GaL-5E-SpC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3609" y="809"/>
         </scene>
         <!--Resume Personal View Controller-->
         <scene sceneID="fTV-Qi-8iT">

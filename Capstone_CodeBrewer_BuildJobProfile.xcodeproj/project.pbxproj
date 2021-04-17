@@ -30,6 +30,7 @@
 		3D7CE0D5262A86D700DE8B30 /* ResumeSaveDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CE0D4262A86D700DE8B30 /* ResumeSaveDownloadViewController.swift */; };
 		3D7CE0D8262A898500DE8B30 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CE0D7262A898500DE8B30 /* SubscriptionViewController.swift */; };
 		3D7CE0DB262A89C000DE8B30 /* SubscriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CE0DA262A89C000DE8B30 /* SubscriptionCollectionViewCell.swift */; };
+		3D7CE0DE262A9A9B00DE8B30 /* CoverLetterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CE0DD262A9A9B00DE8B30 /* CoverLetterDetailViewController.swift */; };
 		8CC3786EEB7842B015C2AD2C /* Pods_Capstone_CodeBrewer_BuildJobProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280BF69109C912B97AA30C86 /* Pods_Capstone_CodeBrewer_BuildJobProfile.framework */; };
 		C8452E822628ADE700DBD578 /* ResumePersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8452E812628ADE700DBD578 /* ResumePersonalViewController.swift */; };
 		C86710DF262761E90071B54C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86710DE262761E90071B54C /* DashboardViewController.swift */; };
@@ -63,6 +64,7 @@
 		3D7CE0D4262A86D700DE8B30 /* ResumeSaveDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeSaveDownloadViewController.swift; sourceTree = "<group>"; };
 		3D7CE0D7262A898500DE8B30 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		3D7CE0DA262A89C000DE8B30 /* SubscriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D7CE0DD262A9A9B00DE8B30 /* CoverLetterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverLetterDetailViewController.swift; sourceTree = "<group>"; };
 		AB7269D0D3CC20860A0456B4 /* Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig"; path = "Target Support Files/Pods-Capstone_CodeBrewer_BuildJobProfile/Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig"; sourceTree = "<group>"; };
 		C8452E812628ADE700DBD578 /* ResumePersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumePersonalViewController.swift; sourceTree = "<group>"; };
 		C86710DE262761E90071B54C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				3D7CE0D4262A86D700DE8B30 /* ResumeSaveDownloadViewController.swift */,
 				3D7CE0D7262A898500DE8B30 /* SubscriptionViewController.swift */,
 				3D7CE0DA262A89C000DE8B30 /* SubscriptionCollectionViewCell.swift */,
+				3D7CE0DD262A9A9B00DE8B30 /* CoverLetterDetailViewController.swift */,
 			);
 			path = Capstone_CodeBrewer_BuildJobProfile;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D225FDF2629EB7000CCD3F4 /* ResumeSkilsViewController.swift in Sources */,
+				3D7CE0DE262A9A9B00DE8B30 /* CoverLetterDetailViewController.swift in Sources */,
 				39E886082624CF6A00FF10BC /* ViewController.swift in Sources */,
 				3D7CE0CF262A807D00DE8B30 /* ResumeChooseTemplateCollectionViewCell.swift in Sources */,
 				3D2137AA2627C2C000B5E12F /* ResumeCollectionViewCell.swift in Sources */,
