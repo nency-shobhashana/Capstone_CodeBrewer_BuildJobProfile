@@ -13,6 +13,8 @@ import MaterialComponents.MaterialTextControls_OutlinedTextFieldsTheming
 
 class ResumePersonalViewController: UIViewController {
     
+    weak var resumeDetailVC: ResumeDetailViewController!
+    
     @IBOutlet weak var firstNameTF: MDCOutlinedTextField!
     @IBOutlet weak var lastNameTF: MDCOutlinedTextField!
     @IBOutlet weak var emailTF: MDCOutlinedTextField!
@@ -60,6 +62,9 @@ class ResumePersonalViewController: UIViewController {
         addressTF.sizeToFit()
     }
 
+    @IBAction func nextClicked(_ sender: Any) {
+        resumeDetailVC.profileLinksClicked(sender)
+    }
     
     /*
     // MARK: - Navigation

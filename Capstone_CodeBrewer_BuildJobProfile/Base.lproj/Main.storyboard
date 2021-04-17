@@ -605,6 +605,9 @@
                                                 <state key="normal" title="Next">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nextClicked:" destination="gKw-Ic-PRV" eventType="touchUpInside" id="4rf-eL-chk"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -723,6 +726,9 @@
                                         <state key="normal" title="Next">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="nextClicked:" destination="Cxj-Gy-lJP" eventType="touchUpInside" id="F9f-sb-2Td"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -794,6 +800,9 @@
                                                 <state key="normal" title="Next">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nextClicked:" destination="434-vU-PRW" eventType="touchUpInside" id="j0T-Or-kdC"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TkL-Vk-2n4" customClass="MDCOutlinedTextArea">
                                                 <rect key="frame" x="24" y="24" width="327" height="150"/>
@@ -886,6 +895,33 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="271" estimatedRowHeight="271" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r8G-Ld-QYz">
                                 <rect key="frame" x="0.0" y="64.5" width="375" height="602.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Eh7-6D-D6Y">
+                                    <rect key="frame" x="0.0" y="331" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFz-sf-tEM">
+                                            <rect key="frame" x="24" y="0.0" width="327" height="44"/>
+                                            <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="BcW-6x-OSZ"/>
+                                            </constraints>
+                                            <state key="normal" title="Next">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="nextClicked:" destination="434-vU-PRW" eventType="touchUpInside" id="cPF-GC-MOy"/>
+                                                <action selector="nextClicked:" destination="YjJ-6G-7at" eventType="touchUpInside" id="ksr-S5-fhU"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="jFz-sf-tEM" firstAttribute="leading" secondItem="Eh7-6D-D6Y" secondAttribute="leading" constant="24" id="BtH-YN-a02"/>
+                                        <constraint firstItem="jFz-sf-tEM" firstAttribute="top" secondItem="Eh7-6D-D6Y" secondAttribute="top" id="TBw-IY-54D"/>
+                                        <constraint firstAttribute="trailing" secondItem="jFz-sf-tEM" secondAttribute="trailing" constant="24" id="TOh-dt-NPO"/>
+                                        <constraint firstAttribute="bottom" secondItem="jFz-sf-tEM" secondAttribute="bottom" id="ndr-hg-Wgo"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EducationTableViewCell" rowHeight="275" id="qB9-Cc-TYW" customClass="EducationTableViewCell" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="275"/>
@@ -986,6 +1022,33 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="410" estimatedRowHeight="410" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-D6-cEP">
                                 <rect key="frame" x="0.0" y="64.5" width="375" height="602.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mMD-Ak-Zsg">
+                                    <rect key="frame" x="0.0" y="466" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ru-FY-bsP">
+                                            <rect key="frame" x="24" y="0.0" width="327" height="44"/>
+                                            <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="A1x-Dy-mnB"/>
+                                            </constraints>
+                                            <state key="normal" title="Next">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="nextClicked:" destination="434-vU-PRW" eventType="touchUpInside" id="P0e-ge-iq7"/>
+                                                <action selector="nextClicked:" destination="zQB-Qi-O7L" eventType="touchUpInside" id="e2c-8Y-bwo"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="1ru-FY-bsP" firstAttribute="top" secondItem="mMD-Ak-Zsg" secondAttribute="top" id="Fuc-KW-wgz"/>
+                                        <constraint firstAttribute="trailing" secondItem="1ru-FY-bsP" secondAttribute="trailing" constant="24" id="KK1-Jr-YgQ"/>
+                                        <constraint firstItem="1ru-FY-bsP" firstAttribute="leading" secondItem="mMD-Ak-Zsg" secondAttribute="leading" constant="24" id="vKU-0k-DLx"/>
+                                        <constraint firstAttribute="bottom" secondItem="1ru-FY-bsP" secondAttribute="bottom" id="waL-dJ-Bkf"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExperianceTableViewCell" id="ghH-0G-E6H" customClass="ExperianceTableViewCell" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="410"/>
@@ -1096,32 +1159,58 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfh-bo-L1O">
-                                <rect key="frame" x="24" y="41" width="327" height="150"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O07-EV-U9I">
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhG-ma-85d">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PII-tb-Jk8">
+                                        <rect key="frame" x="24" y="617" width="327" height="50"/>
+                                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ixz-MW-Q43"/>
+                                        </constraints>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextClicked:" destination="434-vU-PRW" eventType="touchUpInside" id="HcU-as-6ha"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="eoq-S7-YVg"/>
+                                    <constraint firstAttribute="trailing" secondItem="PII-tb-Jk8" secondAttribute="trailing" constant="24" id="9Om-NP-n4a"/>
+                                    <constraint firstItem="AhG-ma-85d" firstAttribute="leading" secondItem="O07-EV-U9I" secondAttribute="leading" id="PYK-Xf-3UX"/>
+                                    <constraint firstAttribute="trailing" secondItem="AhG-ma-85d" secondAttribute="trailing" id="VJp-Xn-kfC"/>
+                                    <constraint firstAttribute="bottom" secondItem="PII-tb-Jk8" secondAttribute="bottom" id="jn3-sq-PaC"/>
+                                    <constraint firstItem="PII-tb-Jk8" firstAttribute="leading" secondItem="O07-EV-U9I" secondAttribute="leading" constant="24" id="nIB-bL-5cp"/>
+                                    <constraint firstAttribute="bottom" secondItem="AhG-ma-85d" secondAttribute="bottom" id="tor-SW-z1K"/>
+                                    <constraint firstItem="AhG-ma-85d" firstAttribute="top" secondItem="O07-EV-U9I" secondAttribute="top" id="zDr-vX-UXF"/>
                                 </constraints>
-                            </view>
+                            </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="pyh-1z-MsA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="O07-EV-U9I" firstAttribute="top" secondItem="6JG-Ei-IHE" secondAttribute="bottom" constant="24" id="A0q-U2-dub"/>
+                            <constraint firstItem="AhG-ma-85d" firstAttribute="width" secondItem="pRc-SQ-ePQ" secondAttribute="width" id="Nbt-6p-P6W"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6JG-Ei-IHE" secondAttribute="trailing" constant="16" id="W4k-tx-mDq"/>
                             <constraint firstItem="6JG-Ei-IHE" firstAttribute="leading" secondItem="pRc-SQ-ePQ" secondAttribute="leadingMargin" id="YxE-hn-yZd"/>
-                            <constraint firstItem="tfh-bo-L1O" firstAttribute="top" secondItem="6JG-Ei-IHE" secondAttribute="bottom" id="ZLR-Gd-hS6"/>
-                            <constraint firstItem="pyh-1z-MsA" firstAttribute="trailing" secondItem="tfh-bo-L1O" secondAttribute="trailing" constant="24" id="al3-Qm-N3o"/>
-                            <constraint firstItem="tfh-bo-L1O" firstAttribute="leading" secondItem="pyh-1z-MsA" secondAttribute="leading" constant="24" id="mnH-6X-kVe"/>
+                            <constraint firstAttribute="trailing" secondItem="O07-EV-U9I" secondAttribute="trailing" id="heA-HQ-I4U"/>
+                            <constraint firstItem="AhG-ma-85d" firstAttribute="height" secondItem="pRc-SQ-ePQ" secondAttribute="height" priority="250" id="o66-za-vUJ"/>
+                            <constraint firstItem="O07-EV-U9I" firstAttribute="leading" secondItem="pRc-SQ-ePQ" secondAttribute="leading" id="q5o-pA-YaH"/>
                             <constraint firstItem="6JG-Ei-IHE" firstAttribute="top" secondItem="pRc-SQ-ePQ" secondAttribute="top" constant="20" symbolic="YES" id="u8W-aW-1F0"/>
+                            <constraint firstAttribute="bottom" secondItem="O07-EV-U9I" secondAttribute="bottom" id="xdv-A2-X10"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="chipFieldView" destination="tfh-bo-L1O" id="tm7-Ix-3ot"/>
+                        <outlet property="chipFieldView" destination="AhG-ma-85d" id="Qx4-Jo-79e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPs-0N-PBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6270" y="-582"/>
+            <point key="canvasLocation" x="6269.6000000000004" y="-582.45877061469275"/>
         </scene>
         <!--Resume Choose Template View Controller-->
         <scene sceneID="ysj-y9-8VW">

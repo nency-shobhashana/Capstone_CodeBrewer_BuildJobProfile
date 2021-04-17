@@ -24,6 +24,11 @@ class ResumeExperianceViewController: UIViewController {
         experince.append(ResumeExperince(name: "", role: "", startYear: "", endYear: ""))
         experinceTableView.reloadData()
     }
+    
+    weak var resumeDetailVC: ResumeDetailViewController!
+    @IBAction func nextClicked(_ sender: Any) {
+        resumeDetailVC.resumeSkilsClicked(sender)
+    }
 
 }
 

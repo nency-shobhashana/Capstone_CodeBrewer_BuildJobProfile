@@ -51,6 +51,11 @@ class ResumeSkilsViewController: UIViewController, MDCChipFieldDelegate {
         let chipVerticalInset = min(0, chip.bounds.height - 48 / 2)
         chip.hitAreaInsets = UIEdgeInsets(top: chipVerticalInset, left: 0, bottom: chipVerticalInset, right: 0)
     }
+    
+    weak var resumeDetailVC: ResumeDetailViewController!
+    @IBAction func nextClicked(_ sender: Any) {
+        resumeDetailVC.bottomSheet?.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension ResumeSkilsViewController {

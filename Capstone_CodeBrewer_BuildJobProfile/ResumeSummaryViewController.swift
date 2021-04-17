@@ -13,6 +13,7 @@ import MaterialComponents.MaterialTextControls_OutlinedTextFieldsTheming
 
 class ResumeSummaryViewController: UIViewController {
     
+    
     @IBOutlet weak var summaryTF: MDCOutlinedTextArea!
 
     override func viewDidLoad() {
@@ -41,4 +42,8 @@ class ResumeSummaryViewController: UIViewController {
     }
     */
 
+    weak var resumeDetailVC: ResumeDetailViewController!
+    @IBAction func nextClicked(_ sender: Any) {
+        resumeDetailVC.resumeEducationClicked(sender)
+    }
 }

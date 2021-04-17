@@ -14,6 +14,8 @@ import MaterialComponents.MaterialBottomSheet
 
 class ResumeProfileLinkViewController: UIViewController {
     
+    weak var resumeDetailVC: ResumeDetailViewController!
+    
     @IBOutlet weak var portfolioTF: MDCOutlinedTextField!
     @IBOutlet weak var linkedInTF: MDCOutlinedTextField!
     @IBOutlet weak var gitHubTF: MDCOutlinedTextField!
@@ -46,5 +48,8 @@ class ResumeProfileLinkViewController: UIViewController {
         gitHubTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
         gitHubTF.sizeToFit()
         
+    }
+    @IBAction func nextClicked(_ sender: Any) {
+        resumeDetailVC.resumeSummaryClicked(sender)
     }
 }
