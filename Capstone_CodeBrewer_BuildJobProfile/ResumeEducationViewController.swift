@@ -10,7 +10,10 @@ import UIKit
 class ResumeEducationViewController: UIViewController {
     
     var education:[ResumeEducation] = [ResumeEducation(name: "", major: "", startYear: "", endYear: "")]
-        
+    
+    weak var resumeDetailVC: ResumeDetailViewController!
+    weak var resumeData: ResumeDetail!
+    
         @IBOutlet weak var educationTableView: UITableView!
 
 
@@ -36,7 +39,7 @@ class ResumeEducationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    weak var resumeDetailVC: ResumeDetailViewController!
+    
     @IBAction func nextClicked(_ sender: Any) {
         resumeDetailVC.resumeExperinceClicked(sender)
     }

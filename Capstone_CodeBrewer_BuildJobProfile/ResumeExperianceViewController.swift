@@ -11,7 +11,11 @@ class ResumeExperianceViewController: UIViewController {
     
     var experince:[ResumeExperince] = [ResumeExperince(name: "", role: "", startYear: "", endYear: "")]
 
+    weak var resumeDetailVC: ResumeDetailViewController!
+    weak var resumeData: ResumeDetail!
+    
     @IBOutlet weak var experinceTableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +29,7 @@ class ResumeExperianceViewController: UIViewController {
         experinceTableView.reloadData()
     }
     
-    weak var resumeDetailVC: ResumeDetailViewController!
+    
     @IBAction func nextClicked(_ sender: Any) {
         resumeDetailVC.resumeSkilsClicked(sender)
     }

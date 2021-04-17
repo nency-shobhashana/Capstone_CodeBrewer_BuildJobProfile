@@ -15,6 +15,9 @@ class ResumeSkilsViewController: UIViewController, MDCChipFieldDelegate {
     
     var containerScheming: MDCContainerScheming = MDCContainerScheme()
         
+    weak var resumeDetailVC: ResumeDetailViewController!
+    weak var resumeData: ResumeDetail!
+    
     @IBOutlet weak var chipFieldView: UIView!
 
 
@@ -52,7 +55,6 @@ class ResumeSkilsViewController: UIViewController, MDCChipFieldDelegate {
         chip.hitAreaInsets = UIEdgeInsets(top: chipVerticalInset, left: 0, bottom: chipVerticalInset, right: 0)
     }
     
-    weak var resumeDetailVC: ResumeDetailViewController!
     @IBAction func nextClicked(_ sender: Any) {
         resumeDetailVC.bottomSheet?.dismiss(animated: true, completion: nil)
     }

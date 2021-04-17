@@ -15,6 +15,7 @@ import MaterialComponents.MaterialBottomSheet
 class ResumeProfileLinkViewController: UIViewController {
     
     weak var resumeDetailVC: ResumeDetailViewController!
+    weak var resumeData: ResumeDetail!
     
     @IBOutlet weak var portfolioTF: MDCOutlinedTextField!
     @IBOutlet weak var linkedInTF: MDCOutlinedTextField!
