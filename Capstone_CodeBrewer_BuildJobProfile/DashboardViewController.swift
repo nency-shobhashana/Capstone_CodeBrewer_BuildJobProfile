@@ -20,6 +20,7 @@ class DashboardViewController: UIViewController {
         
     }
     
+    // segment of resume and cover letter
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             // Resume
@@ -30,6 +31,7 @@ class DashboardViewController: UIViewController {
     }
 }
 
+// Show resume List
 extension DashboardViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return resumes.count
