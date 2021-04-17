@@ -26,6 +26,7 @@
 		3D225FDC2629EB1900CCD3F4 /* ResumeExperianceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D225FDB2629EB1900CCD3F4 /* ResumeExperianceViewController.swift */; };
 		3D225FDF2629EB7000CCD3F4 /* ResumeSkilsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D225FDE2629EB7000CCD3F4 /* ResumeSkilsViewController.swift */; };
 		3D27E740262ADD6800BA26A8 /* resumeData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D27E73E262ADD6800BA26A8 /* resumeData.xcdatamodeld */; };
+		3D27E748262B0A8E00BA26A8 /* CustomPrintPageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27E747262B0A8E00BA26A8 /* CustomPrintPageRenderer.swift */; };
 		3D7CE0CF262A807D00DE8B30 /* ResumeChooseTemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CE0CE262A807D00DE8B30 /* ResumeChooseTemplateCollectionViewCell.swift */; };
 		3D7CE0D2262A856E00DE8B30 /* ResumeChooseTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CE0D1262A856E00DE8B30 /* ResumeChooseTemplateViewController.swift */; };
 		3D7CE0D5262A86D700DE8B30 /* ResumeSaveDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CE0D4262A86D700DE8B30 /* ResumeSaveDownloadViewController.swift */; };
@@ -61,6 +62,7 @@
 		3D225FDB2629EB1900CCD3F4 /* ResumeExperianceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeExperianceViewController.swift; sourceTree = "<group>"; };
 		3D225FDE2629EB7000CCD3F4 /* ResumeSkilsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeSkilsViewController.swift; sourceTree = "<group>"; };
 		3D27E73F262ADD6800BA26A8 /* resumeData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = resumeData.xcdatamodel; sourceTree = "<group>"; };
+		3D27E747262B0A8E00BA26A8 /* CustomPrintPageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPrintPageRenderer.swift; sourceTree = "<group>"; };
 		3D7CE0CE262A807D00DE8B30 /* ResumeChooseTemplateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeChooseTemplateCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D7CE0D1262A856E00DE8B30 /* ResumeChooseTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeChooseTemplateViewController.swift; sourceTree = "<group>"; };
 		3D7CE0D4262A86D700DE8B30 /* ResumeSaveDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeSaveDownloadViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				3D7CE0D7262A898500DE8B30 /* SubscriptionViewController.swift */,
 				3D7CE0DA262A89C000DE8B30 /* SubscriptionCollectionViewCell.swift */,
 				3D7CE0DD262A9A9B00DE8B30 /* CoverLetterDetailViewController.swift */,
+				3D27E747262B0A8E00BA26A8 /* CustomPrintPageRenderer.swift */,
 			);
 			path = Capstone_CodeBrewer_BuildJobProfile;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				3D7CE0DE262A9A9B00DE8B30 /* CoverLetterDetailViewController.swift in Sources */,
 				39E886082624CF6A00FF10BC /* ViewController.swift in Sources */,
 				3D7CE0CF262A807D00DE8B30 /* ResumeChooseTemplateCollectionViewCell.swift in Sources */,
+				3D27E748262B0A8E00BA26A8 /* CustomPrintPageRenderer.swift in Sources */,
 				3D2137AA2627C2C000B5E12F /* ResumeCollectionViewCell.swift in Sources */,
 				3D27E740262ADD6800BA26A8 /* resumeData.xcdatamodeld in Sources */,
 				3D225FD32629DF5000CCD3F4 /* ResumeEducationViewController.swift in Sources */,

@@ -1197,6 +1197,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="n50-vK-bkh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="O07-EV-U9I" firstAttribute="top" secondItem="6JG-Ei-IHE" secondAttribute="bottom" constant="24" id="A0q-U2-dub"/>
@@ -1313,10 +1314,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iix-uh-rbv">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6WF-St-qrK">
                                 <rect key="frame" x="24" y="68" width="327" height="427"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-rs-nbn">
                                 <rect key="frame" x="24" y="593" width="327" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1326,6 +1331,9 @@
                                 <state key="normal" title="Download">
                                     <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="downloadClicked:" destination="krG-ec-wzO" eventType="touchUpInside" id="BO8-dN-cLr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1p-wi-iQQ">
                                 <rect key="frame" x="24" y="519" width="327" height="50"/>
@@ -1336,24 +1344,30 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveClicked:" destination="krG-ec-wzO" eventType="touchUpInside" id="baO-rx-yWs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OF2-Zj-pfi"/>
                         <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OF2-Zj-pfi" firstAttribute="trailing" secondItem="Z1p-wi-iQQ" secondAttribute="trailing" constant="24" id="2zG-mA-Mio"/>
+                            <constraint firstItem="6WF-St-qrK" firstAttribute="top" secondItem="OF2-Zj-pfi" secondAttribute="top" constant="24" id="7Or-jx-ZzC"/>
+                            <constraint firstItem="6WF-St-qrK" firstAttribute="leading" secondItem="OF2-Zj-pfi" secondAttribute="leading" constant="24" id="7fs-ci-R3y"/>
                             <constraint firstItem="Ldx-rs-nbn" firstAttribute="leading" secondItem="OF2-Zj-pfi" secondAttribute="leading" constant="24" id="9rZ-tV-Lfo"/>
-                            <constraint firstItem="Iix-uh-rbv" firstAttribute="top" secondItem="OF2-Zj-pfi" secondAttribute="top" constant="24" id="CZj-hd-cNx"/>
+                            <constraint firstItem="Z1p-wi-iQQ" firstAttribute="top" secondItem="6WF-St-qrK" secondAttribute="bottom" constant="24" id="BH2-xt-6wr"/>
                             <constraint firstItem="OF2-Zj-pfi" firstAttribute="bottom" secondItem="Ldx-rs-nbn" secondAttribute="bottom" constant="24" id="IRT-Nx-gra"/>
-                            <constraint firstItem="Z1p-wi-iQQ" firstAttribute="top" secondItem="Iix-uh-rbv" secondAttribute="bottom" constant="24" id="N8t-PT-0fZ"/>
-                            <constraint firstItem="Iix-uh-rbv" firstAttribute="leading" secondItem="OF2-Zj-pfi" secondAttribute="leading" constant="24" id="TXe-0z-Oj3"/>
-                            <constraint firstItem="OF2-Zj-pfi" firstAttribute="trailing" secondItem="Iix-uh-rbv" secondAttribute="trailing" constant="24" id="YOh-aZ-qMY"/>
+                            <constraint firstItem="OF2-Zj-pfi" firstAttribute="trailing" secondItem="6WF-St-qrK" secondAttribute="trailing" constant="24" id="QI5-IK-urJ"/>
                             <constraint firstItem="Z1p-wi-iQQ" firstAttribute="leading" secondItem="OF2-Zj-pfi" secondAttribute="leading" constant="24" id="buu-0B-73G"/>
                             <constraint firstItem="OF2-Zj-pfi" firstAttribute="trailing" secondItem="Ldx-rs-nbn" secondAttribute="trailing" constant="24" id="evY-Bu-X3e"/>
                             <constraint firstItem="Ldx-rs-nbn" firstAttribute="top" secondItem="Z1p-wi-iQQ" secondAttribute="bottom" constant="24" id="yKM-fp-NB9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Oha-te-OrI"/>
+                    <connections>
+                        <outlet property="webPreview" destination="6WF-St-qrK" id="pDD-bs-S6V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDb-sU-rg5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
