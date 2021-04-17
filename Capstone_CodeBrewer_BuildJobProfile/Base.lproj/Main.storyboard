@@ -245,12 +245,14 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyK-wb-ljo">
-                                <rect key="frame" x="337" y="44" width="30" height="30"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="349" y="46" width="18" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="plus" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="emb-B7-o7i" kind="show" id="uOd-xj-bMZ"/>
+                                    <segue destination="zEu-b8-ZNY" kind="presentation" identifier="choicePopup" modalPresentationStyle="overCurrentContext" id="sSe-g9-lVB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -272,6 +274,8 @@
                     <navigationItem key="navigationItem" id="0jF-GD-OmL"/>
                     <connections>
                         <outlet property="resumeCollectionView" destination="0HU-Ot-eEv" id="6Aw-Tg-gXp"/>
+                        <segue destination="emb-B7-o7i" kind="show" identifier="resumeBuilder" id="n5t-oB-477"/>
+                        <segue destination="wjq-Rg-rgW" kind="show" identifier="coverBuilder" id="P6v-a1-Vmr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGL-vh-hXD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -544,10 +548,83 @@
                             <constraint firstItem="rxH-G2-Tzx" firstAttribute="leading" secondItem="LMf-ma-Jra" secondAttribute="leading" constant="24" id="ydh-mb-kcK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jIK-90-dip"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GaL-5E-SpC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3609" y="809"/>
+        </scene>
+        <!--Add New Pop Uo View Controller-->
+        <scene sceneID="g4N-KD-PiI">
+            <objects>
+                <viewController id="zEu-b8-ZNY" customClass="AddNewPopUoViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bDv-Ah-76l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3T-lv-Nzx">
+                                <rect key="frame" x="82.5" y="269" width="210" height="129"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bi-5A-nZN" userLabel="close">
+                                        <rect key="frame" x="182" y="9" width="20" height="17.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="7Xt-FC-JHR"/>
+                                            <constraint firstAttribute="height" constant="20" id="7qq-EY-K6i"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="clear" catalog="system"/>
+                                        <connections>
+                                            <action selector="closeBtn:" destination="zEu-b8-ZNY" eventType="touchUpInside" id="SDL-hG-gSz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZs-fK-VOZ">
+                                        <rect key="frame" x="16" y="36" width="178" height="33"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Add New Resume">
+                                            <color key="titleColor" red="0.023529411760000001" green="0.3486832976" blue="0.71269983049999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newResumeClicked:" destination="zEu-b8-ZNY" eventType="touchUpInside" id="H7y-62-GMb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84t-SR-Git">
+                                        <rect key="frame" x="16" y="77" width="178" height="33"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Add New Cover Letter">
+                                            <color key="titleColor" red="0.023529411760000001" green="0.3486832976" blue="0.71269983049999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newCoverletterClicked:" destination="zEu-b8-ZNY" eventType="touchUpInside" id="SqV-be-S6g"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6bi-5A-nZN" secondAttribute="trailing" constant="8" id="FdO-vI-odu"/>
+                                    <constraint firstAttribute="trailing" secondItem="84t-SR-Git" secondAttribute="trailing" constant="16" id="LJz-ob-sCA"/>
+                                    <constraint firstItem="6bi-5A-nZN" firstAttribute="top" secondItem="Q3T-lv-Nzx" secondAttribute="top" constant="8" id="LLZ-Wm-T4E"/>
+                                    <constraint firstItem="AZs-fK-VOZ" firstAttribute="leading" secondItem="Q3T-lv-Nzx" secondAttribute="leading" constant="16" id="ccY-rE-pTe"/>
+                                    <constraint firstItem="84t-SR-Git" firstAttribute="top" secondItem="AZs-fK-VOZ" secondAttribute="bottom" constant="8" id="hMi-zK-ePm"/>
+                                    <constraint firstAttribute="trailing" secondItem="AZs-fK-VOZ" secondAttribute="trailing" constant="16" id="qUZ-SL-D9M"/>
+                                    <constraint firstItem="84t-SR-Git" firstAttribute="leading" secondItem="Q3T-lv-Nzx" secondAttribute="leading" constant="16" id="qbH-fT-NQ3"/>
+                                    <constraint firstItem="AZs-fK-VOZ" firstAttribute="top" secondItem="6bi-5A-nZN" secondAttribute="bottom" constant="8" id="yCa-eo-RAW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gij-Ur-iL9"/>
+                        <color key="backgroundColor" red="0.023529411764705882" green="0.3486832976" blue="0.71269983049999996" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q3T-lv-Nzx" firstAttribute="top" secondItem="Gij-Ur-iL9" secondAttribute="top" constant="269" id="By5-he-AOL"/>
+                            <constraint firstItem="Q3T-lv-Nzx" firstAttribute="centerY" secondItem="bDv-Ah-76l" secondAttribute="centerY" id="L5M-0j-C6R"/>
+                            <constraint firstItem="Q3T-lv-Nzx" firstAttribute="centerX" secondItem="bDv-Ah-76l" secondAttribute="centerX" id="Ob3-yz-5xL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeBtn" destination="6bi-5A-nZN" id="a9n-CF-aTV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPi-zU-d2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2058" y="-573"/>
         </scene>
         <!--Resume Personal View Controller-->
         <scene sceneID="fTV-Qi-8iT">
@@ -1377,6 +1454,7 @@
     <resources>
         <image name="app_logo" width="48" height="48"/>
         <image name="bio" width="50" height="50"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

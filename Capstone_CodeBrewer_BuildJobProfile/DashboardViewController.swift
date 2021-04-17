@@ -29,6 +29,21 @@ class DashboardViewController: UIViewController {
             // Cover Letter
         }
     }
+    
+    func openResumeBuilder(){
+        performSegue(withIdentifier: "resumeBuilder", sender: self)
+    }
+    
+    func openCoverBuilder(){
+        performSegue(withIdentifier: "coverBuilder", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "choicePopup"{
+            let choiceVC = segue.destination as! AddNewPopUoViewController
+            choiceVC.dashBoardVC = self
+        }
+    }
 }
 
 // Show resume List
