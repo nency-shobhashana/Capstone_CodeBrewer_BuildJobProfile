@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Eduacation" representedClassName="Eduacation" syncable="YES" codeGenerationType="class">
+        <attribute name="endYear" optional="YES" attributeType="String"/>
+        <attribute name="instituate" optional="YES" attributeType="String"/>
+        <attribute name="major" optional="YES" attributeType="String"/>
+        <attribute name="startYear" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Experiance" representedClassName="Experiance" syncable="YES" codeGenerationType="class">
+        <attribute name="company" optional="YES" attributeType="String"/>
+        <attribute name="designation" optional="YES" attributeType="String"/>
+        <attribute name="endYear" optional="YES" attributeType="String"/>
+        <attribute name="startYear" optional="YES" attributeType="String"/>
+        <attribute name="summary" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ResumeDetail" representedClassName="ResumeDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="githubLink" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="linkedInLink" optional="YES" attributeType="String"/>
+        <attribute name="otherLink" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="portfolioLink" optional="YES" attributeType="String"/>
+        <attribute name="preofessionalSummary" optional="YES" attributeType="String"/>
+        <attribute name="skils" optional="YES" attributeType="String"/>
+        <relationship name="education" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Eduacation"/>
+        <relationship name="experiance" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Experiance"/>
+    </entity>
+    <elements>
+        <element name="ResumeDetail" positionX="-275" positionY="-26" width="128" height="238"/>
+        <element name="Eduacation" positionX="-54" positionY="90" width="128" height="89"/>
+        <element name="Experiance" positionX="-49" positionY="281" width="128" height="104"/>
+    </elements>
+</model>
