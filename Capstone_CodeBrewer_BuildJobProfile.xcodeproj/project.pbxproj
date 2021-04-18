@@ -111,10 +111,10 @@
 				3D27E74A262B2C4C00BA26A8 /* AddNewPopUoViewController.swift */,
 				3D2137A92627C2C000B5E12F /* ResumeCollectionViewCell.swift */,
 				3DEEC622262C3754000D9D0B /* dashboard */,
-				3DEEC621262C372F000D9D0B /* coverLetter */,
+				3DEEC621262C372F000D9D0B /* coverletter */,
 				3DEEC620262C3703000D9D0B /* login */,
 				3DEEC61D262C36EE000D9D0B /* resume */,
-				3DEEC61C262C36D7000D9D0B /* storyBoard */,
+				3DEEC61C262C36D7000D9D0B /* storyboard */,
 				39E886032624CF6A00FF10BC /* AppDelegate.swift */,
 				39E886052624CF6A00FF10BC /* SceneDelegate.swift */,
 				39E8860C2624CF7000FF10BC /* Assets.xcassets */,
@@ -126,12 +126,12 @@
 			path = Capstone_CodeBrewer_BuildJobProfile;
 			sourceTree = "<group>";
 		};
-		3DEEC61C262C36D7000D9D0B /* storyBoard */ = {
+		3DEEC61C262C36D7000D9D0B /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				39E886092624CF6A00FF10BC /* Main.storyboard */,
 			);
-			path = storyBoard;
+			path = storyboard;
 			sourceTree = "<group>";
 		};
 		3DEEC61D262C36EE000D9D0B /* resume */ = {
@@ -162,7 +162,7 @@
 			path = login;
 			sourceTree = "<group>";
 		};
-		3DEEC621262C372F000D9D0B /* coverLetter */ = {
+		3DEEC621262C372F000D9D0B /* coverletter */ = {
 			isa = PBXGroup;
 			children = (
 				3D7CE0D7262A898500DE8B30 /* SubscriptionViewController.swift */,
@@ -170,7 +170,7 @@
 				3D7CE0DD262A9A9B00DE8B30 /* CoverLetterDetailViewController.swift */,
 				3D27E747262B0A8E00BA26A8 /* CustomPrintPageRenderer.swift */,
 			);
-			path = coverLetter;
+			path = coverletter;
 			sourceTree = "<group>";
 		};
 		3DEEC622262C3754000D9D0B /* dashboard */ = {

@@ -274,6 +274,7 @@
                     <navigationItem key="navigationItem" id="0jF-GD-OmL"/>
                     <connections>
                         <outlet property="resumeCollectionView" destination="0HU-Ot-eEv" id="6Aw-Tg-gXp"/>
+                        <outlet property="searchBar" destination="bXk-rZ-oZ5" id="5WB-ed-8Tt"/>
                         <segue destination="emb-B7-o7i" kind="show" identifier="resumeBuilder" id="n5t-oB-477"/>
                         <segue destination="wjq-Rg-rgW" kind="show" identifier="coverBuilder" id="P6v-a1-Vmr"/>
                     </connections>

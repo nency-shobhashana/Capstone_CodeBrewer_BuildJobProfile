@@ -15,7 +15,8 @@ class DashboardViewController: UIViewController {
     var resumeCollection: [Resume] = []
     var coverLetterCollection: [CoverLetter] = []
     var dashboardCollection: [DataCollection] = []
-
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resumeCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -26,6 +27,8 @@ class DashboardViewController: UIViewController {
         resumeCollectionView.dataSource = self
         resumeCollectionView.delegate = self
         resumeCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
+        searchBar.delegate = self
         
         getFirebaseData()
     }
@@ -128,4 +131,8 @@ extension DashboardViewController: UICollectionViewDelegate {
             performSegue(withIdentifier: "coverBuilder", sender: dashboardCollection[indexPath.row].title)
         }
     }
+}
+
+extension DashboardViewController: UISearchBarDelegate {
+    
 }
