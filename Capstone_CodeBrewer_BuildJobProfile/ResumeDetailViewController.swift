@@ -120,8 +120,18 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
         bottomSheet?.delegate = self
     }
     
+    // MARK: - choose template navigation
     @IBAction func nextClicked(_ sender: Any) {
-        performSegue(withIdentifier: "ResumeTemplateChoose", sender: self)
+        performSegue(withIdentifier: "ResumeTemplateChoose", sender: resumeTitle)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResumeTemplateChoose"{
+            let vc = (segue.destination as! ResumeChooseTemplateViewController)
+            vc.resumeTitle = self.resumeTitle
+            vc.resumeData = self.resumeData
+            
+        }
     }
 }
 

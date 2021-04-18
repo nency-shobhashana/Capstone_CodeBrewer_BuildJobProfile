@@ -8,5 +8,12 @@
 import UIKit
 
 class ResumeChooseTemplateCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var templateImageView: UIImageView!
+    @IBOutlet weak var templateName: UITextField!
+    
+    func setup(with data: ResumeTemplate) {
+        templateImageView.image = data.image
+        templateName.text = data.name
+    }
     
 }

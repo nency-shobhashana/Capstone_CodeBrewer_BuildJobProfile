@@ -12,11 +12,15 @@ class ResumeSaveDownloadViewController: UIViewController {
     
     @IBOutlet weak var webPreview: WKWebView!
     var HTMLContent: String!
-    var template: String = "template 1"
+    var templateIndex: Int = 0
+    var template: ResumeTemplate!
+    var resumeTitle: String? = nil
+    var resumeData: Dictionary<String, Any>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        template = resumeTemplate[templateIndex]
         // Do any additional setup after loading the view.
         createResumeAsHTML()
     }
@@ -29,7 +33,14 @@ class ResumeSaveDownloadViewController: UIViewController {
     }
     
     func renderResume() -> String! {
-        let HTMLContent = "<html><body><table><tr><td><table width=100%><tr><td align=center><h2>Nency Shobhashana</h2></td></tr><tr><td align=center>Web Developer</td></tr><tr><td align=center>shobhashananency@gmail.com</td></tr><tr><td align=center>+1 647 676 0708</td></tr><tr><td align=center>Brampton, ON, Canada</td></tr><tr><td>&nbsp;</td></tr></table></td></tr><tr><td><table width=100%><tr><td><h3><u>PROFESSIONAL SUMMARY</u></h3></td></tr><tr><td>Nency is a <b>sophomore</b> at <b>Lambton College</b> majoring in <b>Mobile application development</b> and has <b>3 years</b> of experience in <b>UI/UX development</b>. Committed to delivering high-level solutions that increase business and result in exceptional cost efficiencies and seeking an opportunity where she can apply herself to challenging opportunities in connecting business requirements with Emerging Technologie.</td></tr><tr><td>&nbsp;</td></tr></table></td></tr><tr><td><table width=100%><tr><td><h3><u>EDUCATION</u></h3></td></tr><tr><td><b>Mobile application Design and Development</b> Lambton College in Toronto, Toronto, ON, Canada</td></tr><tr><td align=right>[Sep 2020, May 2022]</td></tr><tr><td><b>Bachelor of Engineering in Information & Technology</b> Ganpat University, Gujarat, India</td></tr><tr><td align=right>[July 2012, Jun 2016]</td></tr><tr><td>&nbsp;</td></tr></table></td></tr><tr><td><table width=100%><tr><td><h3><u>KEY SKILLS</u></h3></td></tr><tr><td>Android, Java, Swift, iOs, Angularjs, Angular(5), typeScript, C/C++, VC++, Asp & Vb.net, PHP, Python, HTML(5), CSS(3), SASS/SCSS, Bootstrap, jQuery, JavaScript, WordPress theming, Drupal theming, PSD to HTML, Responsive design, XHTML, Matlab, Node.js, AJAX & JSON, MySQL, Oracle, MS Access, SQLite</td></tr><tr><td>&nbsp;</td></tr></table></td></tr><tr><td><table width=100%><tr><td><h3><u>PROFESSIONAL EXPERIENCE</u></h3></td></tr><tr><td><table width=100%><tr><td><b>Web Developer</b> at Parex Technologies, Ahmedabad</td></tr><tr><td>[April 2018, March 2019]</td></tr><tr><td><p>Joined as Web developer and worked in designing and developing a website with modern front-end Javascript frameworks like Angular 2+. Used Rest API to communicate with a backend server. Along with web designing in CMS like WordPress. Also created templates of high-quality user interfaces and visual designs prototype by using tools like Photoshop, Justinmind, and other Sketch libraries. Closely worked with clients, BA, and QA team in an Agile methodology.</p></td></tr><tr><td>&nbsp;</td></tr></table></td></tr><tr><td><table width=100%><tr><td><b>UI Developer</b> at Joykal Infotech, Ahmedabad</td></tr><tr><td>[Jan 2018 – Apr 2018]</td></tr><tr><td><p>Joined as a UI developer and here I mainly worked in creating web applications with new and modern market trend designs using HTML(5), CSS(3), SASS, Bootstrap, jQuery, Javascript, and Responsive design with more proficiency.</p></td></tr><tr><td>&nbsp;</td></tr></table></td></tr><tr><td><table width=100%><tr><td><b>UI Developer</b> at Addweb Solution Infotech, Ahmedabad</td></tr><tr><td>[July 2016 – Dec 2018]</td></tr><tr><td><p>Joined as a trainee UI/UX developer. I started working on UI designing from my very first project. During my employment, worked on various web projects created many pages mainly using HTML(5), CSS(3), Bootstrap, jQuery, Javascript, PSD to HTML, Gulp, Responsive design for all devices, and Drupal theming, various task managers like GIT, JIRA, FileZilla, Bitbucket.</p></td></tr><tr><td>&nbsp;</td></tr></table></td></tr></table></td></tr></table></body></html>"
+        var HTMLContent = template.content
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#FIRST_NAME", with: resumeData["firstName"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#LAST_NAME", with: resumeData["lastName"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#EMAIL", with: resumeData["email"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#NUMBER", with: resumeData["phone"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#ADDRESS", with: resumeData["address"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#PROFILE_LINK", with: resumeData["profileLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#LINKEDIN_LINK", with: resumeData["linkedInLink"] as? String ?? "")
         return HTMLContent
     }	
     
@@ -67,7 +78,7 @@ class ResumeSaveDownloadViewController: UIViewController {
             create: true
         )
         
-        let fileURL = folderURL.appendingPathComponent("\(template).pdf")
+        let fileURL = folderURL.appendingPathComponent("\(String(format: resumeTitle ?? "resume_\(templateIndex)" )).pdf")
         
         let pdfFilename = fileURL
         pdfData?.write(to: pdfFilename, atomically: true)
