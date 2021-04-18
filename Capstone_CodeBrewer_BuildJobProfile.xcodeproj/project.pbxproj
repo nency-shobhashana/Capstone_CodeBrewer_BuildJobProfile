@@ -18,6 +18,7 @@
 		3D131106262C4E0F00C065AF /* CoverLetterChooseTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D131105262C4E0F00C065AF /* CoverLetterChooseTemplateViewController.swift */; };
 		3D131109262C4E2600C065AF /* CoverLetterSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D131108262C4E2600C065AF /* CoverLetterSaveViewController.swift */; };
 		3D13110C262C4E5F00C065AF /* CoverLetterChooseTemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D13110B262C4E5F00C065AF /* CoverLetterChooseTemplateCollectionViewCell.swift */; };
+		3D131110262C816A00C065AF /* CoverLetterFieldFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D13110F262C816A00C065AF /* CoverLetterFieldFormViewController.swift */; };
 		3D154D6E2628BFFC00C40935 /* ResumeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D154D6D2628BFFC00C40935 /* ResumeDetailViewController.swift */; };
 		3D154DBA2628E53A00C40935 /* ResumeProfileLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D154DB92628E53A00C40935 /* ResumeProfileLinkViewController.swift */; };
 		3D2137AA2627C2C000B5E12F /* ResumeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2137A92627C2C000B5E12F /* ResumeCollectionViewCell.swift */; };
@@ -57,6 +58,7 @@
 		3D131105262C4E0F00C065AF /* CoverLetterChooseTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverLetterChooseTemplateViewController.swift; sourceTree = "<group>"; };
 		3D131108262C4E2600C065AF /* CoverLetterSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverLetterSaveViewController.swift; sourceTree = "<group>"; };
 		3D13110B262C4E5F00C065AF /* CoverLetterChooseTemplateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverLetterChooseTemplateCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D13110F262C816A00C065AF /* CoverLetterFieldFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverLetterFieldFormViewController.swift; sourceTree = "<group>"; };
 		3D154D6D2628BFFC00C40935 /* ResumeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeDetailViewController.swift; sourceTree = "<group>"; };
 		3D154DB92628E53A00C40935 /* ResumeProfileLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeProfileLinkViewController.swift; sourceTree = "<group>"; };
 		3D2137A92627C2C000B5E12F /* ResumeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				3D131105262C4E0F00C065AF /* CoverLetterChooseTemplateViewController.swift */,
 				3D13110B262C4E5F00C065AF /* CoverLetterChooseTemplateCollectionViewCell.swift */,
 				3D131108262C4E2600C065AF /* CoverLetterSaveViewController.swift */,
+				3D13110F262C816A00C065AF /* CoverLetterFieldFormViewController.swift */,
 			);
 			path = coverletter;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				39E886062624CF6A00FF10BC /* SceneDelegate.swift in Sources */,
 				3D154DBA2628E53A00C40935 /* ResumeProfileLinkViewController.swift in Sources */,
 				3D131109262C4E2600C065AF /* CoverLetterSaveViewController.swift in Sources */,
+				3D131110262C816A00C065AF /* CoverLetterFieldFormViewController.swift in Sources */,
 				3D7CE0D5262A86D700DE8B30 /* ResumeSaveDownloadViewController.swift in Sources */,
 				3D225FB72629D66900CCD3F4 /* ResumeSummaryViewController.swift in Sources */,
 			);

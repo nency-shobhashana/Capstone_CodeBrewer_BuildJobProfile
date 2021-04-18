@@ -545,145 +545,218 @@
             </objects>
             <point key="canvasLocation" x="3532" y="807"/>
         </scene>
-        <!--View Controller-->
+        <!--Cover Letter Field Form View Controller-->
         <scene sceneID="rmw-iC-v1q">
             <objects>
-                <viewController id="biF-sl-dWS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GA6-Cy-u2C">
+                <viewController storyboardIdentifier="CoverLetterFieldFormViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="biF-sl-dWS" customClass="CoverLetterFieldFormViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GA6-Cy-u2C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKY-8C-r81">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFM-Pq-BlF">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sow-Hf-VMe" customClass="MDCOutlinedTextField">
-                                        <rect key="frame" x="20" y="20" width="335" height="50"/>
-                                        <accessibility key="accessibilityConfiguration" label="Last Name"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="zwI-X0-FYD"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGC-O5-YRf" customClass="MDCOutlinedTextField">
-                                        <rect key="frame" x="20" y="86" width="335" height="50"/>
-                                        <accessibility key="accessibilityConfiguration" label="Last Name"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="mHS-7s-zFG"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Designation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fEi-S3-OIi" customClass="MDCOutlinedTextField">
-                                        <rect key="frame" x="20" y="152" width="335" height="50"/>
-                                        <accessibility key="accessibilityConfiguration" label="Last Name"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="WLN-R0-dQ1"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1H-dM-Ull">
-                                        <rect key="frame" x="20" y="594" width="335" height="50"/>
-                                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="6Kz-A6-0AV"/>
-                                        </constraints>
-                                        <state key="normal" title="Next">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="nextClicked:" destination="Cxj-Gy-lJP" eventType="touchUpInside" id="eWd-ay-RhK"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Profile Link" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fj8-d2-bWl" customClass="MDCOutlinedTextField">
-                                        <rect key="frame" x="24" y="218" width="327" height="50"/>
-                                        <accessibility key="accessibilityConfiguration" label="Last Name"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="AcF-Gy-wW5"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LinkedIn Link" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wwl-Ha-7Sv" customClass="MDCOutlinedTextField">
-                                        <rect key="frame" x="24" y="284" width="327" height="50"/>
-                                        <accessibility key="accessibilityConfiguration" label="Last Name"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="cox-Uc-N4g"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hh-2S-EiP" customClass="MDCOutlinedTextField">
-                                        <rect key="frame" x="24" y="350" width="327" height="50"/>
-                                        <accessibility key="accessibilityConfiguration" label="Last Name"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Jn5-1I-B4o"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wWf-2L-VMN" customClass="MDCOutlinedTextField">
-                                        <rect key="frame" x="24" y="416" width="327" height="50"/>
-                                        <accessibility key="accessibilityConfiguration" label="Last Name"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="vKw-gP-N12"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Employee Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJY-VD-HzR" customClass="MDCOutlinedTextField">
-                                        <rect key="frame" x="24" y="482" width="327" height="50"/>
-                                        <accessibility key="accessibilityConfiguration" label="Last Name"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Oqj-JN-AbL"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rgx-5m-Ekl">
+                                        <rect key="frame" x="24" y="0.0" width="327" height="1238"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UF5-AB-mKb" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="6lP-Vw-gW7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FUe-uQ-Hjc" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="66" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="M5C-fZ-fM1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Designation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wn-RE-g5j" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="132" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="wbi-6H-bYQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Profile Link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKh-8u-wQf" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="198" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="5hz-IX-PhA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LinkedIn Link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UjS-RE-wKc" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="264" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="cMX-CZ-HMN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBz-YK-8Ur" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="330" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="adU-xH-L5c"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zV-E8-NpE" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="396" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Tl1-2x-nu0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="scc-BU-D5w" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="462" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="FCK-dj-sBm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Employee Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lhx-fb-s51" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="528" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="a3q-Pi-zih"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Employeee Company NAme" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lcA-Yk-ay8" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="594" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="QI6-Ef-wqb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Employee company Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TEA-ne-2gm" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="660" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="T4H-V2-OfO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Employee E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m29-DE-0dw" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="726" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Wwj-To-GVD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Employee Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hwu-1Y-TsN" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="792" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="AoG-ks-Bdo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where you find Job post" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVp-gu-drw" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="858" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="IKC-4L-xHA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBa-FV-fgD" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="924" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="iTB-P2-zNq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Major" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVB-O0-xTO" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="990" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="PZd-dh-fEd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Experince Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7K-LG-fLE" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="1056" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="R6h-e8-TYM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Role or Experinced field" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V1s-Zd-eg7" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="0.0" y="1122" width="327" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Zzd-53-DWv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKs-j5-wNe">
+                                                <rect key="frame" x="0.0" y="1188" width="327" height="50"/>
+                                                <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="4Hu-nZ-oST"/>
+                                                </constraints>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nextClicked:" destination="434-vU-PRW" eventType="touchUpInside" id="0RC-t0-jlz"/>
+                                                    <action selector="nextClicked:" destination="zQB-Qi-O7L" eventType="touchUpInside" id="9TZ-ub-kmv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="wwl-Ha-7Sv" secondAttribute="trailing" constant="24" id="0AS-w0-s8A"/>
-                                    <constraint firstAttribute="trailing" secondItem="P1H-dM-Ull" secondAttribute="trailing" constant="20" id="0F0-CX-gPD"/>
-                                    <constraint firstItem="CGC-O5-YRf" firstAttribute="leading" secondItem="nKY-8C-r81" secondAttribute="leading" constant="20" id="14s-ph-yKl"/>
-                                    <constraint firstAttribute="trailing" secondItem="CGC-O5-YRf" secondAttribute="trailing" constant="20" id="3rv-2H-iBV"/>
-                                    <constraint firstItem="P1H-dM-Ull" firstAttribute="leading" secondItem="nKY-8C-r81" secondAttribute="leading" constant="20" id="6WR-Xr-Ypk"/>
-                                    <constraint firstItem="Fj8-d2-bWl" firstAttribute="leading" secondItem="nKY-8C-r81" secondAttribute="leading" constant="24" id="7n3-g0-KGh"/>
-                                    <constraint firstItem="5hh-2S-EiP" firstAttribute="leading" secondItem="nKY-8C-r81" secondAttribute="leading" constant="24" id="8ko-JS-Nh0"/>
-                                    <constraint firstAttribute="trailing" secondItem="Fj8-d2-bWl" secondAttribute="trailing" constant="24" id="ARB-5h-d0a"/>
-                                    <constraint firstItem="wWf-2L-VMN" firstAttribute="leading" secondItem="nKY-8C-r81" secondAttribute="leading" constant="24" id="B73-VY-1br"/>
-                                    <constraint firstItem="gJY-VD-HzR" firstAttribute="top" secondItem="wWf-2L-VMN" secondAttribute="bottom" constant="16" id="CTu-Yj-ZnB"/>
-                                    <constraint firstAttribute="trailing" secondItem="sow-Hf-VMe" secondAttribute="trailing" constant="20" id="DmX-we-A3x"/>
-                                    <constraint firstItem="wwl-Ha-7Sv" firstAttribute="leading" secondItem="nKY-8C-r81" secondAttribute="leading" constant="24" id="Eba-SB-Del"/>
-                                    <constraint firstAttribute="bottom" secondItem="P1H-dM-Ull" secondAttribute="bottom" constant="23" id="IIs-Px-SLP"/>
-                                    <constraint firstItem="wwl-Ha-7Sv" firstAttribute="top" secondItem="Fj8-d2-bWl" secondAttribute="bottom" constant="16" id="IT7-wt-SwP"/>
-                                    <constraint firstAttribute="trailing" secondItem="wWf-2L-VMN" secondAttribute="trailing" constant="24" id="KSf-Hr-qCM"/>
-                                    <constraint firstItem="gJY-VD-HzR" firstAttribute="leading" secondItem="nKY-8C-r81" secondAttribute="leading" constant="24" id="Vka-Fg-hv5"/>
-                                    <constraint firstAttribute="trailing" secondItem="5hh-2S-EiP" secondAttribute="trailing" constant="24" id="YWx-Hu-vjs"/>
-                                    <constraint firstAttribute="trailing" secondItem="fEi-S3-OIi" secondAttribute="trailing" constant="20" id="bsD-Am-VeF"/>
-                                    <constraint firstItem="CGC-O5-YRf" firstAttribute="top" secondItem="sow-Hf-VMe" secondAttribute="bottom" constant="16" id="dl0-79-Dwl"/>
-                                    <constraint firstItem="5hh-2S-EiP" firstAttribute="top" secondItem="wwl-Ha-7Sv" secondAttribute="bottom" constant="16" id="g0x-h1-Hrw"/>
-                                    <constraint firstItem="wWf-2L-VMN" firstAttribute="top" secondItem="5hh-2S-EiP" secondAttribute="bottom" constant="16" id="hgk-Ag-sde"/>
-                                    <constraint firstItem="Fj8-d2-bWl" firstAttribute="top" secondItem="fEi-S3-OIi" secondAttribute="bottom" constant="16" id="jQ0-eS-h9c"/>
-                                    <constraint firstItem="sow-Hf-VMe" firstAttribute="leading" secondItem="nKY-8C-r81" secondAttribute="leading" constant="20" id="jsH-sy-k9j"/>
-                                    <constraint firstAttribute="trailing" secondItem="gJY-VD-HzR" secondAttribute="trailing" constant="24" id="kAB-Rx-Q0o"/>
-                                    <constraint firstItem="sow-Hf-VMe" firstAttribute="centerX" secondItem="nKY-8C-r81" secondAttribute="centerX" id="m2z-Nc-3Dq"/>
-                                    <constraint firstItem="sow-Hf-VMe" firstAttribute="top" secondItem="nKY-8C-r81" secondAttribute="top" constant="20" id="nv5-kW-tJj"/>
-                                    <constraint firstItem="P1H-dM-Ull" firstAttribute="top" secondItem="nKY-8C-r81" secondAttribute="top" constant="594" id="p2K-HC-brt"/>
-                                    <constraint firstItem="fEi-S3-OIi" firstAttribute="leading" secondItem="nKY-8C-r81" secondAttribute="leading" constant="20" id="tNM-Gd-7xB"/>
-                                    <constraint firstItem="fEi-S3-OIi" firstAttribute="top" secondItem="CGC-O5-YRf" secondAttribute="bottom" constant="16" id="yVo-Ua-xAz"/>
+                                    <constraint firstAttribute="trailing" secondItem="rgx-5m-Ekl" secondAttribute="trailing" constant="24" id="44P-TB-84F"/>
+                                    <constraint firstItem="rgx-5m-Ekl" firstAttribute="top" secondItem="FFM-Pq-BlF" secondAttribute="top" id="DgO-1Q-ecW"/>
+                                    <constraint firstAttribute="bottom" secondItem="rgx-5m-Ekl" secondAttribute="bottom" id="EDo-Ze-VWZ"/>
+                                    <constraint firstItem="rgx-5m-Ekl" firstAttribute="width" secondItem="FFM-Pq-BlF" secondAttribute="width" constant="-48" id="cca-HT-NXs"/>
+                                    <constraint firstItem="rgx-5m-Ekl" firstAttribute="leading" secondItem="FFM-Pq-BlF" secondAttribute="leading" constant="24" id="h8v-kK-vKy"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="s98-eO-9H3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nKY-8C-r81" firstAttribute="leading" secondItem="s98-eO-9H3" secondAttribute="leading" id="0Yg-SX-zO2"/>
-                            <constraint firstItem="nKY-8C-r81" firstAttribute="bottom" secondItem="s98-eO-9H3" secondAttribute="bottom" id="1tO-Qb-Wba"/>
-                            <constraint firstItem="nKY-8C-r81" firstAttribute="top" secondItem="s98-eO-9H3" secondAttribute="top" id="5CJ-5f-q9c"/>
-                            <constraint firstAttribute="trailing" secondItem="nKY-8C-r81" secondAttribute="trailing" id="tjv-1S-mEQ"/>
+                            <constraint firstAttribute="bottom" secondItem="FFM-Pq-BlF" secondAttribute="bottom" id="8Rx-cf-3dl"/>
+                            <constraint firstItem="FFM-Pq-BlF" firstAttribute="top" secondItem="GA6-Cy-u2C" secondAttribute="top" id="FMH-MY-rOO"/>
+                            <constraint firstAttribute="trailing" secondItem="FFM-Pq-BlF" secondAttribute="trailing" id="KQX-Gx-FXq"/>
+                            <constraint firstItem="FFM-Pq-BlF" firstAttribute="leading" secondItem="GA6-Cy-u2C" secondAttribute="leading" id="k5K-dv-mUq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LinkedInLinkTF" destination="UjS-RE-wKc" id="Nc1-oj-7jc"/>
+                        <outlet property="addressTF" destination="scc-BU-D5w" id="isP-yc-vvy"/>
+                        <outlet property="collegeNameTF" destination="DBa-FV-fgD" id="fsq-Od-TdU"/>
+                        <outlet property="designationTF" destination="9wn-RE-g5j" id="cJ3-Rp-gJc"/>
+                        <outlet property="emailTF" destination="dBz-YK-8Ur" id="Mg3-xF-tRS"/>
+                        <outlet property="employerCompanyAddressNameTF" destination="TEA-ne-2gm" id="LzN-8C-XEl"/>
+                        <outlet property="employerCompanyNameTF" destination="lcA-Yk-ay8" id="C4L-4O-xy8"/>
+                        <outlet property="employerEmailTF" destination="m29-DE-0dw" id="y9K-ZG-RY4"/>
+                        <outlet property="employerJobPostNameTF" destination="zVp-gu-drw" id="Z4e-AZ-Yp8"/>
+                        <outlet property="employerNameTF" destination="lhx-fb-s51" id="4w4-Ua-Nux"/>
+                        <outlet property="employerNumberNameTF" destination="hwu-1Y-TsN" id="iCT-OC-ZOC"/>
+                        <outlet property="expYearTF" destination="k7K-LG-fLE" id="dL8-Gw-2e7"/>
+                        <outlet property="firstNameTF" destination="UF5-AB-mKb" id="zcU-9z-Gfk"/>
+                        <outlet property="lastNameTF" destination="FUe-uQ-Hjc" id="YXa-bQ-Pts"/>
+                        <outlet property="majorTF" destination="QVB-O0-xTO" id="IcE-xP-f0n"/>
+                        <outlet property="phoneTF" destination="dBz-YK-8Ur" id="D03-T9-ekl"/>
+                        <outlet property="profileLinkTF" destination="aKh-8u-wQf" id="PFM-ym-oWb"/>
+                        <outlet property="roleTF" destination="V1s-Zd-eg7" id="oQZ-b5-6Fh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSl-hY-FvK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
