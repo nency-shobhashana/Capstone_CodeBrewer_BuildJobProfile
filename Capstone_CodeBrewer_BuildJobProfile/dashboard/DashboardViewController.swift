@@ -93,11 +93,19 @@ class DashboardViewController: UIViewController {
     }
     
     func openResumeBuilder(){
-        performSegue(withIdentifier: "resumeBuilder", sender: self)
+        let lastIndex: Int = resumeCollection.map { (resume) -> Int in
+            let sub:String = resume.title[7..<resume.title.count]
+            return Int(sub) ?? 0
+        }.max() ?? 0
+        performSegue(withIdentifier: "resumeBuilder", sender: "resume_\(lastIndex)")
     }
     
     func openCoverBuilder(){
-        performSegue(withIdentifier: "coverBuilder", sender: self)
+        let lastIndex: Int = coverLetterCollection.map { (cover) -> Int in
+            let sub:String = cover.title[6..<cover.title.count]
+            return Int(sub) ?? 0
+        }.max() ?? 0
+        performSegue(withIdentifier: "coverBuilder", sender: "cover_\(lastIndex)")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -173,5 +181,18 @@ extension DashboardViewController: UISearchBarDelegate {
         }
         resumeCollectionView.reloadData()
         searchBar.endEditing(true)
+    }
+}
+extension String {
+    subscript (bounds: CountableClosedRange<Int>) -> String {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return String(self[start...end])
+    }
+    
+    subscript (bounds: CountableRange<Int>) -> String {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return String(self[start..<end])
     }
 }
