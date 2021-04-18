@@ -7,12 +7,11 @@
 
 import UIKit
 
-class ResumeExperianceViewController: UIViewController {
+class ResumeExperianceViewController: UIViewController, MDCBottomSheetMethod  {
     
-    var experince:[ResumeExperience] = [ResumeExperience(name: "", role: "", startYear: "", endYear: "")]
+    var experience:[ResumeExperience]!
 
     weak var resumeDetailVC: ResumeDetailViewController!
-//    weak var resumeData: ResumeDetail!
     
     @IBOutlet weak var experinceTableView: UITableView!
     
@@ -21,11 +20,16 @@ class ResumeExperianceViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        experience = (resumeDetailVC.resumeData["experience"] as? Array<ResumeExperience>) ?? [ResumeExperience(name: "", role: "", startYear: "", endYear: "")]
         experinceTableView.dataSource = self
     }
     
+    func onDismiss() {
+        resumeDetailVC.resumeData["experience"] = experience
+    }
+    
     @IBAction func addEducationClicked(_ sender: Any) {
-        experince.append(ResumeExperience(name: "", role: "", startYear: "", endYear: ""))
+        experience.append(ResumeExperience(name: "", role: "", startYear: "", endYear: ""))
         experinceTableView.reloadData()
     }
     
@@ -38,13 +42,13 @@ class ResumeExperianceViewController: UIViewController {
 
 extension ResumeExperianceViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return experince.count
+        return experience.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tbcell = tableView.dequeueReusableCell(withIdentifier: "ExperianceTableViewCell", for: indexPath) as! ExperianceTableViewCell
         
-        let resumeExperince: ResumeExperience = experince[indexPath.row]
+        let resumeExperince: ResumeExperience = experience[indexPath.row]
         tbcell.initCell(experince: resumeExperince)
         
         return tbcell

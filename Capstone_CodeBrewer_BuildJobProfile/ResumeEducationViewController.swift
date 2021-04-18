@@ -7,43 +7,47 @@
 
 import UIKit
 
-class ResumeEducationViewController: UIViewController {
+class ResumeEducationViewController: UIViewController, MDCBottomSheetMethod {
     
-    var education:[ResumeEducation] = [ResumeEducation(name: "", major: "", startYear: "", endYear: "")]
+    var education:[ResumeEducation]!
     
     weak var resumeDetailVC: ResumeDetailViewController!
-//    weak var resumeData: ResumeDetail!
     
-        @IBOutlet weak var educationTableView: UITableView!
-
-
+    @IBOutlet weak var educationTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-                educationTableView.dataSource = self
+        education = (resumeDetailVC.resumeData["education"] as? Array<ResumeEducation>) ?? [ResumeEducation(name: "", major: "", startYear: "", endYear: "")]
+        educationTableView.dataSource = self
     }
     
     @IBAction func addEducationClicked(_ sender: Any) {
-            education.append(ResumeEducation(name: "", major: "", startYear: "", endYear: ""))
-            educationTableView.reloadData()
-        }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        education.append(ResumeEducation(name: "", major: "", startYear: "", endYear: ""))
+        educationTableView.reloadData()
     }
-    */
+    
+    func onDismiss() {
+        resumeDetailVC.resumeData["education"] = education
+    }
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     @IBAction func nextClicked(_ sender: Any) {
         resumeDetailVC.resumeExperinceClicked(sender)
     }
-
+    
 }
 
 extension ResumeEducationViewController: UITableViewDataSource {

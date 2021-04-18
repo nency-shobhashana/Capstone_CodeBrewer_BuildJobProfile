@@ -11,12 +11,11 @@ import MaterialComponents.MaterialContainerScheme
 import MaterialComponents.MaterialTextFields
 import MaterialComponents.MaterialChips_Theming
 
-class ResumeSkilsViewController: UIViewController, MDCChipFieldDelegate {
+class ResumeSkilsViewController: UIViewController, MDCChipFieldDelegate, MDCBottomSheetMethod  {
     
     var containerScheming: MDCContainerScheming = MDCContainerScheme()
         
     weak var resumeDetailVC: ResumeDetailViewController!
-//    weak var resumeData: ResumeDetail!
     
     @IBOutlet weak var chipFieldView: UIView!
 
@@ -25,6 +24,11 @@ class ResumeSkilsViewController: UIViewController, MDCChipFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        summaryTF.textView.text = resumeDetailVC.resumeData["skills"] as? String ?? ""
+    }
+    
+    func onDismiss() {
+//        resumeDetailVC.resumeData["skills"] = summaryTF.textView.text ?? ""
     }
     
 
