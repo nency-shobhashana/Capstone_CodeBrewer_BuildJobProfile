@@ -18,6 +18,7 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resumeCollectionView: UICollectionView!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +71,7 @@ class DashboardViewController: UIViewController {
     
     // segment of resume and cover letter
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
+        searchBar.text = ""
         if sender.selectedSegmentIndex == 0 {
             // resume
             dashboardCollection = resumeCollection
@@ -134,5 +136,31 @@ extension DashboardViewController: UICollectionViewDelegate {
 }
 
 extension DashboardViewController: UISearchBarDelegate {
+    // search on search button clicked
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if searchBar.text == nil || searchBar.text == "" {
+            searchBarCancelButtonClicked(searchBar)
+        }
+        var sourceCollection: [DataCollection]
+        if segmentControl.selectedSegmentIndex == 0{
+            sourceCollection = resumeCollection
+        } else {
+            sourceCollection = coverLetterCollection
+        }
+        dashboardCollection = sourceCollection.filter({ data -> Bool in
+            data.title.lowercased().contains(searchBar.text?.lowercased() ?? "")
+        })
+        resumeCollectionView.reloadData()
+        searchBar.endEditing(true)
+    }
     
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        if segmentControl.selectedSegmentIndex == 0{
+            dashboardCollection = resumeCollection
+        } else {
+            dashboardCollection = coverLetterCollection
+        }
+        resumeCollectionView.reloadData()
+        searchBar.endEditing(true)
+    }
 }
