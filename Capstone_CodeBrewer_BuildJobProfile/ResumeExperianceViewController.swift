@@ -12,7 +12,7 @@ class ResumeExperianceViewController: UIViewController {
     var experince:[ResumeExperince] = [ResumeExperince(name: "", role: "", startYear: "", endYear: "")]
 
     weak var resumeDetailVC: ResumeDetailViewController!
-    weak var resumeData: ResumeDetail!
+//    weak var resumeData: ResumeDetail!
     
     @IBOutlet weak var experinceTableView: UITableView!
     

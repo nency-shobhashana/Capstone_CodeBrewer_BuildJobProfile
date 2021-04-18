@@ -86,19 +86,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
     }
     
     
-    //core data persistentContainer
-    lazy var persistentContainer: NSPersistentContainer = {
-            let container = NSPersistentContainer(name: "resumeData")
-            container.loadPersistentStores { description, error in
-                if let error = error {
-                    fatalError("Unable to load persistent stores: \(error)")
-                }
-            }
-            return container
-        }()
-    
-    lazy var coreDataContext: NSManagedObjectContext = {
-        return persistentContainer.viewContext
-    }()
 }
 

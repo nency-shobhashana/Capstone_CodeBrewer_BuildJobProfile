@@ -16,7 +16,7 @@ class ResumeSkilsViewController: UIViewController, MDCChipFieldDelegate {
     var containerScheming: MDCContainerScheming = MDCContainerScheme()
         
     weak var resumeDetailVC: ResumeDetailViewController!
-    weak var resumeData: ResumeDetail!
+//    weak var resumeData: ResumeDetail!
     
     @IBOutlet weak var chipFieldView: UIView!
 

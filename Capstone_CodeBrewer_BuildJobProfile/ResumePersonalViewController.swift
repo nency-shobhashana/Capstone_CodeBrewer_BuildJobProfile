@@ -14,7 +14,7 @@ import MaterialComponents.MaterialTextControls_OutlinedTextFieldsTheming
 class ResumePersonalViewController: UIViewController {
     
     weak var resumeDetailVC: ResumeDetailViewController!
-    weak var resumeData: ResumeDetail!
+//    weak var resumeData: ResumeDetail!
     
     @IBOutlet weak var firstNameTF: MDCOutlinedTextField!
     @IBOutlet weak var lastNameTF: MDCOutlinedTextField!
@@ -27,22 +27,22 @@ class ResumePersonalViewController: UIViewController {
         super.viewDidLoad()
         
         // load data from core data to UI component
-        firstNameTF.text = resumeData.firstName ?? ""
-        lastNameTF.text = resumeData.lastName ?? ""
-        emailTF.text = resumeData.email ?? ""
-        phoneTF.text = resumeData.phone ?? ""
-        addressTF.text = resumeData.address ?? ""
+//        firstNameTF.text = resumeData.firstName ?? ""
+//        lastNameTF.text = resumeData.lastName ?? ""
+//        emailTF.text = resumeData.email ?? ""
+//        phoneTF.text = resumeData.phone ?? ""
+//        addressTF.text = resumeData.address ?? ""
     }
     
     // store user data in to core data component
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        resumeData.firstName = firstNameTF.text ?? ""
-        resumeData.lastName = lastNameTF.text ?? ""
-        resumeData.email = emailTF.text ?? ""
-        resumeData.phone = phoneTF.text ?? ""
-        resumeData.address = addressTF.text ?? ""
+//        resumeData.firstName = firstNameTF.text ?? ""
+//        resumeData.lastName = lastNameTF.text ?? ""
+//        resumeData.email = emailTF.text ?? ""
+//        resumeData.phone = phoneTF.text ?? ""
+//        resumeData.address = addressTF.text ?? ""
     }
     
     

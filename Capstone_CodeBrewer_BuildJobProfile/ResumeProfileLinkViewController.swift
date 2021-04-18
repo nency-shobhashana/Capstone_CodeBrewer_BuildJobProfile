@@ -15,7 +15,7 @@ import MaterialComponents.MaterialBottomSheet
 class ResumeProfileLinkViewController: UIViewController {
     
     weak var resumeDetailVC: ResumeDetailViewController!
-    weak var resumeData: ResumeDetail!
+//    weak var resumeData: ResumeDetail!
     
     @IBOutlet weak var portfolioTF: MDCOutlinedTextField!
     @IBOutlet weak var linkedInTF: MDCOutlinedTextField!
@@ -25,18 +25,18 @@ class ResumeProfileLinkViewController: UIViewController {
         super.viewDidLoad()
         
         // load data from core data to UI component
-        portfolioTF.text = resumeData.portfolioLink ?? ""
-        linkedInTF.text = resumeData.linkedInLink ?? ""
-        gitHubTF.text = resumeData.githubLink ?? ""
+//        portfolioTF.text = resumeData.portfolioLink ?? ""
+//        linkedInTF.text = resumeData.linkedInLink ?? ""
+//        gitHubTF.text = resumeData.githubLink ?? ""
     }
     
     // store user data in to core data component
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        resumeData.portfolioLink = portfolioTF.text ?? ""
-        resumeData.linkedInLink = linkedInTF.text ?? ""
-        resumeData.githubLink = gitHubTF.text ?? ""
+//        resumeData.portfolioLink = portfolioTF.text ?? ""
+//        resumeData.linkedInLink = linkedInTF.text ?? ""
+//        resumeData.githubLink = gitHubTF.text ?? ""
     }
     
 

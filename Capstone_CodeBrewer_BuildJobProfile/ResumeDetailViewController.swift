@@ -13,29 +13,18 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
     var bottomSheet:MDCBottomSheetController? = nil
     
     weak var coreDataContex: NSManagedObjectContext!
-    var resumeData: ResumeDetail!
+//    var resumeData: ResumeDetail!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.coreDataContex = (UIApplication.shared.delegate as! AppDelegate).coreDataContext
         retrieveResumeDetail()
         // Do any additional setup after loading the view.
     }
     
     // retrieve ResumeDetail
     func retrieveResumeDetail(){
-        let request: NSFetchRequest<ResumeDetail> = ResumeDetail.fetchRequest()
-        do {
-            let resumeDetail = try coreDataContex?.fetch(request) ?? []
-            if resumeDetail.count == 0{
-                resumeData = ResumeDetail(context: coreDataContex)
-            } else {
-                resumeData = resumeDetail.first ?? ResumeDetail(context: coreDataContex)
-            }
-        } catch {
-            print("Error loading Category \(error.localizedDescription)")
-        }
+        
     }
     
     func bottomSheetControllerDidDismissBottomSheet(_ controller: MDCBottomSheetController) {
@@ -52,7 +41,7 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumePersonalViewController") as! ResumePersonalViewController
         bottomSheetVC.resumeDetailVC = self
-        bottomSheetVC.resumeData = self.resumeData
+//        bottomSheetVC.resumeData = self.resumeData
         bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
         bottomSheet?.trackingScrollView = bottomSheetVC.scrollView
         present(bottomSheet!,animated: true, completion: nil)
@@ -65,7 +54,7 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeProfileLinkViewController") as! ResumeProfileLinkViewController
         bottomSheetVC.resumeDetailVC = self
-        bottomSheetVC.resumeData = self.resumeData
+//        bottomSheetVC.resumeData = self.resumeData
         bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
         present(bottomSheet!,animated: true, completion: nil)
         bottomSheet?.delegate = self
@@ -77,7 +66,7 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeSummaryViewController") as! ResumeSummaryViewController
         bottomSheetVC.resumeDetailVC = self
-        bottomSheetVC.resumeData = self.resumeData
+//        bottomSheetVC.resumeData = self.resumeData
         bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
         present(bottomSheet!,animated: true, completion: nil)
         bottomSheet?.delegate = self
@@ -88,7 +77,7 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeEducationViewController") as! ResumeEducationViewController
         bottomSheetVC.resumeDetailVC = self
-        bottomSheetVC.resumeData = self.resumeData
+//        bottomSheetVC.resumeData = self.resumeData
         bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
         present(bottomSheet!,animated: true, completion: nil)
         bottomSheet?.delegate = self
@@ -99,7 +88,7 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeExperianceViewController") as! ResumeExperianceViewController
         bottomSheetVC.resumeDetailVC = self
-        bottomSheetVC.resumeData = self.resumeData
+//        bottomSheetVC.resumeData = self.resumeData
         bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
         present(bottomSheet!,animated: true, completion: nil)
         bottomSheet?.delegate = self
@@ -110,7 +99,7 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeSkilsViewController") as! ResumeSkilsViewController
         bottomSheetVC.resumeDetailVC = self
-        bottomSheetVC.resumeData = self.resumeData
+//        bottomSheetVC.resumeData = self.resumeData
         bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
         present(bottomSheet!,animated: true, completion: nil)
         bottomSheet?.delegate = self
