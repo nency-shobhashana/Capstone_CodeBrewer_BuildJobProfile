@@ -10,27 +10,68 @@ import FirebaseDatabase
 import FirebaseAuth
 import MaterialComponents.MaterialBottomSheet
 
-class CoverLetterDetailViewController: UIViewController {
+class CoverLetterDetailViewController: UIViewController, MDCBottomSheetControllerDelegate  {
 
+    var bottomSheet:MDCBottomSheetController? = nil
     var ref: DatabaseReference!
     var coverLetterTitle: String? = nil
-    var resumeData: Dictionary<String, Any>!
+    var coverLetterData: Dictionary<String, Any>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        ref = Database.database().reference().child("users/\(Auth.auth().currentUser?.uid ?? "")/coverLetter")
+        retrieveCoverLetterDetail()
+    }
+    
+    // retrieve coverLetter Detail
+    func retrieveCoverLetterDetail(){
+        ref.child(coverLetterTitle!).getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+                let value = snapshot.value as! Dictionary<String, Any>
+                self.coverLetterData = value
+            }
+            else {
+                self.coverLetterData = Dictionary<String, Any>()
+            }
+        }
+    }
+    
+    func bottomSheetControllerDidDismissBottomSheet(_ controller: MDCBottomSheetController) {
+        (controller.contentViewController as? MDCBottomSheetMethod)?.onDismiss()
+        if coverLetterTitle != nil{
+            ref.child(coverLetterTitle!).setValue(coverLetterData)
+        }
+        bottomSheet = nil
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Cover Letter Detail
+    @IBAction func personalClicked(_ sender: Any) {
+        (bottomSheet?.contentViewController as? MDCBottomSheetMethod)?.onDismiss()
+        bottomSheet?.dismiss(animated: true, completion: nil)
+//        let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumePersonalViewController") as! ResumePersonalViewController
+//        bottomSheetVC.resumeDetailVC = self
+//        bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
+        present(bottomSheet!,animated: true, completion: nil)
+        bottomSheet?.delegate = self
     }
-    */
+    
+    // MARK: - choose template navigation
+    @IBAction func nextClicked(_ sender: Any) {
+        performSegue(withIdentifier: "CoverLetterTemplateChoose", sender: coverLetterTitle)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CoverLetterTemplateChoose"{
+            let vc = (segue.destination as! CoverLetterChooseTemplateViewController)
+            vc.coverLetterTitle = self.coverLetterTitle
+            vc.coverLetterData = self.coverLetterData
+            
+        }
+    }
 
 }

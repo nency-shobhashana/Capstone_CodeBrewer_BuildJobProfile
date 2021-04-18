@@ -482,6 +482,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextClicked:" destination="wjq-Rg-rgW" eventType="touchUpInside" id="Uo1-fz-LQL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cover Letter Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caT-ND-Jcm">
                                 <rect key="frame" x="24" y="68" width="327" height="41"/>
@@ -498,6 +501,9 @@
                                         <state key="normal" title="Employee Detail">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="personalClicked:" destination="wjq-Rg-rgW" eventType="touchUpInside" id="NZq-p5-Imw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iV9-R4-cTr">
                                         <rect key="frame" x="0.0" y="53" width="327" height="33"/>
@@ -681,7 +687,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSl-hY-FvK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3609" y="1512"/>
+            <point key="canvasLocation" x="3532" y="1490"/>
         </scene>
         <!--Add New Pop Uo View Controller-->
         <scene sceneID="g4N-KD-PiI">
