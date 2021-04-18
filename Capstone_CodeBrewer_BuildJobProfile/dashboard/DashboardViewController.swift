@@ -46,6 +46,7 @@ class DashboardViewController: UIViewController {
             else if snapshot.exists() {
                 let value = snapshot.value as! NSDictionary
                 value.forEach { (key: Any, value: Any) in
+                    self.resumeCollection.removeAll()
                     self.resumeCollection.append(Resume(title: key as! String, image: UIImage(named: "resume")!))
                     self.dashboardCollection = self.resumeCollection
                     DispatchQueue.main.async {
@@ -64,6 +65,7 @@ class DashboardViewController: UIViewController {
             else if snapshot.exists() {
                 let value = snapshot.value as! NSDictionary
                 value.forEach { (key: Any, value: Any) in
+                    self.coverLetterCollection.removeAll()
                     self.coverLetterCollection.append(CoverLetter(title: key as! String, image: UIImage(named: "coverLetter")!))
                 }
             }
@@ -178,7 +180,7 @@ extension DashboardViewController: UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        if segmentControl.selectedSegmentIndex == 0{
+        if segmentControl.selectedSegmentIndex == 0 {
             dashboardCollection = resumeCollection
         } else {
             dashboardCollection = coverLetterCollection
