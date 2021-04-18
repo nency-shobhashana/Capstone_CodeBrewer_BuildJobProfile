@@ -31,6 +31,10 @@ class DashboardViewController: UIViewController {
         
         searchBar.delegate = self
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         getFirebaseData()
     }
     
