@@ -11,7 +11,7 @@ import MaterialComponents.MaterialTextControls_OutlinedTextFields
 import MaterialComponents.MaterialTextControls_OutlinedTextAreasTheming
 import MaterialComponents.MaterialTextControls_OutlinedTextFieldsTheming
 
-class CoverLetterFieldFormViewController: UIViewController {
+class CoverLetterFieldFormViewController: UIViewController, MDCBottomSheetMethod {
     
     weak var coverLetterDetailVC: CoverLetterDetailViewController!
 
@@ -175,5 +175,9 @@ class CoverLetterFieldFormViewController: UIViewController {
         roleTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
         roleTF.sizeToFit()
         
+    }
+    
+    @IBAction func nextClicked(_ sender: Any) {
+        coverLetterDetailVC.bottomSheet?.dismiss(animated: true, completion: nil)
     }
 }

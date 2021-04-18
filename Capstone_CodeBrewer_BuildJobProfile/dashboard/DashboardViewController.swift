@@ -71,7 +71,7 @@ class DashboardViewController: UIViewController {
                     self.coverLetterCollection.append(CoverLetter(title: key as! String, image: UIImage(named: "coverLetter")!))
                 }
                 DispatchQueue.main.async {
-                    if self.segmentControl.selectedSegmentIndex == 0 {
+                    if self.segmentControl.selectedSegmentIndex == 1 {
                         self.dashboardCollection = self.resumeCollection
                         self.resumeCollectionView.reloadData()
                     }

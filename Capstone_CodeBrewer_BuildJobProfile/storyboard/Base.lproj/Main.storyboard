@@ -715,6 +715,7 @@
                                                 <connections>
                                                     <action selector="nextClicked:" destination="434-vU-PRW" eventType="touchUpInside" id="0RC-t0-jlz"/>
                                                     <action selector="nextClicked:" destination="zQB-Qi-O7L" eventType="touchUpInside" id="9TZ-ub-kmv"/>
+                                                    <action selector="nextClicked:" destination="biF-sl-dWS" eventType="touchUpInside" id="ZxI-Bi-F4a"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -753,7 +754,7 @@
                         <outlet property="firstNameTF" destination="UF5-AB-mKb" id="zcU-9z-Gfk"/>
                         <outlet property="lastNameTF" destination="FUe-uQ-Hjc" id="YXa-bQ-Pts"/>
                         <outlet property="majorTF" destination="QVB-O0-xTO" id="IcE-xP-f0n"/>
-                        <outlet property="phoneTF" destination="dBz-YK-8Ur" id="D03-T9-ekl"/>
+                        <outlet property="phoneTF" destination="2zV-E8-NpE" id="CRC-3A-fAY"/>
                         <outlet property="profileLinkTF" destination="aKh-8u-wQf" id="PFM-ym-oWb"/>
                         <outlet property="roleTF" destination="V1s-Zd-eg7" id="oQZ-b5-6Fh"/>
                     </connections>
@@ -1468,6 +1469,7 @@
                                         </state>
                                         <connections>
                                             <action selector="nextClicked:" destination="434-vU-PRW" eventType="touchUpInside" id="HcU-as-6ha"/>
+                                            <action selector="nextClicked:" destination="yzx-Vt-p3x" eventType="touchUpInside" id="p51-hy-J5a"/>
                                         </connections>
                                     </button>
                                 </subviews>
