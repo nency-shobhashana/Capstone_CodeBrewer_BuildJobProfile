@@ -19,6 +19,7 @@ class ResumeChooseTemplateViewController: UIViewController {
         // Do any additional setup after loading the view.
         templateCollectionView.dataSource = self
         templateCollectionView.delegate = self
+        templateCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
     
 

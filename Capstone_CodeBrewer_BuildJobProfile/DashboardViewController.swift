@@ -22,11 +22,12 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         ref = Database.database().reference().child("users").child(Auth.auth().currentUser?.uid ?? "")
-        getFirebaseData()
         
         resumeCollectionView.dataSource = self
         resumeCollectionView.delegate = self
         resumeCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
+        getFirebaseData()
     }
     
     func getFirebaseData(){
@@ -38,6 +39,10 @@ class DashboardViewController: UIViewController {
                 let value = snapshot.value as! NSDictionary
                 value.forEach { (key: Any, value: Any) in
                     self.resumeCollection.append(Resume(title: key as! String, image: UIImage(named: "resume")!))
+                    self.dashboardCollection = self.resumeCollection
+                    DispatchQueue.main.async {
+                        self.resumeCollectionView.reloadData()
+                    }
                 }
             }
             else {
