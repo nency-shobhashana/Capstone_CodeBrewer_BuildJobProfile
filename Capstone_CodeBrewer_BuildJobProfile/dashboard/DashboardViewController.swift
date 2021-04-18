@@ -45,11 +45,13 @@ class DashboardViewController: UIViewController {
             }
             else if snapshot.exists() {
                 let value = snapshot.value as! NSDictionary
+                self.resumeCollection.removeAll()
                 value.forEach { (key: Any, value: Any) in
-                    self.resumeCollection.removeAll()
                     self.resumeCollection.append(Resume(title: key as! String, image: UIImage(named: "resume")!))
-                    self.dashboardCollection = self.resumeCollection
-                    DispatchQueue.main.async {
+                }
+                DispatchQueue.main.async {
+                    if self.segmentControl.selectedSegmentIndex == 0 {
+                        self.dashboardCollection = self.resumeCollection
                         self.resumeCollectionView.reloadData()
                     }
                 }
@@ -64,9 +66,15 @@ class DashboardViewController: UIViewController {
             }
             else if snapshot.exists() {
                 let value = snapshot.value as! NSDictionary
+                self.coverLetterCollection.removeAll()
                 value.forEach { (key: Any, value: Any) in
-                    self.coverLetterCollection.removeAll()
                     self.coverLetterCollection.append(CoverLetter(title: key as! String, image: UIImage(named: "coverLetter")!))
+                }
+                DispatchQueue.main.async {
+                    if self.segmentControl.selectedSegmentIndex == 0 {
+                        self.dashboardCollection = self.resumeCollection
+                        self.resumeCollectionView.reloadData()
+                    }
                 }
             }
             else {
