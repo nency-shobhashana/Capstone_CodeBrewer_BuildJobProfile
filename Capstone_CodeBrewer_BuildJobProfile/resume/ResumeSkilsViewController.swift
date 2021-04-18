@@ -14,31 +14,37 @@ import MaterialComponents.MaterialChips_Theming
 class ResumeSkilsViewController: UIViewController, MDCChipFieldDelegate, MDCBottomSheetMethod  {
     
     var containerScheming: MDCContainerScheming = MDCContainerScheme()
-        
+    
     weak var resumeDetailVC: ResumeDetailViewController!
     
     @IBOutlet weak var chipFieldView: UIView!
-
-
+    let chipField = MDCChipField()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-//        summaryTF.textView.text = resumeDetailVC.resumeData["skills"] as? String ?? ""
+        (resumeDetailVC.resumeData["skills"] as? String)?.components(separatedBy: ",").forEach({ (string) in
+            let view = MDCChipView()
+            view.titleLabel.text = string
+            chipField.addChip(view)
+        })
     }
     
     func onDismiss() {
-//        resumeDetailVC.resumeData["skills"] = summaryTF.textView.text ?? ""
+        resumeDetailVC.resumeData["skills"] = chipField.chips.map({ (chipView) -> String in
+            return chipView.titleLabel.text ?? ""
+        }).joined(separator: ",")
     }
     
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configTextField()
     }
     
     private func configTextField(){
-        let chipField = MDCChipField()
         
         chipField.delegate = self
         chipField.textField.placeholderLabel.text = "Enter your skills."
@@ -49,7 +55,7 @@ class ResumeSkilsViewController: UIViewController, MDCChipFieldDelegate, MDCBott
     }
     
     func chipFieldHeightDidChange(_ chipField: MDCChipField) {
-        view.layoutIfNeeded()
+        chipFieldView.layoutIfNeeded()
     }
     
     func chipField(_ chipField: MDCChipField, didAddChip chip: MDCChipView) {

@@ -20,12 +20,24 @@ class ResumeExperianceViewController: UIViewController, MDCBottomSheetMethod  {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        experience = (resumeDetailVC.resumeData["experience"] as? Array<ResumeExperience>) ?? [ResumeExperience(name: "", role: "", startYear: "", endYear: "")]
+        experience = (resumeDetailVC.resumeData["experience"] as? Array<Dictionary<String, String>>)?.map({ (data) -> ResumeExperience in
+                    return ResumeExperience(name: data["name"] ?? "", role: data["role"] ?? "", startYear: data["startYear"] ?? "", endYear: data["endYear"] ?? "")
+                    
+                }) ?? [ResumeExperience(name: "", role: "", startYear: "", endYear: "")]
+
         experinceTableView.dataSource = self
     }
     
     func onDismiss() {
-        resumeDetailVC.resumeData["experience"] = experience
+        experinceTableView.visibleCells.forEach { cell in
+                    if let data = (cell as! ExperianceTableViewCell).saveData() {
+                        experience[(cell as! ExperianceTableViewCell).index] = data
+                    }
+                    
+                }
+                resumeDetailVC.resumeData["experience"] = experience.map({ (data) -> Dictionary<String, String> in
+                    ["name" : data.name, "role" : data.role, "startYear" : data.startYear, "endYear": data.endYear]
+                })
     }
     
     @IBAction func addEducationClicked(_ sender: Any) {
@@ -48,8 +60,11 @@ extension ResumeExperianceViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tbcell = tableView.dequeueReusableCell(withIdentifier: "ExperianceTableViewCell", for: indexPath) as! ExperianceTableViewCell
         
-        let resumeExperince: ResumeExperience = experience[indexPath.row]
-        tbcell.initCell(experince: resumeExperince)
+        if let data = tbcell.saveData() {
+                    experience[tbcell.index] = data
+                }
+                
+                tbcell.initCell(experince: experience[indexPath.row], index: indexPath.row)
         
         return tbcell
     }

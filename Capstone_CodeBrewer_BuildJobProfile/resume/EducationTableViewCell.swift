@@ -21,33 +21,41 @@ class EducationTableViewCell: UITableViewCell {
     @IBOutlet weak var majorTF: MDCOutlinedTextField!
     @IBOutlet weak var startYearTF: MDCOutlinedTextField!
     @IBOutlet weak var endYearTF: MDCOutlinedTextField!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         configTextField()
     }
-
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
         
     }
     
     var education: ResumeEducation? = nil
+    var index: Int = -1
     
-    func initCell(education: ResumeEducation!){
-        saveData()
+    func initCell(education: ResumeEducation, index: Int){
+    
         self.education = education
+        self.index = index
+        
+        instituteNameTF.text = self.education?.name ?? ""
+        majorTF.text = self.education?.major ?? ""
+        startYearTF.text = self.education?.startYear ?? ""
+        endYearTF.text = self.education?.endYear ?? ""
     }
     
-    func saveData(){
+    func saveData() -> ResumeEducation? {
         self.education?.name = instituteNameTF.text ?? ""
         self.education?.major = majorTF.text ?? ""
         self.education?.startYear = startYearTF.text ?? ""
         self.education?.endYear = endYearTF.text ?? ""
+        return self.education
     }
     
     private func configTextField(){
@@ -74,5 +82,5 @@ class EducationTableViewCell: UITableViewCell {
         endYearTF.sizeToFit()
         
     }
-
+    
 }

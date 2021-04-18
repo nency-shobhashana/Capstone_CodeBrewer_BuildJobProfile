@@ -20,7 +20,10 @@ class ResumeEducationViewController: UIViewController, MDCBottomSheetMethod {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        education = (resumeDetailVC.resumeData["education"] as? Array<ResumeEducation>) ?? [ResumeEducation(name: "", major: "", startYear: "", endYear: "")]
+        education = (resumeDetailVC.resumeData["education"] as? Array<Dictionary<String, String>>)?.map({ (data) -> ResumeEducation in
+            return ResumeEducation(name: data["name"] ?? "", major: data["major"] ?? "", startYear: data["startYear"] ?? "", endYear: data["endYear"] ?? "")
+            
+        }) ?? [ResumeEducation(name: "", major: "", startYear: "", endYear: "")]
         educationTableView.dataSource = self
     }
     
@@ -30,7 +33,15 @@ class ResumeEducationViewController: UIViewController, MDCBottomSheetMethod {
     }
     
     func onDismiss() {
-        resumeDetailVC.resumeData["education"] = education
+        educationTableView.visibleCells.forEach { cell in
+            if let data = (cell as! EducationTableViewCell).saveData() {
+                education[(cell as! EducationTableViewCell).index] = data
+            }
+            
+        }
+        resumeDetailVC.resumeData["education"] = education.map({ (data) -> Dictionary<String, String> in
+            ["name" : data.name, "major" : data.major, "startYear" : data.startYear, "endYear": data.endYear]
+        })
     }
     
     
@@ -58,11 +69,11 @@ extension ResumeEducationViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tbcell = tableView.dequeueReusableCell(withIdentifier: "EducationTableViewCell", for: indexPath) as! EducationTableViewCell
         
-        let resumeEducation: ResumeEducation = education[indexPath.row]
-        tbcell.initCell(education:resumeEducation)
+        if let data = tbcell.saveData() {
+            education[tbcell.index] = data
+        }
+        tbcell.initCell(education: education[indexPath.row], index: indexPath.row)
         
         return tbcell
     }
-    
-    
 }

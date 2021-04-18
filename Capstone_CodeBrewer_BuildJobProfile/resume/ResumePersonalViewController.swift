@@ -30,7 +30,7 @@ class ResumePersonalViewController: UIViewController, MDCBottomSheetMethod {
         firstNameTF.text = resumeDetailVC.resumeData["firstName"] as? String ?? ""
         lastNameTF.text = resumeDetailVC.resumeData["lastName"] as? String ?? ""
         emailTF.text = resumeDetailVC.resumeData["email"] as? String ?? ""
-        phoneTF.text = resumeDetailVC.resumeData["phoneNo"] as? String ?? ""
+        phoneTF.text = resumeDetailVC.resumeData["phone"] as? String ?? ""
         addressTF.text = resumeDetailVC.resumeData["address"] as? String ?? ""
     }
     

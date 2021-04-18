@@ -35,17 +35,24 @@ class ExperianceTableViewCell: UITableViewCell {
     }
     
     var experince: ResumeExperience? = nil
-    
-    func initCell(experince: ResumeExperience){
-        saveData()
+    var index: Int = -1
+    func initCell(experince: ResumeExperience, index: Int){
+        
         self.experince = experince
+        self.index = index
+        
+        companyNameTF.text = self.experince?.name ?? ""
+        designationTF.text = self.experince?.role ?? ""
+        startYearTF.text = self.experince?.startYear ?? ""
+        endYearTF.text = self.experince?.endYear ?? ""
     }
     
-    func saveData(){
+    func saveData() -> ResumeExperience? {
         self.experince?.name = companyNameTF.text ?? ""
         self.experince?.role = designationTF.text ?? ""
         self.experince?.startYear = startYearTF.text ?? ""
         self.experince?.endYear = endYearTF.text ?? ""
+        return self.experince
     }
     
     
