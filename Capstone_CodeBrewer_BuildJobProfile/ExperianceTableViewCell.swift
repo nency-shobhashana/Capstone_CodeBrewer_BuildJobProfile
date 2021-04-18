@@ -34,9 +34,9 @@ class ExperianceTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var experince: ResumeExperince? = nil
+    var experince: ResumeExperience? = nil
     
-    func initCell(experince: ResumeExperince){
+    func initCell(experince: ResumeExperience){
         saveData()
         self.experince = experince
     }

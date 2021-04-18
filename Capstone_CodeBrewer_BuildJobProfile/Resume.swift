@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 
+protocol MDCBottomSheetMethod {
+    func onDismiss()
+}
 
 protocol DataCollection{
     var title: String { get }
@@ -22,11 +25,15 @@ struct CoverLetter : DataCollection {
     var image: UIImage
 }
 
-let resumes: [Resume] = [
-    Resume(title: "Mobile Developer", image: UIImage(named: "resume")!),
-    Resume(title: "Android Developer", image: UIImage(named: "resume1")!),
-    Resume(title: "iOS Developer", image: UIImage(named: "resume2")!)
-]
+struct ResumeDetail {
+    var firstName: String?
+    var lastName: String?
+    var email: String?
+    var phoneNo: String?
+    var address: String?
+    var education: [ResumeEducation]
+    var experience : [ResumeExperience]
+}
 
 struct ResumeEducation {
     var name: String
@@ -35,7 +42,7 @@ struct ResumeEducation {
     var endYear: String
 }
 
-struct ResumeExperince {
+struct ResumeExperience {
     var name: String
     var role: String
     var startYear: String

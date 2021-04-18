@@ -12,10 +12,9 @@ import MaterialComponents.MaterialTextControls_OutlinedTextAreasTheming
 import MaterialComponents.MaterialTextControls_OutlinedTextFieldsTheming
 import MaterialComponents.MaterialBottomSheet
 
-class ResumeProfileLinkViewController: UIViewController {
+class ResumeProfileLinkViewController: UIViewController, MDCBottomSheetMethod {
     
     weak var resumeDetailVC: ResumeDetailViewController!
-//    weak var resumeData: ResumeDetail!
     
     @IBOutlet weak var portfolioTF: MDCOutlinedTextField!
     @IBOutlet weak var linkedInTF: MDCOutlinedTextField!
@@ -25,18 +24,16 @@ class ResumeProfileLinkViewController: UIViewController {
         super.viewDidLoad()
         
         // load data from core data to UI component
-//        portfolioTF.text = resumeData.portfolioLink ?? ""
-//        linkedInTF.text = resumeData.linkedInLink ?? ""
-//        gitHubTF.text = resumeData.githubLink ?? ""
+        portfolioTF.text = resumeDetailVC.resumeData["portfolioLink"] as? String ?? ""
+        linkedInTF.text = resumeDetailVC.resumeData["linkedInLink"] as? String ?? ""
+        gitHubTF.text = resumeDetailVC.resumeData["githubLink"] as? String ?? ""
     }
     
     // store user data in to core data component
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-//        resumeData.portfolioLink = portfolioTF.text ?? ""
-//        resumeData.linkedInLink = linkedInTF.text ?? ""
-//        resumeData.githubLink = gitHubTF.text ?? ""
+    func onDismiss() {
+        resumeDetailVC.resumeData["portfolioLink"] = portfolioTF.text ?? ""
+        resumeDetailVC.resumeData["linkedInLink"] = linkedInTF.text ?? ""
+        resumeDetailVC.resumeData["githubLink"] = gitHubTF.text ?? ""
     }
     
 

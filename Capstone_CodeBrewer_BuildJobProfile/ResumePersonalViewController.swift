@@ -11,10 +11,10 @@ import MaterialComponents.MaterialTextControls_OutlinedTextFields
 import MaterialComponents.MaterialTextControls_OutlinedTextAreasTheming
 import MaterialComponents.MaterialTextControls_OutlinedTextFieldsTheming
 
-class ResumePersonalViewController: UIViewController {
+class ResumePersonalViewController: UIViewController, MDCBottomSheetMethod {
     
     weak var resumeDetailVC: ResumeDetailViewController!
-//    weak var resumeData: ResumeDetail!
+    
     
     @IBOutlet weak var firstNameTF: MDCOutlinedTextField!
     @IBOutlet weak var lastNameTF: MDCOutlinedTextField!
@@ -27,24 +27,21 @@ class ResumePersonalViewController: UIViewController {
         super.viewDidLoad()
         
         // load data from core data to UI component
-//        firstNameTF.text = resumeData.firstName ?? ""
-//        lastNameTF.text = resumeData.lastName ?? ""
-//        emailTF.text = resumeData.email ?? ""
-//        phoneTF.text = resumeData.phone ?? ""
-//        addressTF.text = resumeData.address ?? ""
+        firstNameTF.text = resumeDetailVC.resumeData["firstName"] as? String ?? ""
+        lastNameTF.text = resumeDetailVC.resumeData["lastName"] as? String ?? ""
+        emailTF.text = resumeDetailVC.resumeData["email"] as? String ?? ""
+        phoneTF.text = resumeDetailVC.resumeData["phoneNo"] as? String ?? ""
+        addressTF.text = resumeDetailVC.resumeData["address"] as? String ?? ""
     }
     
-    // store user data in to core data component
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-//        resumeData.firstName = firstNameTF.text ?? ""
-//        resumeData.lastName = lastNameTF.text ?? ""
-//        resumeData.email = emailTF.text ?? ""
-//        resumeData.phone = phoneTF.text ?? ""
-//        resumeData.address = addressTF.text ?? ""
+    func onDismiss() {
+        resumeDetailVC.resumeData["firstName"] = firstNameTF.text ?? ""
+        resumeDetailVC.resumeData["lastName"] = lastNameTF.text ?? ""
+        resumeDetailVC.resumeData["email"] = emailTF.text ?? ""
+        resumeDetailVC.resumeData["phone"] = phoneTF.text ?? ""
+        resumeDetailVC.resumeData["address"] = addressTF.text ?? ""
     }
-    
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

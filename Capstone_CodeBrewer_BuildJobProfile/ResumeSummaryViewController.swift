@@ -11,10 +11,9 @@ import MaterialComponents.MaterialTextControls_OutlinedTextFields
 import MaterialComponents.MaterialTextControls_OutlinedTextAreasTheming
 import MaterialComponents.MaterialTextControls_OutlinedTextFieldsTheming
 
-class ResumeSummaryViewController: UIViewController {
+class ResumeSummaryViewController: UIViewController, MDCBottomSheetMethod {
     
     weak var resumeDetailVC: ResumeDetailViewController!
-//    weak var resumeData: ResumeDetail!
     
     @IBOutlet weak var summaryTF: MDCOutlinedTextArea!
     
@@ -22,14 +21,12 @@ class ResumeSummaryViewController: UIViewController {
         super.viewDidLoad()
         
         // load data from core data to UI component
-//        summaryTF.textView.text = resumeData.preofessionalSummary ?? ""
+        summaryTF.textView.text = resumeDetailVC.resumeData["preofessionalSummary"] as? String ?? ""
     }
     
     // store user data in to core data component
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-//        resumeData.preofessionalSummary = summaryTF.textView.text ?? ""
+    func onDismiss() {
+        resumeDetailVC.resumeData["preofessionalSummary"] = summaryTF.textView.text ?? ""
     }
     
     override func viewWillAppear(_ animated: Bool) {

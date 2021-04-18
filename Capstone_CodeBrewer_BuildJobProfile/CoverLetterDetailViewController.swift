@@ -9,6 +9,7 @@ import UIKit
 
 class CoverLetterDetailViewController: UIViewController {
 
+    var coverLetterTitle: String? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
 

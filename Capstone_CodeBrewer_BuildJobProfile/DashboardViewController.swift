@@ -86,6 +86,14 @@ class DashboardViewController: UIViewController {
             let choiceVC = segue.destination as! AddNewPopUoViewController
             choiceVC.dashBoardVC = self
         }
+        if segue.identifier == "resumeBuilder"{
+            let choiceVC = segue.destination as! ResumeDetailViewController
+            choiceVC.resumeTitle = sender as? String
+        }
+        if segue.identifier == "coverBuilder"{
+            let choiceVC = segue.destination as! CoverLetterDetailViewController
+            choiceVC.coverLetterTitle = sender as? String
+        }
     }
 }
 
@@ -109,6 +117,10 @@ extension DashboardViewController: UICollectionViewDelegateFlowLayout {
 
 extension DashboardViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(dashboardCollection[indexPath.row].title)
+        if true {
+            performSegue(withIdentifier: "resumeBuilder", sender: dashboardCollection[indexPath.row].title)
+        } else {
+            performSegue(withIdentifier: "coverBuilder", sender: dashboardCollection[indexPath.row].title)
+        }
     }
 }

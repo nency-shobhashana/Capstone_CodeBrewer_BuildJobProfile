@@ -9,7 +9,7 @@ import UIKit
 
 class ResumeExperianceViewController: UIViewController {
     
-    var experince:[ResumeExperince] = [ResumeExperince(name: "", role: "", startYear: "", endYear: "")]
+    var experince:[ResumeExperience] = [ResumeExperience(name: "", role: "", startYear: "", endYear: "")]
 
     weak var resumeDetailVC: ResumeDetailViewController!
 //    weak var resumeData: ResumeDetail!
@@ -25,7 +25,7 @@ class ResumeExperianceViewController: UIViewController {
     }
     
     @IBAction func addEducationClicked(_ sender: Any) {
-        experince.append(ResumeExperince(name: "", role: "", startYear: "", endYear: ""))
+        experince.append(ResumeExperience(name: "", role: "", startYear: "", endYear: ""))
         experinceTableView.reloadData()
     }
     
@@ -44,7 +44,7 @@ extension ResumeExperianceViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tbcell = tableView.dequeueReusableCell(withIdentifier: "ExperianceTableViewCell", for: indexPath) as! ExperianceTableViewCell
         
-        let resumeExperince: ResumeExperince = experince[indexPath.row]
+        let resumeExperince: ResumeExperience = experince[indexPath.row]
         tbcell.initCell(experince: resumeExperince)
         
         return tbcell
