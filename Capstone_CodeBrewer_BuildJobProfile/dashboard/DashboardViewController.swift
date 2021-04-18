@@ -101,7 +101,7 @@ class DashboardViewController: UIViewController {
             let sub:String = resume.title[7..<resume.title.count]
             return Int(sub) ?? 0
         }.max() ?? 0
-        performSegue(withIdentifier: "resumeBuilder", sender: "resume_\(lastIndex)")
+        performSegue(withIdentifier: "resumeBuilder", sender: "resume_\(lastIndex + 1)")
     }
     
     func openCoverBuilder(){
@@ -109,7 +109,7 @@ class DashboardViewController: UIViewController {
             let sub:String = cover.title[6..<cover.title.count]
             return Int(sub) ?? 0
         }.max() ?? 0
-        performSegue(withIdentifier: "coverBuilder", sender: "cover_\(lastIndex)")
+        performSegue(withIdentifier: "coverBuilder", sender: "cover_\(lastIndex + 1)")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
