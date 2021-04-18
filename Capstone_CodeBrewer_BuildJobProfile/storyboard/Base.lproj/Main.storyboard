@@ -698,7 +698,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3T-lv-Nzx">
-                                <rect key="frame" x="82.5" y="269" width="210" height="129"/>
+                                <rect key="frame" x="82.5" y="270.5" width="210" height="126"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bi-5A-nZN" userLabel="close">
                                         <rect key="frame" x="182" y="9" width="20" height="17.5"/>
@@ -737,18 +737,18 @@
                                     <constraint firstAttribute="trailing" secondItem="6bi-5A-nZN" secondAttribute="trailing" constant="8" id="FdO-vI-odu"/>
                                     <constraint firstAttribute="trailing" secondItem="84t-SR-Git" secondAttribute="trailing" constant="16" id="LJz-ob-sCA"/>
                                     <constraint firstItem="6bi-5A-nZN" firstAttribute="top" secondItem="Q3T-lv-Nzx" secondAttribute="top" constant="8" id="LLZ-Wm-T4E"/>
+                                    <constraint firstItem="84t-SR-Git" firstAttribute="top" secondItem="AZs-fK-VOZ" secondAttribute="bottom" constant="8" id="LVl-Yu-PYL"/>
+                                    <constraint firstAttribute="bottom" secondItem="84t-SR-Git" secondAttribute="bottom" constant="16" id="Z3m-1R-bQm"/>
                                     <constraint firstItem="AZs-fK-VOZ" firstAttribute="leading" secondItem="Q3T-lv-Nzx" secondAttribute="leading" constant="16" id="ccY-rE-pTe"/>
-                                    <constraint firstItem="84t-SR-Git" firstAttribute="top" secondItem="AZs-fK-VOZ" secondAttribute="bottom" constant="8" id="hMi-zK-ePm"/>
+                                    <constraint firstItem="AZs-fK-VOZ" firstAttribute="top" secondItem="6bi-5A-nZN" secondAttribute="bottom" constant="8" id="p6X-eB-0BA"/>
                                     <constraint firstAttribute="trailing" secondItem="AZs-fK-VOZ" secondAttribute="trailing" constant="16" id="qUZ-SL-D9M"/>
                                     <constraint firstItem="84t-SR-Git" firstAttribute="leading" secondItem="Q3T-lv-Nzx" secondAttribute="leading" constant="16" id="qbH-fT-NQ3"/>
-                                    <constraint firstItem="AZs-fK-VOZ" firstAttribute="top" secondItem="6bi-5A-nZN" secondAttribute="bottom" constant="8" id="yCa-eo-RAW"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gij-Ur-iL9"/>
                         <color key="backgroundColor" red="0.023529411764705882" green="0.3486832976" blue="0.71269983049999996" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Q3T-lv-Nzx" firstAttribute="top" secondItem="Gij-Ur-iL9" secondAttribute="top" constant="269" id="By5-he-AOL"/>
                             <constraint firstItem="Q3T-lv-Nzx" firstAttribute="centerY" secondItem="bDv-Ah-76l" secondAttribute="centerY" id="L5M-0j-C6R"/>
                             <constraint firstItem="Q3T-lv-Nzx" firstAttribute="centerX" secondItem="bDv-Ah-76l" secondAttribute="centerX" id="Ob3-yz-5xL"/>
                         </constraints>
