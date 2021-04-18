@@ -12,6 +12,8 @@ import MaterialComponents.MaterialTextControls_OutlinedTextAreasTheming
 import MaterialComponents.MaterialTextControls_OutlinedTextFieldsTheming
 
 class CoverLetterFieldFormViewController: UIViewController {
+    
+    weak var coverLetterDetailVC: CoverLetterDetailViewController!
 
     @IBOutlet weak var firstNameTF: MDCOutlinedTextField!
     @IBOutlet weak var lastNameTF: MDCOutlinedTextField!
@@ -35,7 +37,46 @@ class CoverLetterFieldFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // load data from core data to UI component
+        firstNameTF.text = coverLetterDetailVC.coverLetterData["firstName"] as? String ?? ""
+        lastNameTF.text = coverLetterDetailVC.coverLetterData["lastName"] as? String ?? ""
+        designationTF.text = coverLetterDetailVC.coverLetterData["designation"] as? String ?? ""
+        profileLinkTF.text = coverLetterDetailVC.coverLetterData["profile_link"] as? String ?? ""
+        LinkedInLinkTF.text = coverLetterDetailVC.coverLetterData["linkedIn_link"] as? String ?? ""
+        emailTF.text = coverLetterDetailVC.coverLetterData["email"] as? String ?? ""
+        phoneTF.text = coverLetterDetailVC.coverLetterData["phone"] as? String ?? ""
+        addressTF.text = coverLetterDetailVC.coverLetterData["address"] as? String ?? ""
+        employerNameTF.text = coverLetterDetailVC.coverLetterData["employee_name"] as? String ?? ""
+        employerCompanyNameTF.text = coverLetterDetailVC.coverLetterData["employee_cmpny_name"] as? String ?? ""
+        employerCompanyAddressNameTF.text = coverLetterDetailVC.coverLetterData["employee_cmpny_address"] as? String ?? ""
+        employerEmailTF.text = coverLetterDetailVC.coverLetterData["employee_email"] as? String ?? ""
+        employerNumberNameTF.text = coverLetterDetailVC.coverLetterData["employee_number"] as? String ?? ""
+        employerJobPostNameTF.text = coverLetterDetailVC.coverLetterData["job_post"] as? String ?? ""
+        collegeNameTF.text = coverLetterDetailVC.coverLetterData["college_name"] as? String ?? ""
+        majorTF.text = coverLetterDetailVC.coverLetterData["major"] as? String ?? ""
+        expYearTF.text = coverLetterDetailVC.coverLetterData["exp_year"] as? String ?? ""
+        roleTF.text = coverLetterDetailVC.coverLetterData["role"] as? String ?? ""
+    }
+    
+    func onDismiss() {
+        coverLetterDetailVC.coverLetterData["firstName"] = firstNameTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["lastName"] = lastNameTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["designation"] = designationTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["profile_link"] = profileLinkTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["linkedIn_link"] = LinkedInLinkTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["email"] = emailTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["phone"] = phoneTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["address"] = addressTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["employee_name"] = employerNameTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["employee_cmpny_name"] = employerCompanyNameTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["employee_cmpny_address"] = employerCompanyAddressNameTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["employee_email"] = employerEmailTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["employee_number"] = employerNumberNameTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["job_post"] = employerJobPostNameTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["college_name"] = collegeNameTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["major"] = majorTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["exp_year"] = expYearTF.text ?? ""
+        coverLetterDetailVC.coverLetterData["role"] = roleTF.text ?? ""
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -54,7 +54,7 @@ class CoverLetterDetailViewController: UIViewController, MDCBottomSheetControlle
         (bottomSheet?.contentViewController as? MDCBottomSheetMethod)?.onDismiss()
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "CoverLetterFieldFormViewController") as! CoverLetterFieldFormViewController
-//        bottomSheetVC.resumeDetailVC = self
+        bottomSheetVC.coverLetterDetailVC = self
         bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
         present(bottomSheet!,animated: true, completion: nil)
         bottomSheet?.delegate = self
