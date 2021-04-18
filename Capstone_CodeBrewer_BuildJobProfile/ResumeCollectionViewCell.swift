@@ -12,8 +12,8 @@ class ResumeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var resumeImageView: UIImageView!
     @IBOutlet weak var resumeTitle: UILabel!
     
-    func setup(with resume:Resume) {
-        resumeImageView.image = resume.image
-        resumeTitle.text = resume.title
+    func setup(with data: DataCollection) {
+        resumeImageView.image = data.image
+        resumeTitle.text = data.title
     }
 }

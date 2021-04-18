@@ -8,9 +8,18 @@
 import Foundation
 import UIKit
 
-struct Resume {
-    let title: String
-    let image: UIImage
+
+protocol DataCollection{
+    var title: String { get }
+    var image: UIImage { get }
+}
+struct Resume : DataCollection {
+    var title: String
+    var image: UIImage
+}
+struct CoverLetter : DataCollection {
+    var title: String
+    var image: UIImage
 }
 
 let resumes: [Resume] = [

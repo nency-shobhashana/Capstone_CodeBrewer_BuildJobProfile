@@ -28,4 +28,6 @@ pod 'MaterialComponents/Cards+Theming'
 pod 'MaterialComponents/Chips'
 pod 'MaterialComponents/Chips+Theming'
 
+pod 'Firebase/Database'
+
 end
