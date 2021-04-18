@@ -72,7 +72,7 @@ class DashboardViewController: UIViewController {
                 }
                 DispatchQueue.main.async {
                     if self.segmentControl.selectedSegmentIndex == 1 {
-                        self.dashboardCollection = self.resumeCollection
+                        self.dashboardCollection = self.coverLetterCollection
                         self.resumeCollectionView.reloadData()
                     }
                 }
@@ -160,7 +160,7 @@ extension DashboardViewController: UICollectionViewDelegateFlowLayout {
 
 extension DashboardViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if true {
+        if self.segmentControl.selectedSegmentIndex == 0 {
             performSegue(withIdentifier: "resumeBuilder", sender: dashboardCollection[indexPath.row].title)
         } else {
             performSegue(withIdentifier: "coverBuilder", sender: dashboardCollection[indexPath.row].title)
