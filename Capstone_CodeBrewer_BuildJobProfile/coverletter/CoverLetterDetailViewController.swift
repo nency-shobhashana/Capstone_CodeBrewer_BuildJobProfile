@@ -6,10 +6,16 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
+import MaterialComponents.MaterialBottomSheet
 
 class CoverLetterDetailViewController: UIViewController {
 
+    var ref: DatabaseReference!
     var coverLetterTitle: String? = nil
+    var resumeData: Dictionary<String, Any>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
