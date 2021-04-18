@@ -37,7 +37,6 @@
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Jx-Vb-lGR" customClass="FBSDKLoginButton">
                                         <rect key="frame" x="0.0" y="70" width="327" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
                             </stackView>

@@ -63,6 +63,7 @@ class ViewController: UIViewController, LoginButtonDelegate {
         
         //Firebase facebook sign up
         fbLoginPlace.delegate = self
+        fbLoginPlace.permissions = ["public_profile", "email"]
     }
     
     override func viewWillDisappear(_ animated: Bool) {
