@@ -69,6 +69,15 @@ class DashboardViewController: UIViewController {
         }
     }
     
+    @IBAction func logoutClicked(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            performSegue(withIdentifier: "logout", sender: nil)
+        } catch let error as NSError {
+            print(error)
+        }
+    }
+    
     // segment of resume and cover letter
     @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
         searchBar.text = ""
@@ -105,6 +114,8 @@ class DashboardViewController: UIViewController {
             choiceVC.coverLetterTitle = sender as? String
         }
     }
+    
+    
 }
 
 // Show resume List

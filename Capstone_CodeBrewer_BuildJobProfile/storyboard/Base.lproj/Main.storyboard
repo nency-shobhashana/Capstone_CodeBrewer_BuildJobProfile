@@ -131,6 +131,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6mp-Dj-J1t" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="WWH-9o-n2w"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0kc-fD-FfJ">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -244,40 +245,41 @@
                                     <constraint firstItem="0HU-Ot-eEv" firstAttribute="top" secondItem="bXk-rZ-oZ5" secondAttribute="bottom" constant="24" id="wyg-Le-nXt"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyK-wb-ljo">
-                                <rect key="frame" x="349" y="46" width="18" height="18"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" backgroundImage="plus" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="zEu-b8-ZNY" kind="presentation" identifier="choicePopup" modalPresentationStyle="overCurrentContext" id="sSe-g9-lVB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pJT-gD-FLv"/>
                         <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="hyK-wb-ljo" firstAttribute="top" secondItem="pJT-gD-FLv" secondAttribute="top" id="9ei-oT-yvm"/>
                             <constraint firstItem="obv-dF-Lt8" firstAttribute="top" secondItem="aw2-yH-HZc" secondAttribute="bottom" constant="12" id="B0D-hY-Iio"/>
                             <constraint firstItem="pJT-gD-FLv" firstAttribute="bottom" secondItem="HtQ-se-VW6" secondAttribute="bottom" id="S3t-RO-HaK"/>
                             <constraint firstItem="HtQ-se-VW6" firstAttribute="top" secondItem="obv-dF-Lt8" secondAttribute="bottom" constant="40" id="Xta-3l-YI8"/>
                             <constraint firstItem="pJT-gD-FLv" firstAttribute="trailing" secondItem="HtQ-se-VW6" secondAttribute="trailing" id="gWA-KK-gUf"/>
                             <constraint firstItem="obv-dF-Lt8" firstAttribute="leading" secondItem="pJT-gD-FLv" secondAttribute="leading" constant="24" id="jic-OQ-aXx"/>
-                            <constraint firstItem="pJT-gD-FLv" firstAttribute="trailing" secondItem="hyK-wb-ljo" secondAttribute="trailing" constant="8" id="l6F-fp-Ray"/>
                             <constraint firstItem="aw2-yH-HZc" firstAttribute="leading" secondItem="pJT-gD-FLv" secondAttribute="leading" constant="24" id="ohg-Ed-KNr"/>
                             <constraint firstItem="aw2-yH-HZc" firstAttribute="top" secondItem="pJT-gD-FLv" secondAttribute="top" constant="80" id="qHC-fG-Ybn"/>
                             <constraint firstItem="HtQ-se-VW6" firstAttribute="leading" secondItem="pJT-gD-FLv" secondAttribute="leading" id="wHY-d0-fch"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0jF-GD-OmL"/>
+                    <navigationItem key="navigationItem" id="0jF-GD-OmL">
+                        <rightBarButtonItems>
+                            <barButtonItem image="plus" catalog="system" id="SL9-4M-dyb">
+                                <connections>
+                                    <segue destination="zEu-b8-ZNY" kind="presentation" identifier="choicePopup" modalPresentationStyle="overCurrentContext" id="pvY-za-HsH"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Logout" id="do3-Hb-Shu">
+                                <connections>
+                                    <action selector="logoutClicked:" destination="eNk-dH-Cud" id="Ufc-wT-hXY"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="resumeCollectionView" destination="0HU-Ot-eEv" id="6Aw-Tg-gXp"/>
                         <outlet property="searchBar" destination="bXk-rZ-oZ5" id="5WB-ed-8Tt"/>
                         <outlet property="segmentControl" destination="s3v-Pq-Tb5" id="lpK-Wk-Tsz"/>
                         <segue destination="emb-B7-o7i" kind="show" identifier="resumeBuilder" id="n5t-oB-477"/>
                         <segue destination="wjq-Rg-rgW" kind="show" identifier="coverBuilder" id="P6v-a1-Vmr"/>
+                        <segue destination="6mp-Dj-J1t" kind="presentation" identifier="logout" modalPresentationStyle="fullScreen" id="V8l-wP-Pck"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGL-vh-hXD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

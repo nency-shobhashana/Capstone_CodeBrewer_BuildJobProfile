@@ -107,9 +107,6 @@
 		39E886022624CF6A00FF10BC /* Capstone_CodeBrewer_BuildJobProfile */ = {
 			isa = PBXGroup;
 			children = (
-				C86710DE262761E90071B54C /* DashboardViewController.swift */,
-				3D27E74A262B2C4C00BA26A8 /* AddNewPopUoViewController.swift */,
-				3D2137A92627C2C000B5E12F /* ResumeCollectionViewCell.swift */,
 				3DEEC622262C3754000D9D0B /* dashboard */,
 				3DEEC621262C372F000D9D0B /* coverletter */,
 				3DEEC620262C3703000D9D0B /* login */,
@@ -176,6 +173,9 @@
 		3DEEC622262C3754000D9D0B /* dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				C86710DE262761E90071B54C /* DashboardViewController.swift */,
+				3D27E74A262B2C4C00BA26A8 /* AddNewPopUoViewController.swift */,
+				3D2137A92627C2C000B5E12F /* ResumeCollectionViewCell.swift */,
 			);
 			path = dashboard;
 			sourceTree = "<group>";
