@@ -41,6 +41,17 @@ class ResumeSaveDownloadViewController: UIViewController {
         HTMLContent = HTMLContent.replacingOccurrences(of: "#ADDRESS", with: resumeData["address"] as? String ?? "")
         HTMLContent = HTMLContent.replacingOccurrences(of: "#PROFILE_LINK", with: resumeData["profileLink"] as? String ?? "")
         HTMLContent = HTMLContent.replacingOccurrences(of: "#LINKEDIN_LINK", with: resumeData["linkedInLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#PROF_SUMMARY", with: resumeData["preofessionalSummary"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#COLLEGE_NAME", with: resumeData["linkedInLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#MAJOR", with: resumeData["linkedInLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#START_DATE", with: resumeData["linkedInLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#END_DATE", with: resumeData["linkedInLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#SKILLS", with: resumeData["linkedInLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#ROLE", with: resumeData["linkedInLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#EXP_START_DATE", with: resumeData["linkedInLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#EXP_END_DATE", with: resumeData["linkedInLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#COMPANY_NAME", with: resumeData["linkedInLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#DESCRIPTION", with: resumeData["linkedInLink"] as? String ?? "")
         return HTMLContent
     }	
     
