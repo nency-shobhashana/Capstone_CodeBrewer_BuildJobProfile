@@ -36,11 +36,22 @@ class CoverLetterSaveViewController: UIViewController {
         var HTMLContent = template.content
         HTMLContent = HTMLContent.replacingOccurrences(of: "#FIRST_NAME", with: coverLetterData["firstName"] as? String ?? "")
         HTMLContent = HTMLContent.replacingOccurrences(of: "#LAST_NAME", with: coverLetterData["lastName"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#DESIGNATION", with: coverLetterData["designation"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#PROFILE_LINK", with: coverLetterData["profile_link"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#LINKEDIN_LINK", with: coverLetterData["linkedIn_link"] as? String ?? "")
         HTMLContent = HTMLContent.replacingOccurrences(of: "#EMAIL", with: coverLetterData["email"] as? String ?? "")
         HTMLContent = HTMLContent.replacingOccurrences(of: "#NUMBER", with: coverLetterData["phone"] as? String ?? "")
         HTMLContent = HTMLContent.replacingOccurrences(of: "#ADDRESS", with: coverLetterData["address"] as? String ?? "")
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#PROFILE_LINK", with: coverLetterData["profileLink"] as? String ?? "")
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#LINKEDIN_LINK", with: coverLetterData["linkedInLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#EMP_NAME", with: coverLetterData["employee_name"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#EMP_COMPANY_NAME", with: coverLetterData["employee_cmpny_name"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#EMP_COMPANY_ADD", with: coverLetterData["employee_cmpny_address"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#EMP_EMAIL", with: coverLetterData["employee_email"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#EMP_NUMBER", with: coverLetterData["employee_number"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#EMP_JOB_POST", with: coverLetterData["job_post"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#COMPANY_NAME", with: coverLetterData["college_name"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#MAJOR", with: coverLetterData["major"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#EXP_YEAR", with: coverLetterData["exp_year"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#ROLE", with: coverLetterData["role"] as? String ?? "")
         return HTMLContent
     }
     
