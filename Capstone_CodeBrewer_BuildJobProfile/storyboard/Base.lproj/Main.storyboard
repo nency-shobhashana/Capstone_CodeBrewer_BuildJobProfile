@@ -722,6 +722,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wqn-SD-MYW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="FFM-Pq-BlF" secondAttribute="bottom" id="8Rx-cf-3dl"/>
@@ -872,7 +873,7 @@
                                                 <rect key="frame" x="20" y="218" width="327" height="50"/>
                                                 <accessibility key="accessibilityConfiguration" label="Phone number"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9dx-m8-K5V" customClass="MDCOutlinedTextField">
                                                 <rect key="frame" x="20" y="284" width="327" height="50"/>
