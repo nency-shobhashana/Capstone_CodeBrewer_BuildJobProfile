@@ -8,10 +8,10 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
-import MaterialComponents.MaterialBottomSheet
+import FittedSheets
 
-class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDelegate {
-    var bottomSheet:MDCBottomSheetController? = nil
+class ResumeDetailViewController: UIViewController {
+    var bottomSheet:SheetViewController? = nil
     
     var ref: DatabaseReference!
     var resumeTitle: String? = nil
@@ -43,8 +43,7 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
         
     }
     
-    func bottomSheetControllerDidDismissBottomSheet(_ controller: MDCBottomSheetController) {
-        (controller.contentViewController as? MDCBottomSheetMethod)?.onDismiss()
+    func saveDataOnSheetDismiss() {
         if resumeTitle != nil{
             ref.child(resumeTitle!).setValue(resumeData)
         }
@@ -53,71 +52,94 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
     
     // MARK: - Resume Personal Detail
     @IBAction func personalClicked(_ sender: Any) {
-        (bottomSheet?.contentViewController as? MDCBottomSheetMethod)?.onDismiss()
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumePersonalViewController") as! ResumePersonalViewController
         bottomSheetVC.resumeDetailVC = self
-        bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
-        bottomSheet?.trackingScrollView = bottomSheetVC.scrollView
-        present(bottomSheet!,animated: true, completion: nil)
-        bottomSheet?.delegate = self
+        bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])
+        bottomSheet?.minimumSpaceAbovePullBar = 24
+        bottomSheet?.shouldDismiss = { sheet in
+            (sheet.childViewController as? MDCBottomSheetMethod)?.onDismiss()
+            self.saveDataOnSheetDismiss()
+            return true
+        }
+        self.present(bottomSheet!, animated: true, completion: nil)
     }
     
     
     // MARK: - Resume Profile Link
     @IBAction func profileLinksClicked(_ sender: Any) {
-        (bottomSheet?.contentViewController as? MDCBottomSheetMethod)?.onDismiss()
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeProfileLinkViewController") as! ResumeProfileLinkViewController
         bottomSheetVC.resumeDetailVC = self
-        bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
-        present(bottomSheet!,animated: true, completion: nil)
-        bottomSheet?.delegate = self
+        bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])
+        bottomSheet?.minimumSpaceAbovePullBar = 24
+        bottomSheet?.shouldDismiss = { sheet in
+            (sheet.childViewController as? MDCBottomSheetMethod)?.onDismiss()
+            self.saveDataOnSheetDismiss()
+            return true
+        }
+        self.present(bottomSheet!, animated: true, completion: nil)
     }
     
     
     // MARK: - Resume Professional Summary
     @IBAction func resumeSummaryClicked(_ sender: Any) {
-        (bottomSheet?.contentViewController as? MDCBottomSheetMethod)?.onDismiss()
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeSummaryViewController") as! ResumeSummaryViewController
         bottomSheetVC.resumeDetailVC = self
-        bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
-        present(bottomSheet!,animated: true, completion: nil)
-        bottomSheet?.delegate = self
+        bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])
+        bottomSheet?.minimumSpaceAbovePullBar = 24
+        bottomSheet?.shouldDismiss = { sheet in
+            (sheet.childViewController as? MDCBottomSheetMethod)?.onDismiss()
+            self.saveDataOnSheetDismiss()
+            return true
+        }
+        self.present(bottomSheet!, animated: true, completion: nil)
     }
     
     // MARK: - Resume Education
     @IBAction func resumeEducationClicked(_ sender: Any) {
-        (bottomSheet?.contentViewController as? MDCBottomSheetMethod)?.onDismiss()
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeEducationViewController") as! ResumeEducationViewController
         bottomSheetVC.resumeDetailVC = self
-        bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
-        present(bottomSheet!,animated: true, completion: nil)
-        bottomSheet?.delegate = self
+        bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])
+        bottomSheet?.minimumSpaceAbovePullBar = 24
+        bottomSheet?.shouldDismiss = { sheet in
+            (sheet.childViewController as? MDCBottomSheetMethod)?.onDismiss()
+            self.saveDataOnSheetDismiss()
+            return true
+        }
+        self.present(bottomSheet!, animated: true, completion: nil)
     }
     
     // MARK: - Resume Experince
     @IBAction func resumeExperinceClicked(_ sender: Any) {
-        (bottomSheet?.contentViewController as? MDCBottomSheetMethod)?.onDismiss()
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeExperianceViewController") as! ResumeExperianceViewController
         bottomSheetVC.resumeDetailVC = self
-        bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
-        present(bottomSheet!,animated: true, completion: nil)
-        bottomSheet?.delegate = self
+        bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])
+        bottomSheet?.minimumSpaceAbovePullBar = 24
+        bottomSheet?.shouldDismiss = { sheet in
+            (sheet.childViewController as? MDCBottomSheetMethod)?.onDismiss()
+            self.saveDataOnSheetDismiss()
+            return true
+        }
+        self.present(bottomSheet!, animated: true, completion: nil)
     }
     
     // MARK: - Resume Skills
     @IBAction func resumeSkilsClicked(_ sender: Any) {
-        (bottomSheet?.contentViewController as? MDCBottomSheetMethod)?.onDismiss()
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeSkilsViewController") as! ResumeSkilsViewController
         bottomSheetVC.resumeDetailVC = self
-        bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
-        present(bottomSheet!,animated: true, completion: nil)
-        bottomSheet?.delegate = self
+        bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])
+        bottomSheet?.minimumSpaceAbovePullBar = 24
+        bottomSheet?.shouldDismiss = { sheet in
+            (sheet.childViewController as? MDCBottomSheetMethod)?.onDismiss()
+            self.saveDataOnSheetDismiss()
+            return true
+        }
+        self.present(bottomSheet!, animated: true, completion: nil)
     }
     
     // MARK: - choose template navigation
@@ -134,4 +156,3 @@ class ResumeDetailViewController: UIViewController, MDCBottomSheetControllerDele
         }
     }
 }
-

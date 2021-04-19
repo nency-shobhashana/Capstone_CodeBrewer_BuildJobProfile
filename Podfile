@@ -21,6 +21,7 @@ pod 'MaterialComponents/TextControls+OutlinedTextAreasTheming'
 pod 'MaterialComponents/TextControls+OutlinedTextFieldsTheming'
 
 pod 'MaterialComponents/BottomSheet'
+pod 'FittedSheets'
 
 pod 'MaterialComponents/Cards'
 pod 'MaterialComponents/Cards+Theming'
@@ -29,5 +30,7 @@ pod 'MaterialComponents/Chips'
 pod 'MaterialComponents/Chips+Theming'
 
 pod 'Firebase/Database'
+
+
 
 end
