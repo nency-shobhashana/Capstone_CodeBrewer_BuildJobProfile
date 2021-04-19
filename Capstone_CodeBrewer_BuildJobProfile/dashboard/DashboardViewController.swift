@@ -58,6 +58,13 @@ class DashboardViewController: UIViewController {
             }
             else {
                 print("No data available")
+                DispatchQueue.main.async {
+                    self.resumeCollection.removeAll()
+                    if self.segmentControl.selectedSegmentIndex == 0 {
+                        self.dashboardCollection = self.resumeCollection
+                        self.resumeCollectionView.reloadData()
+                    }
+                }
             }
         }
         ref.child("coverLetter").getData { (error, snapshot) in
@@ -78,9 +85,35 @@ class DashboardViewController: UIViewController {
                 }
             }
             else {
+                DispatchQueue.main.async {
+                    self.coverLetterCollection.removeAll()
+                    if self.segmentControl.selectedSegmentIndex == 1 {
+                        self.dashboardCollection = self.coverLetterCollection
+                        self.resumeCollectionView.reloadData()
+                    }
+                }
                 print("No data available")
             }
         }
+    }
+    
+    func removeData(isResume: Bool, title: String){
+        let refreshAlert = UIAlertController(title: "Delete", message: "Are you sure you want to remove?", preferredStyle: UIAlertController.Style.alert)
+
+        refreshAlert.addAction(UIAlertAction(title: "Remove", style: .default, handler: { (action: UIAlertAction!) in
+            if isResume {
+                self.ref.child("resume").child(title).removeValue()
+            } else {
+                self.ref.child("coverLetter").child(title).removeValue()
+            }
+            self.getFirebaseData()
+        }))
+
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+              print("Handle Cancel Logic here")
+        }))
+
+        present(refreshAlert, animated: true, completion: nil)
     }
     
     @IBAction func logoutClicked(_ sender: Any) {
@@ -147,7 +180,8 @@ extension DashboardViewController: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ResumeCollectionViewCell", for: indexPath) as! ResumeCollectionViewCell
-        cell.setup(with: dashboardCollection[indexPath.row])
+        cell.dashboardViewController = self
+        cell.setup(with: dashboardCollection[indexPath.row], isResume: self.segmentControl.selectedSegmentIndex == 0)
         return cell
     }
 }
