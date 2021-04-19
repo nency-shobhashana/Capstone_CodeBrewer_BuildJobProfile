@@ -42,7 +42,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.058823529411764705" green="0.33725490196078434" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.058823529411764705" green="0.33725490196078434" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ZjG-Ea-L7C" secondAttribute="bottom" constant="24" id="BXS-W1-SVp"/>
                             <constraint firstItem="Mjq-Jt-nep" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sbf-3p-e4c"/>
@@ -148,23 +148,23 @@
             <objects>
                 <viewController id="eNk-dH-Cud" customClass="DashboardViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="meo-ZX-NUY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Build Job Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aw2-yH-HZc">
-                                <rect key="frame" x="24" y="68" width="315" height="51"/>
+                                <rect key="frame" x="24" y="32" width="315" height="51"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with us!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obv-dF-Lt8">
-                                <rect key="frame" x="24" y="131" width="96" height="27"/>
+                                <rect key="frame" x="24" y="95" width="96" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HtQ-se-VW6">
-                                <rect key="frame" x="0.0" y="198" width="375" height="469"/>
+                                <rect key="frame" x="0.0" y="162" width="375" height="461"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="s3v-Pq-Tb5">
                                         <rect key="frame" x="92" y="24" width="191" height="32"/>
@@ -185,7 +185,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0HU-Ot-eEv">
-                                        <rect key="frame" x="24" y="159" width="327" height="310"/>
+                                        <rect key="frame" x="24" y="159" width="327" height="302"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="llj-YH-kqs">
                                             <size key="itemSize" width="166" height="195"/>
@@ -263,23 +263,25 @@
                         <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="obv-dF-Lt8" firstAttribute="top" secondItem="aw2-yH-HZc" secondAttribute="bottom" constant="12" id="B0D-hY-Iio"/>
-                            <constraint firstItem="pJT-gD-FLv" firstAttribute="bottom" secondItem="HtQ-se-VW6" secondAttribute="bottom" id="S3t-RO-HaK"/>
+                            <constraint firstAttribute="bottom" secondItem="HtQ-se-VW6" secondAttribute="bottom" id="S3t-RO-HaK"/>
                             <constraint firstItem="HtQ-se-VW6" firstAttribute="top" secondItem="obv-dF-Lt8" secondAttribute="bottom" constant="40" id="Xta-3l-YI8"/>
                             <constraint firstItem="pJT-gD-FLv" firstAttribute="trailing" secondItem="HtQ-se-VW6" secondAttribute="trailing" id="gWA-KK-gUf"/>
                             <constraint firstItem="obv-dF-Lt8" firstAttribute="leading" secondItem="pJT-gD-FLv" secondAttribute="leading" constant="24" id="jic-OQ-aXx"/>
                             <constraint firstItem="aw2-yH-HZc" firstAttribute="leading" secondItem="pJT-gD-FLv" secondAttribute="leading" constant="24" id="ohg-Ed-KNr"/>
-                            <constraint firstItem="aw2-yH-HZc" firstAttribute="top" secondItem="pJT-gD-FLv" secondAttribute="top" constant="24" id="qHC-fG-Ybn"/>
+                            <constraint firstItem="aw2-yH-HZc" firstAttribute="top" secondItem="pJT-gD-FLv" secondAttribute="top" constant="32" id="qHC-fG-Ybn"/>
                             <constraint firstItem="HtQ-se-VW6" firstAttribute="leading" secondItem="pJT-gD-FLv" secondAttribute="leading" id="wHY-d0-fch"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0jF-GD-OmL">
                         <rightBarButtonItems>
                             <barButtonItem image="plus" catalog="system" id="SL9-4M-dyb">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="zEu-b8-ZNY" kind="presentation" identifier="choicePopup" modalPresentationStyle="overCurrentContext" id="pvY-za-HsH"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Logout" id="do3-Hb-Shu">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="logoutClicked:" destination="eNk-dH-Cud" id="Ufc-wT-hXY"/>
                                 </connections>
@@ -304,11 +306,11 @@
             <objects>
                 <viewController id="emb-B7-o7i" customClass="ResumeDetailViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bPn-lh-Jr6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rfo-GU-HtH">
-                                <rect key="frame" x="24" y="133" width="327" height="298"/>
+                                <rect key="frame" x="24" y="89" width="327" height="298"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Te-NE-dij">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="33"/>
@@ -373,27 +375,27 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQe-u7-yDp">
-                                <rect key="frame" x="24" y="593" width="327" height="50"/>
+                                <rect key="frame" x="24" y="549" width="327" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="rsc-0M-049"/>
                                 </constraints>
                                 <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="nextClicked:" destination="emb-B7-o7i" eventType="touchUpInside" id="HUa-MK-Fiv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resume Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9D6-e2-Gfu">
-                                <rect key="frame" x="24" y="68" width="327" height="41"/>
+                                <rect key="frame" x="24" y="24" width="327" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gEU-oX-aCm"/>
-                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.058823529411764705" green="0.33725490196078434" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gEU-oX-aCm" firstAttribute="trailing" secondItem="9D6-e2-Gfu" secondAttribute="trailing" constant="24" id="2fY-ad-GKx"/>
                             <constraint firstItem="gEU-oX-aCm" firstAttribute="trailing" secondItem="HQe-u7-yDp" secondAttribute="trailing" constant="24" id="6Tr-0u-4Ys"/>
@@ -437,7 +439,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Le-iS-S8O">
                                 <rect key="frame" x="24" y="146" width="327" height="497"/>
-                                <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b18-kp-iql">
                                     <size key="itemSize" width="143" height="191"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -459,7 +461,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mYV-xn-C2g"/>
-                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="50M-Yd-3i0" firstAttribute="leading" secondItem="mYV-xn-C2g" secondAttribute="leading" constant="24" id="4sG-31-T64"/>
                             <constraint firstItem="1Le-iS-S8O" firstAttribute="top" secondItem="jfG-ee-mEB" secondAttribute="bottom" constant="24" id="4zX-U8-KnI"/>
@@ -483,31 +485,31 @@
             <objects>
                 <viewController id="wjq-Rg-rgW" customClass="CoverLetterDetailViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vva-hB-xO4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap4-Ky-1bz">
-                                <rect key="frame" x="24" y="593" width="327" height="50"/>
+                                <rect key="frame" x="24" y="549" width="327" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="44W-2L-rxZ"/>
                                     <constraint firstAttribute="height" constant="50" id="7sh-e9-9hU"/>
                                 </constraints>
                                 <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="nextClicked:" destination="wjq-Rg-rgW" eventType="touchUpInside" id="Uo1-fz-LQL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cover Letter Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caT-ND-Jcm">
-                                <rect key="frame" x="24" y="68" width="327" height="41"/>
+                                <rect key="frame" x="24" y="24" width="327" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rxH-G2-Tzx">
-                                <rect key="frame" x="24" y="133" width="327" height="114"/>
+                                <rect key="frame" x="24" y="89" width="327" height="114"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUT-eZ-8FH">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="46"/>
@@ -529,7 +531,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LMf-ma-Jra"/>
-                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LMf-ma-Jra" firstAttribute="bottom" secondItem="Ap4-Ky-1bz" secondAttribute="bottom" constant="24" id="0yW-fX-XmP"/>
                             <constraint firstItem="caT-ND-Jcm" firstAttribute="top" secondItem="LMf-ma-Jra" secondAttribute="top" constant="24" id="3h2-Gc-Zff"/>
@@ -787,7 +789,9 @@
                                             <constraint firstAttribute="width" constant="20" id="7Xt-FC-JHR"/>
                                             <constraint firstAttribute="height" constant="20" id="7qq-EY-K6i"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="clear" catalog="system"/>
+                                        <state key="normal" backgroundImage="clear" catalog="system">
+                                            <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="closeBtn:" destination="zEu-b8-ZNY" eventType="touchUpInside" id="SDL-hG-gSz"/>
                                         </connections>
@@ -796,7 +800,7 @@
                                         <rect key="frame" x="16" y="36" width="178" height="33"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <state key="normal" title="Add New Resume">
-                                            <color key="titleColor" red="0.023529411760000001" green="0.3486832976" blue="0.71269983049999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="newResumeClicked:" destination="zEu-b8-ZNY" eventType="touchUpInside" id="H7y-62-GMb"/>
@@ -806,7 +810,7 @@
                                         <rect key="frame" x="16" y="77" width="178" height="33"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <state key="normal" title="Add New Cover Letter">
-                                            <color key="titleColor" red="0.023529411760000001" green="0.3486832976" blue="0.71269983049999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="newCoverletterClicked:" destination="zEu-b8-ZNY" eventType="touchUpInside" id="SqV-be-S6g"/>
@@ -897,7 +901,7 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qat-a2-Gls">
                                                 <rect key="frame" x="20" y="358" width="327" height="50"/>
-                                                <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="yin-wA-M00"/>
                                                 </constraints>
@@ -1018,7 +1022,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yc-9J-ttP">
                                         <rect key="frame" x="20" y="226" width="327" height="50"/>
-                                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="TZp-kq-yFH"/>
                                         </constraints>
@@ -1092,7 +1096,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEP-hy-YhK">
                                                 <rect key="frame" x="24" y="198" width="327" height="50"/>
-                                                <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="hp7-oD-mKV"/>
                                                 </constraints>
@@ -1157,9 +1161,17 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqj-yn-ctc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hib-db-pfd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hib-db-pfd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1200,7 +1212,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFz-sf-tEM">
                                             <rect key="frame" x="24" y="0.0" width="327" height="44"/>
-                                            <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="BcW-6x-OSZ"/>
                                             </constraints>
@@ -1327,7 +1339,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ru-FY-bsP">
                                             <rect key="frame" x="24" y="0.0" width="327" height="44"/>
-                                            <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="A1x-Dy-mnB"/>
                                             </constraints>
@@ -1518,17 +1530,17 @@
             <objects>
                 <viewController id="jv0-aY-PCB" customClass="ResumeChooseTemplateViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wgv-Rw-mbG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Template" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOR-Vp-mNo">
-                                <rect key="frame" x="24" y="68" width="327" height="21"/>
+                                <rect key="frame" x="24" y="24" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaX-AP-2fc">
-                                <rect key="frame" x="0.0" y="113" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="69" width="375" height="554"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ymz-vt-LSm">
                                         <rect key="frame" x="24" y="24" width="327" height="506"/>
@@ -1588,7 +1600,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vjo-6F-3Bk"/>
-                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zOR-Vp-mNo" firstAttribute="top" secondItem="Vjo-6F-3Bk" secondAttribute="top" constant="24" id="JnL-jh-iRI"/>
                             <constraint firstItem="Vjo-6F-3Bk" firstAttribute="trailing" secondItem="zOR-Vp-mNo" secondAttribute="trailing" constant="24" id="Nhp-nr-ZBr"/>
@@ -1614,11 +1626,11 @@
             <objects>
                 <viewController id="krG-ec-wzO" customClass="ResumeSaveDownloadViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qay-ff-Q7X">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6WF-St-qrK">
-                                <rect key="frame" x="24" y="68" width="327" height="427"/>
+                                <rect key="frame" x="24" y="24" width="327" height="427"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -1626,26 +1638,26 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-rs-nbn">
-                                <rect key="frame" x="24" y="593" width="327" height="50"/>
+                                <rect key="frame" x="24" y="549" width="327" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ee2-M1-Sm8"/>
                                 </constraints>
                                 <state key="normal" title="Download">
-                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="downloadClicked:" destination="krG-ec-wzO" eventType="touchUpInside" id="BO8-dN-cLr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1p-wi-iQQ">
-                                <rect key="frame" x="24" y="519" width="327" height="50"/>
+                                <rect key="frame" x="24" y="475" width="327" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ynd-D6-BIJ"/>
                                 </constraints>
                                 <state key="normal" title="Save">
-                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="saveClicked:" destination="krG-ec-wzO" eventType="touchUpInside" id="baO-rx-yWs"/>
@@ -1653,7 +1665,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OF2-Zj-pfi"/>
-                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="OF2-Zj-pfi" firstAttribute="trailing" secondItem="Z1p-wi-iQQ" secondAttribute="trailing" constant="24" id="2zG-mA-Mio"/>
                             <constraint firstItem="6WF-St-qrK" firstAttribute="top" secondItem="OF2-Zj-pfi" secondAttribute="top" constant="24" id="7Or-jx-ZzC"/>
@@ -1681,17 +1693,17 @@
             <objects>
                 <viewController storyboardIdentifier="CoverLetterChooseTemplateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jq2-2F-Fkg" customClass="CoverLetterChooseTemplateViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AwT-en-Tp5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Template" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcS-C4-CC2">
-                                <rect key="frame" x="24" y="68" width="327" height="21"/>
+                                <rect key="frame" x="24" y="24" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYb-4T-N9B">
-                                <rect key="frame" x="0.0" y="113" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="69" width="375" height="554"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qfo-6m-7fM">
                                         <rect key="frame" x="24" y="24" width="327" height="506"/>
@@ -1751,7 +1763,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qoF-R6-07m"/>
-                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yYb-4T-N9B" firstAttribute="leading" secondItem="qoF-R6-07m" secondAttribute="leading" id="50a-jo-Jyx"/>
                             <constraint firstItem="qoF-R6-07m" firstAttribute="bottom" secondItem="yYb-4T-N9B" secondAttribute="bottom" id="6H3-Cz-fCB"/>
@@ -1777,11 +1789,11 @@
             <objects>
                 <viewController id="7re-iE-2hJ" customClass="CoverLetterSaveViewController" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2a1-ef-pgD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muh-s2-HdA">
-                                <rect key="frame" x="24" y="68" width="327" height="427"/>
+                                <rect key="frame" x="24" y="24" width="327" height="427"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -1789,26 +1801,26 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPx-Hu-161">
-                                <rect key="frame" x="24" y="593" width="327" height="50"/>
+                                <rect key="frame" x="24" y="549" width="327" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Wnd-Uc-D9K"/>
                                 </constraints>
                                 <state key="normal" title="Download">
-                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="downloadClicked:" destination="7re-iE-2hJ" eventType="touchUpInside" id="uNc-xA-ifc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dx7-p7-IRx">
-                                <rect key="frame" x="24" y="519" width="327" height="50"/>
+                                <rect key="frame" x="24" y="475" width="327" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dSG-j3-LUB"/>
                                 </constraints>
                                 <state key="normal" title="Save">
-                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="saveClicked:" destination="7re-iE-2hJ" eventType="touchUpInside" id="Wwj-6F-giI"/>
@@ -1816,7 +1828,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8RX-Jd-XdV"/>
-                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.33725490200000002" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Dx7-p7-IRx" firstAttribute="leading" secondItem="8RX-Jd-XdV" secondAttribute="leading" constant="24" id="9fx-4C-oxh"/>
                             <constraint firstItem="Dx7-p7-IRx" firstAttribute="top" secondItem="muh-s2-HdA" secondAttribute="bottom" constant="24" id="CJG-65-asM"/>
