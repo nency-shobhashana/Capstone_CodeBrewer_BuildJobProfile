@@ -8,11 +8,11 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
-import MaterialComponents.MaterialBottomSheet
+import FittedSheets
 
-class CoverLetterDetailViewController: UIViewController, MDCBottomSheetControllerDelegate  {
+class CoverLetterDetailViewController: UIViewController  {
 
-    var bottomSheet:MDCBottomSheetController? = nil
+    var bottomSheet:SheetViewController? = nil
     var ref: DatabaseReference!
     var coverLetterTitle: String? = nil
     var coverLetterData: Dictionary<String, Any>!
@@ -40,8 +40,7 @@ class CoverLetterDetailViewController: UIViewController, MDCBottomSheetControlle
         }
     }
     
-    func bottomSheetControllerDidDismissBottomSheet(_ controller: MDCBottomSheetController) {
-        (controller.contentViewController as? MDCBottomSheetMethod)?.onDismiss()
+    func saveDataOnSheetDismiss() {
         if coverLetterTitle != nil{
             ref.child(coverLetterTitle!).setValue(coverLetterData)
         }
@@ -51,13 +50,17 @@ class CoverLetterDetailViewController: UIViewController, MDCBottomSheetControlle
 
     // MARK: - Cover Letter Detail
     @IBAction func personalClicked(_ sender: Any) {
-        (bottomSheet?.contentViewController as? MDCBottomSheetMethod)?.onDismiss()
         bottomSheet?.dismiss(animated: true, completion: nil)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "CoverLetterFieldFormViewController") as! CoverLetterFieldFormViewController
         bottomSheetVC.coverLetterDetailVC = self
-        bottomSheet = MDCBottomSheetController(contentViewController: bottomSheetVC)
-        present(bottomSheet!,animated: true, completion: nil)
-        bottomSheet?.delegate = self
+        bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])
+        bottomSheet?.minimumSpaceAbovePullBar = 24
+        bottomSheet?.shouldDismiss = { sheet in
+            (sheet.childViewController as? MDCBottomSheetMethod)?.onDismiss()
+            self.saveDataOnSheetDismiss()
+            return true
+        }
+        self.present(bottomSheet!, animated: true, completion: nil)
     }
     
     // MARK: - choose template navigation
