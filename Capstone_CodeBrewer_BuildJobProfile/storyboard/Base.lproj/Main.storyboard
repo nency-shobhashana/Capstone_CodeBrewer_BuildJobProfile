@@ -152,19 +152,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Build Job Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aw2-yH-HZc">
-                                <rect key="frame" x="24" y="124" width="315" height="51"/>
+                                <rect key="frame" x="24" y="68" width="315" height="51"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with us!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obv-dF-Lt8">
-                                <rect key="frame" x="24" y="187" width="96" height="27"/>
+                                <rect key="frame" x="24" y="131" width="96" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HtQ-se-VW6">
-                                <rect key="frame" x="0.0" y="254" width="375" height="413"/>
+                                <rect key="frame" x="0.0" y="198" width="375" height="469"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="s3v-Pq-Tb5">
                                         <rect key="frame" x="92" y="24" width="191" height="32"/>
@@ -185,7 +185,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0HU-Ot-eEv">
-                                        <rect key="frame" x="0.0" y="159" width="375" height="254"/>
+                                        <rect key="frame" x="24" y="159" width="327" height="310"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="llj-YH-kqs">
                                             <size key="itemSize" width="166" height="195"/>
@@ -195,7 +195,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ResumeCollectionViewCell" id="EBr-Dk-BHH" customClass="ResumeCollectionViewCell" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="166" height="195"/>
+                                                <rect key="frame" x="80.5" y="0.0" width="166" height="195"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8gg-K4-TWC">
                                                     <rect key="frame" x="0.0" y="0.0" width="166" height="195"/>
@@ -248,10 +248,10 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="bXk-rZ-oZ5" secondAttribute="trailing" constant="30" id="Pe8-DV-Spp"/>
                                     <constraint firstItem="s3v-Pq-Tb5" firstAttribute="top" secondItem="HtQ-se-VW6" secondAttribute="top" constant="24" id="Q8t-Yw-BkW"/>
-                                    <constraint firstAttribute="trailing" secondItem="0HU-Ot-eEv" secondAttribute="trailing" id="Qu6-QX-Ujx"/>
+                                    <constraint firstAttribute="trailing" secondItem="0HU-Ot-eEv" secondAttribute="trailing" constant="24" id="Qu6-QX-Ujx"/>
                                     <constraint firstItem="bXk-rZ-oZ5" firstAttribute="leading" secondItem="HtQ-se-VW6" secondAttribute="leading" constant="30" id="S8V-5b-gfb"/>
                                     <constraint firstAttribute="trailing" secondItem="s3v-Pq-Tb5" secondAttribute="trailing" constant="92" id="TYv-p4-7dT"/>
-                                    <constraint firstItem="0HU-Ot-eEv" firstAttribute="leading" secondItem="HtQ-se-VW6" secondAttribute="leading" id="VUn-0f-qEg"/>
+                                    <constraint firstItem="0HU-Ot-eEv" firstAttribute="leading" secondItem="HtQ-se-VW6" secondAttribute="leading" constant="24" id="VUn-0f-qEg"/>
                                     <constraint firstItem="bXk-rZ-oZ5" firstAttribute="top" secondItem="s3v-Pq-Tb5" secondAttribute="bottom" constant="24" id="Xrb-yp-Gf1"/>
                                     <constraint firstAttribute="bottom" secondItem="0HU-Ot-eEv" secondAttribute="bottom" id="fSC-nN-EQf"/>
                                     <constraint firstItem="s3v-Pq-Tb5" firstAttribute="leading" secondItem="HtQ-se-VW6" secondAttribute="leading" constant="92" id="hto-Ch-29P"/>
@@ -268,7 +268,7 @@
                             <constraint firstItem="pJT-gD-FLv" firstAttribute="trailing" secondItem="HtQ-se-VW6" secondAttribute="trailing" id="gWA-KK-gUf"/>
                             <constraint firstItem="obv-dF-Lt8" firstAttribute="leading" secondItem="pJT-gD-FLv" secondAttribute="leading" constant="24" id="jic-OQ-aXx"/>
                             <constraint firstItem="aw2-yH-HZc" firstAttribute="leading" secondItem="pJT-gD-FLv" secondAttribute="leading" constant="24" id="ohg-Ed-KNr"/>
-                            <constraint firstItem="aw2-yH-HZc" firstAttribute="top" secondItem="pJT-gD-FLv" secondAttribute="top" constant="80" id="qHC-fG-Ybn"/>
+                            <constraint firstItem="aw2-yH-HZc" firstAttribute="top" secondItem="pJT-gD-FLv" secondAttribute="top" constant="24" id="qHC-fG-Ybn"/>
                             <constraint firstItem="HtQ-se-VW6" firstAttribute="leading" secondItem="pJT-gD-FLv" secondAttribute="leading" id="wHY-d0-fch"/>
                         </constraints>
                     </view>
