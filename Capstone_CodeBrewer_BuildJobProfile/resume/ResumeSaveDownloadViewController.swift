@@ -42,10 +42,22 @@ class ResumeSaveDownloadViewController: UIViewController {
         HTMLContent = HTMLContent.replacingOccurrences(of: "#PROFILE_LINK", with: resumeData["profileLink"] as? String ?? "")
         HTMLContent = HTMLContent.replacingOccurrences(of: "#LINKEDIN_LINK", with: resumeData["linkedInLink"] as? String ?? "")
         HTMLContent = HTMLContent.replacingOccurrences(of: "#PROF_SUMMARY", with: resumeData["preofessionalSummary"] as? String ?? "")
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#COLLEGE_NAME", with: resumeData["linkedInLink"] as? String ?? "")
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#MAJOR", with: resumeData["linkedInLink"] as? String ?? "")
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#START_DATE", with: resumeData["linkedInLink"] as? String ?? "")
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#END_DATE", with: resumeData["linkedInLink"] as? String ?? "")
+        
+        var educationContent = ""
+        if let match = HTMLContent.range(of: "(?<=#COLLEGE_START#).+(?=#COLLEGE_END#)", options: .regularExpression) {
+            educationContent = (resumeData["education"] as? Array<Dictionary<String, String>>)?.map({ (data) -> String in
+                var raw = HTMLContent.substring(with: match)
+                raw = raw.replacingOccurrences(of: "#COLLEGE_NAME", with: data["name"] as? String ?? "")
+                raw = raw.replacingOccurrences(of: "#MAJOR", with: data["major"] as? String ?? "")
+                raw = raw.replacingOccurrences(of: "#START_DATE", with: data["startYear"] as? String ?? "")
+                raw = raw.replacingOccurrences(of: "#END_DATE", with: data["endYear"] as? String ?? "")
+                return raw
+            }).joined() ?? ""
+        }
+        
+        let educationReplaceRange = HTMLContent.range(of: "(?=#COLLEGE_START#).+(?:#COLLEGE_END#)", options: .regularExpression)
+        HTMLContent.replaceSubrange(educationReplaceRange!, with: educationContent)
+        
         HTMLContent = HTMLContent.replacingOccurrences(of: "#SKILLS", with: resumeData["linkedInLink"] as? String ?? "")
         HTMLContent = HTMLContent.replacingOccurrences(of: "#ROLE", with: resumeData["linkedInLink"] as? String ?? "")
         HTMLContent = HTMLContent.replacingOccurrences(of: "#EXP_START_DATE", with: resumeData["linkedInLink"] as? String ?? "")
