@@ -58,12 +58,24 @@ class ResumeSaveDownloadViewController: UIViewController {
         let educationReplaceRange = HTMLContent.range(of: "(?=#COLLEGE_START#).+(?:#COLLEGE_END#)", options: .regularExpression)
         HTMLContent.replaceSubrange(educationReplaceRange!, with: educationContent)
         
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#SKILLS", with: resumeData["linkedInLink"] as? String ?? "")
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#ROLE", with: resumeData["linkedInLink"] as? String ?? "")
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#EXP_START_DATE", with: resumeData["linkedInLink"] as? String ?? "")
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#EXP_END_DATE", with: resumeData["linkedInLink"] as? String ?? "")
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#COMPANY_NAME", with: resumeData["linkedInLink"] as? String ?? "")
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#DESCRIPTION", with: resumeData["linkedInLink"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#SKILLS", with: resumeData["skills"] as? String ?? "")
+        
+        var expContent = ""
+        if let match = HTMLContent.range(of: "(?<=#EXP_START#).+(?=#EXP_END#)", options: .regularExpression) {
+            expContent = (resumeData["experience"] as? Array<Dictionary<String, String>>)?.map({ (data) -> String in
+                var raw = HTMLContent.substring(with: match)
+                raw = raw.replacingOccurrences(of: "#ROLE", with: data["role"] as? String ?? "")
+                raw = raw.replacingOccurrences(of: "#EXP_START_DATE", with: data["startYear"] as? String ?? "")
+                raw = raw.replacingOccurrences(of: "#EXP_END_DATE", with: data["endYear"] as? String ?? "")
+                raw = raw.replacingOccurrences(of: "#COMPANY_NAME", with: data["name"] as? String ?? "")
+                raw = raw.replacingOccurrences(of: "#DESCRIPTION", with: data["description"] as? String ?? "")
+                return raw
+            }).joined() ?? ""
+        }
+        
+        let expnReplaceRange = HTMLContent.range(of: "(?=#EXP_START#).+(?:#EXP_END#)", options: .regularExpression)
+        HTMLContent.replaceSubrange(expnReplaceRange!, with: expContent)
+        
         return HTMLContent
     }	
     

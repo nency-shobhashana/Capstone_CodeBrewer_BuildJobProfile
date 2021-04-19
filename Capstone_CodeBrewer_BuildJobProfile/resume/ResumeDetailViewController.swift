@@ -52,7 +52,7 @@ class ResumeDetailViewController: UIViewController {
     
     // MARK: - Resume Personal Detail
     @IBAction func personalClicked(_ sender: Any) {
-        bottomSheet?.dismiss(animated: true, completion: nil)
+        bottomSheet?.attemptDismiss(animated: true)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumePersonalViewController") as! ResumePersonalViewController
         bottomSheetVC.resumeDetailVC = self
         bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])
@@ -68,7 +68,7 @@ class ResumeDetailViewController: UIViewController {
     
     // MARK: - Resume Profile Link
     @IBAction func profileLinksClicked(_ sender: Any) {
-        bottomSheet?.dismiss(animated: true, completion: nil)
+        bottomSheet?.attemptDismiss(animated: true)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeProfileLinkViewController") as! ResumeProfileLinkViewController
         bottomSheetVC.resumeDetailVC = self
         bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])
@@ -84,7 +84,7 @@ class ResumeDetailViewController: UIViewController {
     
     // MARK: - Resume Professional Summary
     @IBAction func resumeSummaryClicked(_ sender: Any) {
-        bottomSheet?.dismiss(animated: true, completion: nil)
+        bottomSheet?.attemptDismiss(animated: true)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeSummaryViewController") as! ResumeSummaryViewController
         bottomSheetVC.resumeDetailVC = self
         bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])
@@ -99,7 +99,7 @@ class ResumeDetailViewController: UIViewController {
     
     // MARK: - Resume Education
     @IBAction func resumeEducationClicked(_ sender: Any) {
-        bottomSheet?.dismiss(animated: true, completion: nil)
+        bottomSheet?.attemptDismiss(animated: true)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeEducationViewController") as! ResumeEducationViewController
         bottomSheetVC.resumeDetailVC = self
         bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])
@@ -114,7 +114,7 @@ class ResumeDetailViewController: UIViewController {
     
     // MARK: - Resume Experince
     @IBAction func resumeExperinceClicked(_ sender: Any) {
-        bottomSheet?.dismiss(animated: true, completion: nil)
+        bottomSheet?.attemptDismiss(animated: true)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeExperianceViewController") as! ResumeExperianceViewController
         bottomSheetVC.resumeDetailVC = self
         bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])
@@ -129,7 +129,7 @@ class ResumeDetailViewController: UIViewController {
     
     // MARK: - Resume Skills
     @IBAction func resumeSkilsClicked(_ sender: Any) {
-        bottomSheet?.dismiss(animated: true, completion: nil)
+        bottomSheet?.attemptDismiss(animated: true)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "ResumeSkilsViewController") as! ResumeSkilsViewController
         bottomSheetVC.resumeDetailVC = self
         bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])

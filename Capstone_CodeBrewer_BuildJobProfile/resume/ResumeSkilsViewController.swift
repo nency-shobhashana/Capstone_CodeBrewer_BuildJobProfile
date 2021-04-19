@@ -66,7 +66,7 @@ class ResumeSkilsViewController: UIViewController, MDCChipFieldDelegate, MDCBott
     }
     
     @IBAction func nextClicked(_ sender: Any) {
-        resumeDetailVC.bottomSheet?.dismiss(animated: true, completion: nil)
+        resumeDetailVC.bottomSheet?.attemptDismiss(animated: true)
     }
 }
 
