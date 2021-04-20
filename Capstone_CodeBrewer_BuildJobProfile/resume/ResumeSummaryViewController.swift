@@ -22,13 +22,13 @@ class ResumeSummaryViewController: UIViewController, MDCBottomSheetMethod {
         super.viewDidLoad()
         
         // load data from core data to UI component
-        summaryTF.textView.text = resumeDetailVC.resumeData["preofessionalSummary"] as? String ?? ""
+        summaryTF.textView.text = resumeDetailVC.resumeData["professionalSummary"] as? String ?? ""
         designationTF.text = resumeDetailVC.resumeData["designation"] as? String ?? ""
     }
     
     // store user data in to core data component
     func onDismiss() {
-        resumeDetailVC.resumeData["preofessionalSummary"] = summaryTF.textView.text ?? ""
+        resumeDetailVC.resumeData["professionalSummary"] = summaryTF.textView.text ?? ""
         resumeDetailVC.resumeData["designation"] = designationTF.text ?? ""
     }
     

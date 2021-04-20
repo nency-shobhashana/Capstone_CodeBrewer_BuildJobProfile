@@ -41,7 +41,7 @@ class ResumeSaveDownloadViewController: UIViewController {
         HTMLContent = HTMLContent.replacingOccurrences(of: "#ADDRESS", with: resumeData["address"] as? String ?? "")
         HTMLContent = HTMLContent.replacingOccurrences(of: "#PROFILE_LINK", with: resumeData["profileLink"] as? String ?? "")
         HTMLContent = HTMLContent.replacingOccurrences(of: "#LINKEDIN_LINK", with: resumeData["linkedInLink"] as? String ?? "")
-        HTMLContent = HTMLContent.replacingOccurrences(of: "#PROF_SUMMARY", with: resumeData["preofessionalSummary"] as? String ?? "")
+        HTMLContent = HTMLContent.replacingOccurrences(of: "#PROF_SUMMARY", with: resumeData["professionalSummary"] as? String ?? "")
         
         var educationContent = ""
         if let match = HTMLContent.range(of: "(?<=#COLLEGE_START#).+(?=#COLLEGE_END#)", options: .regularExpression) {
