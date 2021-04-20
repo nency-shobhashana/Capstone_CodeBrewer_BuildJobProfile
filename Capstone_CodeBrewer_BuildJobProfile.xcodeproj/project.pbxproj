@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		394B56C626261FC900702F72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 394B56C526261FC900702F72 /* GoogleService-Info.plist */; };
 		394B570626265E0200702F72 /* LoginAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394B570526265E0200702F72 /* LoginAuthViewController.swift */; };
 		39E886042624CF6A00FF10BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E886032624CF6A00FF10BC /* AppDelegate.swift */; };
 		39E886062624CF6A00FF10BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E886052624CF6A00FF10BC /* SceneDelegate.swift */; };
@@ -38,6 +37,7 @@
 		3D7CE0DB262A89C000DE8B30 /* SubscriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CE0DA262A89C000DE8B30 /* SubscriptionCollectionViewCell.swift */; };
 		3D7CE0DE262A9A9B00DE8B30 /* CoverLetterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CE0DD262A9A9B00DE8B30 /* CoverLetterDetailViewController.swift */; };
 		3DD6B4E7262EB77000560F72 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD6B4E6262EB77000560F72 /* Subscription.swift */; };
+		3DF1BC91262F3B19003FAD78 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DF1BC90262F3B19003FAD78 /* GoogleService-Info.plist */; };
 		8CC3786EEB7842B015C2AD2C /* Pods_Capstone_CodeBrewer_BuildJobProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280BF69109C912B97AA30C86 /* Pods_Capstone_CodeBrewer_BuildJobProfile.framework */; };
 		C8452E822628ADE700DBD578 /* ResumePersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8452E812628ADE700DBD578 /* ResumePersonalViewController.swift */; };
 		C86710DF262761E90071B54C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86710DE262761E90071B54C /* DashboardViewController.swift */; };
@@ -46,7 +46,6 @@
 /* Begin PBXFileReference section */
 		0976D90B81460B94EECCE6A6 /* Pods-Capstone_CodeBrewer_BuildJobProfile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_CodeBrewer_BuildJobProfile.debug.xcconfig"; path = "Target Support Files/Pods-Capstone_CodeBrewer_BuildJobProfile/Pods-Capstone_CodeBrewer_BuildJobProfile.debug.xcconfig"; sourceTree = "<group>"; };
 		280BF69109C912B97AA30C86 /* Pods_Capstone_CodeBrewer_BuildJobProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capstone_CodeBrewer_BuildJobProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		394B56C526261FC900702F72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		394B570526265E0200702F72 /* LoginAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthViewController.swift; sourceTree = "<group>"; };
 		39E886002624CF6A00FF10BC /* Capstone_CodeBrewer_BuildJobProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone_CodeBrewer_BuildJobProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E886032624CF6A00FF10BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		3D7CE0DD262A9A9B00DE8B30 /* CoverLetterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverLetterDetailViewController.swift; sourceTree = "<group>"; };
 		3DD6B4E6262EB77000560F72 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		3DE3EE3A262EADCC00829371 /* Capstone_CodeBrewer_BuildJobProfile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Capstone_CodeBrewer_BuildJobProfile.entitlements; sourceTree = "<group>"; };
+		3DF1BC90262F3B19003FAD78 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AB7269D0D3CC20860A0456B4 /* Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig"; path = "Target Support Files/Pods-Capstone_CodeBrewer_BuildJobProfile/Pods-Capstone_CodeBrewer_BuildJobProfile.release.xcconfig"; sourceTree = "<group>"; };
 		C8452E812628ADE700DBD578 /* ResumePersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumePersonalViewController.swift; sourceTree = "<group>"; };
 		C86710DE262761E90071B54C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 				39E886032624CF6A00FF10BC /* AppDelegate.swift */,
 				39E886052624CF6A00FF10BC /* SceneDelegate.swift */,
 				39E8860C2624CF7000FF10BC /* Assets.xcassets */,
+				3DF1BC90262F3B19003FAD78 /* GoogleService-Info.plist */,
 				39E886112624CF7000FF10BC /* Info.plist */,
-				394B56C526261FC900702F72 /* GoogleService-Info.plist */,
 				3D2137AD2627D01A00B5E12F /* Resume.swift */,
 			);
 			path = Capstone_CodeBrewer_BuildJobProfile;
@@ -275,7 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E886102624CF7000FF10BC /* LaunchScreen.storyboard in Resources */,
-				394B56C626261FC900702F72 /* GoogleService-Info.plist in Resources */,
+				3DF1BC91262F3B19003FAD78 /* GoogleService-Info.plist in Resources */,
 				39E8860D2624CF7000FF10BC /* Assets.xcassets in Resources */,
 				39E8860B2624CF6A00FF10BC /* Main.storyboard in Resources */,
 			);
@@ -524,15 +524,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Capstone_CodeBrewer_BuildJobProfile/Capstone_CodeBrewer_BuildJobProfile.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = P9EGBPR36S;
 				INFOPLIST_FILE = Capstone_CodeBrewer_BuildJobProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lambton.C0787472.buildJobProfile.Capstone-CodeBrewer-BuildJobProfile";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lambton.C0787472.CodeBrewer.buildJobProfile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = CapstoneDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -545,15 +547,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Capstone_CodeBrewer_BuildJobProfile/Capstone_CodeBrewer_BuildJobProfile.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = P9EGBPR36S;
 				INFOPLIST_FILE = Capstone_CodeBrewer_BuildJobProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lambton.C0787472.buildJobProfile.Capstone-CodeBrewer-BuildJobProfile";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lambton.C0787472.CodeBrewer.buildJobProfile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = CapstoneDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

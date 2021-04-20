@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>402578668828-oe7pr8d0a5vqg7hdmlsiphop3cpdthmv.apps.googleusercontent.com</string>
+	<string>402578668828-2kg0a7f1qpat7reranmhekvp2vbpha67.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.402578668828-oe7pr8d0a5vqg7hdmlsiphop3cpdthmv</string>
+	<string>com.googleusercontent.apps.402578668828-2kg0a7f1qpat7reranmhekvp2vbpha67</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCFBgEgkI8UaarZ19V9dzSWfANxAhOd81s</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.lambton.C0787472.buildJobProfile.Capstone-CodeBrewer-BuildJobProfile</string>
+	<string>com.lambton.C0787472.CodeBrewer.buildJobProfile</string>
 	<key>PROJECT_ID</key>
 	<string>build-job-profile</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:402578668828:ios:51ea8fb347d92cf1654ed9</string>
+	<string>1:402578668828:ios:1ec30112daeafeba654ed9</string>
+	<key>DATABASE_URL</key>
+	<string>https://build-job-profile-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

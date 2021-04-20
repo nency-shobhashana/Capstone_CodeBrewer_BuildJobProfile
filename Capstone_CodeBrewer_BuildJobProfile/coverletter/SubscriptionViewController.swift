@@ -15,7 +15,7 @@ class SubscriptionViewController: UIViewController {
     var ref: DatabaseReference!
     private var paymentRequest: PKPaymentRequest = {
             let request = PKPaymentRequest()
-        request.merchantIdentifier = ""
+        request.merchantIdentifier = "merchant.com.lambton.C0787472.CodeBrewer.buildJobProfile"
         request.supportedNetworks = [.quicPay, .visa
                                      , .amex, .masterCard]
         request.supportedCountries = ["CA", "US"]
