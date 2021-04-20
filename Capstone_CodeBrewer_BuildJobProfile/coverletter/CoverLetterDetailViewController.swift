@@ -48,7 +48,16 @@ class CoverLetterDetailViewController: UIViewController  {
     }
     
     func isImpDataThere() -> Bool {
-        return (coverLetterData["firstName"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false && (coverLetterData["lastName"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false && (coverLetterData["email"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
+        return (coverLetterData["firstName"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false &&
+            (coverLetterData["lastName"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false &&
+            (coverLetterData["email"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
+            (coverLetterData["phone"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
+            (coverLetterData["college_name"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
+            (coverLetterData["major"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
+            (coverLetterData["employee_cmpny_address"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
+            (coverLetterData["employee_email"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
+            (coverLetterData["employee_number"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
+            (coverLetterData["job_post"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
     }
     
     func saveDataOnSheetDismiss() {
