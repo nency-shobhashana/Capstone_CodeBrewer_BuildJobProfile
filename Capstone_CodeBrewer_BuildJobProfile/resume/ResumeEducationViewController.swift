@@ -19,6 +19,8 @@ class ResumeEducationViewController: UIViewController, MDCBottomSheetMethod {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.sheetViewController!.handleScrollView(self.educationTableView)
+        
         // Do any additional setup after loading the view.
         education = (resumeDetailVC.resumeData["education"] as? Array<Dictionary<String, String>>)?.map({ (data) -> ResumeEducation in
             return ResumeEducation(name: data["name"] ?? "", major: data["major"] ?? "", startYear: data["startYear"] ?? "", endYear: data["endYear"] ?? "")
@@ -26,6 +28,11 @@ class ResumeEducationViewController: UIViewController, MDCBottomSheetMethod {
         }) ?? [ResumeEducation(name: "", major: "", startYear: "", endYear: "")]
         educationTableView.dataSource = self
     }
+    
+    //MARK: - For hiding keyboard
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
     
     @IBAction func addEducationClicked(_ sender: Any) {
         education.append(ResumeEducation(name: "", major: "", startYear: "", endYear: ""))

@@ -18,6 +18,8 @@ class ResumeExperianceViewController: UIViewController, MDCBottomSheetMethod  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.sheetViewController!.handleScrollView(self.experinceTableView)
 
         // Do any additional setup after loading the view.
         experience = (resumeDetailVC.resumeData["experience"] as? Array<Dictionary<String, String>>)?.map({ (data) -> ResumeExperience in
@@ -27,6 +29,11 @@ class ResumeExperianceViewController: UIViewController, MDCBottomSheetMethod  {
 
         experinceTableView.dataSource = self
     }
+    
+    //MARK: - For hiding keyboard
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
     
     func onDismiss() {
         experinceTableView.visibleCells.forEach { cell in

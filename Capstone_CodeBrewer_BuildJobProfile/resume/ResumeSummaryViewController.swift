@@ -17,14 +17,22 @@ class ResumeSummaryViewController: UIViewController, MDCBottomSheetMethod {
     
     @IBOutlet weak var designationTF: MDCOutlinedTextField!
     @IBOutlet weak var summaryTF: MDCOutlinedTextArea!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.sheetViewController!.handleScrollView(self.scrollView)
         
         // load data from core data to UI component
         summaryTF.textView.text = resumeDetailVC.resumeData["professionalSummary"] as? String ?? ""
         designationTF.text = resumeDetailVC.resumeData["designation"] as? String ?? ""
     }
+    
+    //MARK: - For hiding keyboard
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
     
     // store user data in to core data component
     func onDismiss() {

@@ -25,11 +25,10 @@ class ResumePersonalViewController: UIViewController, MDCBottomSheetMethod, UITe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.sheetViewController!.handleScrollView(self.scrollView)
+        
         phoneTF.delegate = self
         //MARK:- UITextField Delegate
-        
-       
-        
         // load data from core data to UI component
         firstNameTF.text = resumeDetailVC.resumeData["firstName"] as? String ?? ""
         lastNameTF.text = resumeDetailVC.resumeData["lastName"] as? String ?? ""
@@ -38,6 +37,11 @@ class ResumePersonalViewController: UIViewController, MDCBottomSheetMethod, UITe
         addressTF.text = resumeDetailVC.resumeData["address"] as? String ?? ""
         
     }
+    
+    //MARK: - For hiding keyboard
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let allowedCharacters = "+1234567890"

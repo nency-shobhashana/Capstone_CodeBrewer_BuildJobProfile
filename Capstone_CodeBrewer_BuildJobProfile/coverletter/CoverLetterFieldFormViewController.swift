@@ -33,9 +33,12 @@ class CoverLetterFieldFormViewController: UIViewController, MDCBottomSheetMethod
     @IBOutlet weak var majorTF: MDCOutlinedTextField!
     @IBOutlet weak var expYearTF: MDCOutlinedTextField!
     @IBOutlet weak var roleTF: MDCOutlinedTextField!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.sheetViewController!.handleScrollView(self.scrollView)
 
         // load data from core data to UI component
         firstNameTF.text = coverLetterDetailVC.coverLetterData["firstName"] as? String ?? ""
@@ -57,6 +60,11 @@ class CoverLetterFieldFormViewController: UIViewController, MDCBottomSheetMethod
         expYearTF.text = coverLetterDetailVC.coverLetterData["exp_year"] as? String ?? ""
         roleTF.text = coverLetterDetailVC.coverLetterData["role"] as? String ?? ""
     }
+    
+    //MARK: - For hiding keyboard
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
     
     func onDismiss() {
         coverLetterDetailVC.coverLetterData["firstName"] = firstNameTF.text ?? ""

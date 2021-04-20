@@ -463,7 +463,7 @@
                                                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xw6-Aw-3v9" customClass="MDCCard">
                                                     <rect key="frame" x="2" y="2" width="138" height="196"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-4q-Iim">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="EZ6-4q-Iim">
                                                             <rect key="frame" x="2" y="2" width="134" height="192"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Standard" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFj-Og-p3k">
@@ -851,6 +851,7 @@
                         <outlet property="phoneTF" destination="2zV-E8-NpE" id="CRC-3A-fAY"/>
                         <outlet property="profileLinkTF" destination="aKh-8u-wQf" id="PFM-ym-oWb"/>
                         <outlet property="roleTF" destination="V1s-Zd-eg7" id="oQZ-b5-6Fh"/>
+                        <outlet property="scrollView" destination="FFM-Pq-BlF" id="Mf5-8r-BPF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSl-hY-FvK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1170,6 +1171,7 @@
                         <outlet property="gitHubTF" destination="tdQ-fK-Ggr" id="VM5-Vp-GuW"/>
                         <outlet property="linkedInTF" destination="40n-Sw-DKG" id="goQ-wc-QbB"/>
                         <outlet property="portfolioTF" destination="7sG-nk-x2a" id="WK1-bx-RaI"/>
+                        <outlet property="scrollView" destination="9Gu-Xg-UOd" id="eaj-cz-Zd4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFc-to-ieL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1264,6 +1266,7 @@
                     </view>
                     <connections>
                         <outlet property="designationTF" destination="VjR-a5-q8n" id="Hu6-8H-UWs"/>
+                        <outlet property="scrollView" destination="LxZ-oq-vqQ" id="QAX-2D-sZp"/>
                         <outlet property="summaryTF" destination="TkL-Vk-2n4" id="Jq3-rd-LUB"/>
                     </connections>
                 </viewController>
@@ -1661,6 +1664,7 @@
                     </view>
                     <connections>
                         <outlet property="chipFieldView" destination="AhG-ma-85d" id="Qx4-Jo-79e"/>
+                        <outlet property="scrollView" destination="O07-EV-U9I" id="lIm-4d-HCK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPs-0N-PBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1775,7 +1779,7 @@
                                 <rect key="frame" x="24" y="24" width="327" height="427"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
-                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                                    <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences" javaScriptEnabled="NO"/>
                                 </wkWebViewConfiguration>
@@ -1939,7 +1943,7 @@
                                 <rect key="frame" x="24" y="24" width="327" height="427"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
-                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                                    <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences" javaScriptEnabled="NO"/>
                                 </wkWebViewConfiguration>

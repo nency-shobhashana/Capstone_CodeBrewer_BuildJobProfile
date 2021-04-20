@@ -19,15 +19,23 @@ class ResumeProfileLinkViewController: UIViewController, MDCBottomSheetMethod {
     @IBOutlet weak var portfolioTF: MDCOutlinedTextField!
     @IBOutlet weak var linkedInTF: MDCOutlinedTextField!
     @IBOutlet weak var gitHubTF: MDCOutlinedTextField!
+    @IBOutlet weak var scrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.sheetViewController!.handleScrollView(self.scrollView)
         
         // load data from core data to UI component
         portfolioTF.text = resumeDetailVC.resumeData["portfolioLink"] as? String ?? ""
         linkedInTF.text = resumeDetailVC.resumeData["linkedInLink"] as? String ?? ""
         gitHubTF.text = resumeDetailVC.resumeData["githubLink"] as? String ?? ""
     }
+    
+    //MARK: - For hiding keyboard
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
     
     // store user data in to core data component
     func onDismiss() {

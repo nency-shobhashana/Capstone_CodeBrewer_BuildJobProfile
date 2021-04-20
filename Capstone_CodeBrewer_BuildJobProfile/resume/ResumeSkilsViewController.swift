@@ -14,15 +14,16 @@ import MaterialComponents.MaterialChips_Theming
 class ResumeSkilsViewController: UIViewController, MDCChipFieldDelegate, MDCBottomSheetMethod  {
     
     var containerScheming: MDCContainerScheming = MDCContainerScheme()
-    
+    let chipField = MDCChipField()
     weak var resumeDetailVC: ResumeDetailViewController!
     
     @IBOutlet weak var chipFieldView: UIView!
-    let chipField = MDCChipField()
-    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.sheetViewController!.handleScrollView(self.scrollView)
         
         // Do any additional setup after loading the view.
         (resumeDetailVC.resumeData["skills"] as? String)?.components(separatedBy: ",").forEach({ (string) in
@@ -31,6 +32,11 @@ class ResumeSkilsViewController: UIViewController, MDCChipFieldDelegate, MDCBott
             chipField.addChip(view)
         })
     }
+    
+    //MARK: - For hiding keyboard
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
     
     func onDismiss() {
         resumeDetailVC.resumeData["skills"] = chipField.chips.map({ (chipView) -> String in
