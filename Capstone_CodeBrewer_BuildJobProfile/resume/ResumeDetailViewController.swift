@@ -13,6 +13,8 @@ import FittedSheets
 class ResumeDetailViewController: UIViewController {
     var bottomSheet:SheetViewController? = nil
     
+    @IBOutlet weak var nextButton: UIButton!
+    
     var ref: DatabaseReference!
     var resumeTitle: String? = nil
     var resumeData: Dictionary<String, Any>!
@@ -23,7 +25,7 @@ class ResumeDetailViewController: UIViewController {
         ref = Database.database().reference().child("users/\(Auth.auth().currentUser?.uid ?? "")/resume")
         
         retrieveResumeDetail()
-        // Do any additional setup after loading the view.
+        nextButton.isEnabled = false
     }
     
     // retrieve ResumeDetail
@@ -43,9 +45,14 @@ class ResumeDetailViewController: UIViewController {
         
     }
     
+    func isImpDataThere() -> Bool {
+        return (resumeData["firstName"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false && (resumeData["lastName"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false && (resumeData["email"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
+    }
+    
     func saveDataOnSheetDismiss() {
-        if resumeTitle != nil{
+        if resumeTitle != nil && isImpDataThere() {
             ref.child(resumeTitle!).setValue(resumeData)
+            nextButton.isEnabled = true
         }
         bottomSheet = nil
     }

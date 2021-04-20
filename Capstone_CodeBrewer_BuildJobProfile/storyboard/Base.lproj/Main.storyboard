@@ -410,6 +410,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="oaF-1u-8tc"/>
                     <connections>
+                        <outlet property="nextButton" destination="HQe-u7-yDp" id="57q-g5-zWM"/>
                         <segue destination="jv0-aY-PCB" kind="show" identifier="ResumeTemplateChoose" id="dFi-DE-pP9"/>
                     </connections>
                 </viewController>
@@ -546,6 +547,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jIK-90-dip"/>
                     <connections>
+                        <outlet property="nextButton" destination="Ap4-Ky-1bz" id="Tph-W5-HGb"/>
                         <segue destination="jq2-2F-Fkg" kind="show" identifier="CoverLetterTemplateChoose" id="aJ2-YK-MF1"/>
                     </connections>
                 </viewController>

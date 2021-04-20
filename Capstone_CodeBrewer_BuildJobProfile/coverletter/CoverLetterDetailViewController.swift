@@ -12,6 +12,7 @@ import FittedSheets
 
 class CoverLetterDetailViewController: UIViewController  {
 
+    @IBOutlet weak var nextButton: UIButton!
     var bottomSheet:SheetViewController? = nil
     var ref: DatabaseReference!
     var coverLetterTitle: String? = nil
@@ -22,6 +23,7 @@ class CoverLetterDetailViewController: UIViewController  {
 
         ref = Database.database().reference().child("users/\(Auth.auth().currentUser?.uid ?? "")/coverLetter")
         retrieveCoverLetterDetail()
+        nextButton.isEnabled = false
     }
     
     // retrieve coverLetter Detail
@@ -40,9 +42,14 @@ class CoverLetterDetailViewController: UIViewController  {
         }
     }
     
+    func isImpDataThere() -> Bool {
+        return (coverLetterData["firstName"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false && (coverLetterData["lastName"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false && (coverLetterData["email"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
+    }
+    
     func saveDataOnSheetDismiss() {
-        if coverLetterTitle != nil{
+        if coverLetterTitle != nil  && isImpDataThere() {
             ref.child(coverLetterTitle!).setValue(coverLetterData)
+            nextButton.isEnabled = true
         }
         bottomSheet = nil
     }
