@@ -22,6 +22,7 @@ class CoverLetterSaveViewController: UIViewController {
     var template: CoverLetterTemplate!
     var coverLetterTitle: String? = nil
     var coverLetterData: Dictionary<String, Any>!
+    var saveNoOfLetter = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,8 @@ class CoverLetterSaveViewController: UIViewController {
         template = coverLetterTemplate[templateIndex]
         // Do any additional setup after loading the view.
         createCoverLetterAsHTML()
-        ref.child("subcription").getData { (error, snapshot) in
+        ref = Database.database().reference().child("users").child(Auth.auth().currentUser?.uid ?? "")
+        ref.child("subscription").getData { (error, snapshot) in
             if let error = error {
                 print("Error getting data \(error)")
                 return
@@ -38,7 +40,10 @@ class CoverLetterSaveViewController: UIViewController {
                 let value = snapshot.value as! Dictionary<String, Any>
                 let noOfLetter = value["noOfLetter"] as! NSNumber
                 if Int(truncating: noOfLetter) > 0{
-                    self.downloadButton.isEnabled = true
+                    DispatchQueue.main.async {
+                        self.saveNoOfLetter = Int(noOfLetter) - 1
+                        self.downloadButton.isEnabled = true
+                    }
                 }
             }
         }
@@ -79,6 +84,7 @@ class CoverLetterSaveViewController: UIViewController {
             let pdfData = try exportHTMLContentToPDF(HTMLContent: self.HTMLContent)
             let activityViewController = UIActivityViewController(activityItems: [pdfData], applicationActivities: nil)
             present(activityViewController, animated: true, completion: nil)
+            ref.child("subscription/noOfLetter").setValue(self.saveNoOfLetter)
         } catch {
             print("error")
         }

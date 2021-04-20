@@ -20,7 +20,7 @@ class AddNewPopUoViewController: UIViewController {
         super.viewDidLoad()
         coverLetter.isEnabled = false
         ref = Database.database().reference().child("users").child(Auth.auth().currentUser?.uid ?? "")
-        ref.child("subcription").getData { (error, snapshot) in
+        ref.child("subscription").getData { (error, snapshot) in
             if let error = error {
                 print("Error getting data \(error)")
                 return
@@ -29,7 +29,9 @@ class AddNewPopUoViewController: UIViewController {
                 let value = snapshot.value as! Dictionary<String, Any>
                 let noOfLetter = value["noOfLetter"] as! NSNumber
                 if Int(truncating: noOfLetter) > 0{
-                    self.coverLetter.isEnabled = true
+                    DispatchQueue.main.async {
+                        self.coverLetter.isEnabled = true
+                    }
                 }
             }
         }

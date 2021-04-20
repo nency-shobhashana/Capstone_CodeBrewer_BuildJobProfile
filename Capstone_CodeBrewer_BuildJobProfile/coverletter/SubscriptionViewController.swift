@@ -50,7 +50,7 @@ class SubscriptionViewController: UIViewController {
     func subscriptionPurchased(index: Int, completion: @escaping (PKPaymentAuthorizationResult) -> Void){
         var data:Dictionary<String, Any> = ["purchaseDate": ""]
         
-        ref.child("subcription").getData { (error, snapshot) in
+        ref.child("subscription").getData { (error, snapshot) in
             if let error = error {
                 completion(PKPaymentAuthorizationResult(status: .failure, errors: nil))
                 print("Error getting data \(error)")
@@ -64,7 +64,7 @@ class SubscriptionViewController: UIViewController {
             else {
                 data["noOfLetter"] = subscription[index].noOfLetter
             }
-            self.ref.child("subcription").setValue(data, withCompletionBlock: { (error, ref) in
+            self.ref.child("subscription").setValue(data, withCompletionBlock: { (error, ref) in
                 if let error = error {
                     completion(PKPaymentAuthorizationResult(status: .failure, errors: nil))
                 } else {

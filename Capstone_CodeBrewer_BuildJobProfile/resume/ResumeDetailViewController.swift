@@ -37,6 +37,11 @@ class ResumeDetailViewController: UIViewController {
             else if snapshot.exists() {
                 let value = snapshot.value as! Dictionary<String, Any>
                 self.resumeData = value
+                if self.isImpDataThere() {
+                    DispatchQueue.main.async {
+                        self.nextButton.isEnabled = true
+                    }
+                }
             }
             else {
                 self.resumeData = Dictionary<String, Any>()

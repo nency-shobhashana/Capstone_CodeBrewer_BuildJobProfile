@@ -35,6 +35,11 @@ class CoverLetterDetailViewController: UIViewController  {
             else if snapshot.exists() {
                 let value = snapshot.value as! Dictionary<String, Any>
                 self.coverLetterData = value
+                if self.isImpDataThere() {
+                    DispatchQueue.main.async {
+                        self.nextButton.isEnabled = true
+                    }
+                }
             }
             else {
                 self.coverLetterData = Dictionary<String, Any>()
