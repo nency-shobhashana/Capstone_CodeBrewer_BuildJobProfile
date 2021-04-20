@@ -621,7 +621,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="Tl1-2x-nu0"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="scc-BU-D5w" customClass="MDCOutlinedTextField">
                                                 <rect key="frame" x="0.0" y="462" width="327" height="50"/>
@@ -701,7 +701,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="R6h-e8-TYM"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Role or Experinced field" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V1s-Zd-eg7" customClass="MDCOutlinedTextField">
                                                 <rect key="frame" x="0.0" y="1122" width="327" height="50"/>
@@ -1260,12 +1260,12 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FEN-IP-RKx" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="134.5" width="343" height="51.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                         </textField>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Year (or expected)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3o4-uW-1BK" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="202" width="343" height="51"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -1387,12 +1387,12 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPa-RJ-BzD" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="132" width="343" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                         </textField>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Year or current" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRp-en-s4T" customClass="MDCOutlinedTextField">
                                                             <rect key="frame" x="0.0" y="198" width="343" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                         </textField>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzb-n2-Qn9" customClass="MDCOutlinedTextArea">
                                                             <rect key="frame" x="0.0" y="264" width="343" height="124"/>
