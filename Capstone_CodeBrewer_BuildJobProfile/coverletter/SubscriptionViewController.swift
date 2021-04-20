@@ -48,7 +48,7 @@ class SubscriptionViewController: UIViewController {
         }
     }
     func subscriptionPurchased(index: Int, completion: @escaping (PKPaymentAuthorizationResult) -> Void){
-        var data:Dictionary<String, Any> = ["purchaseDate": ""]
+        var data:Dictionary<String, Any> = [:]
         
         ref.child("subscription").getData { (error, snapshot) in
             if let error = error {

@@ -27,7 +27,7 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
         self.data = data
         self.dataIndex = index
         planNameTF.text = data.planName
-        planPriceTF.text = "$\(data.plantPrice) / \(data.isMonthly ? "Month" : "Year")"
+        planPriceTF.text = "$\(data.plantPrice)"
         planDescTF.text = data.planDescription
     }
     
