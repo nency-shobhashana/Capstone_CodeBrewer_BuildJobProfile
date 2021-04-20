@@ -155,6 +155,10 @@ class DashboardViewController: UIViewController {
         performSegue(withIdentifier: "coverBuilder", sender: "cover_\(lastIndex + 1)")
     }
     
+    func openSubscription(){
+        performSegue(withIdentifier: "subscription", sender:nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "choicePopup"{
             let choiceVC = segue.destination as! AddNewPopUoViewController

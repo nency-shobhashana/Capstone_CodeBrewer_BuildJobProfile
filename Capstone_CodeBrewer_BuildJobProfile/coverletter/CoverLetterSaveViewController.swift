@@ -7,10 +7,16 @@
 
 import UIKit
 import WebKit
+import FirebaseAuth
+import FirebaseDatabase
+
 
 class CoverLetterSaveViewController: UIViewController {
 
     @IBOutlet weak var webPreview: WKWebView!
+    @IBOutlet weak var downloadButton: UIButton!
+    var ref: DatabaseReference!
+    
     var HTMLContent: String!
     var templateIndex: Int = 0
     var template: CoverLetterTemplate!
@@ -19,10 +25,23 @@ class CoverLetterSaveViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        downloadButton.isEnabled = false
         template = coverLetterTemplate[templateIndex]
         // Do any additional setup after loading the view.
         createCoverLetterAsHTML()
+        ref.child("subcription").getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+                return
+            }
+            else if snapshot.exists() {
+                let value = snapshot.value as! Dictionary<String, Any>
+                let noOfLetter = value["noOfLetter"] as! NSNumber
+                if Int(truncating: noOfLetter) > 0{
+                    self.downloadButton.isEnabled = true
+                }
+            }
+        }
     }
     
     func createCoverLetterAsHTML() {
