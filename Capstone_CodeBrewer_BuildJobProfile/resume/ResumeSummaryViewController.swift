@@ -15,6 +15,7 @@ class ResumeSummaryViewController: UIViewController, MDCBottomSheetMethod {
     
     weak var resumeDetailVC: ResumeDetailViewController!
     
+    @IBOutlet weak var designationTF: MDCOutlinedTextField!
     @IBOutlet weak var summaryTF: MDCOutlinedTextArea!
     
     override func viewDidLoad() {
@@ -22,11 +23,13 @@ class ResumeSummaryViewController: UIViewController, MDCBottomSheetMethod {
         
         // load data from core data to UI component
         summaryTF.textView.text = resumeDetailVC.resumeData["preofessionalSummary"] as? String ?? ""
+        designationTF.text = resumeDetailVC.resumeData["designation"] as? String ?? ""
     }
     
     // store user data in to core data component
     func onDismiss() {
         resumeDetailVC.resumeData["preofessionalSummary"] = summaryTF.textView.text ?? ""
+        resumeDetailVC.resumeData["designation"] = designationTF.text ?? ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,9 +37,15 @@ class ResumeSummaryViewController: UIViewController, MDCBottomSheetMethod {
     }
     
     private func configTextAreaField() {
+        designationTF.label.text = "Current Designation"
+        designationTF.placeholder = "Current Designation"
+        designationTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
+        designationTF.sizeToFit()
+        
         summaryTF.label.text = "Professional Summary"
         summaryTF.placeholder = "Professional Summary"
         summaryTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
+        summaryTF.sizeThatFits(CGSize(width: summaryTF.frame.width, height: 150))
     }
     
     /*

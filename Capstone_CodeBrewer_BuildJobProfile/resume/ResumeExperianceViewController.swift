@@ -68,6 +68,4 @@ extension ResumeExperianceViewController: UITableViewDataSource {
         
         return tbcell
     }
-    
-    
 }
