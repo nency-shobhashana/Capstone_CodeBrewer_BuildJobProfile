@@ -47,6 +47,7 @@ struct ResumeExperience {
     var role: String
     var startYear: String
     var endYear: String
+    var description: String
 }
 
 struct ResumeTemplate{

@@ -20,6 +20,7 @@ class ExperianceTableViewCell: UITableViewCell {
     @IBOutlet weak var designationTF: MDCOutlinedTextField!
     @IBOutlet weak var startYearTF: MDCOutlinedTextField!
     @IBOutlet weak var endYearTF: MDCOutlinedTextField!
+    @IBOutlet weak var descriptionTA: MDCOutlinedTextArea!
     
     
     override func awakeFromNib() {
@@ -45,6 +46,7 @@ class ExperianceTableViewCell: UITableViewCell {
         designationTF.text = self.experince?.role ?? ""
         startYearTF.text = self.experince?.startYear ?? ""
         endYearTF.text = self.experince?.endYear ?? ""
+        descriptionTA.textView.text = self.experince?.description ?? ""
     }
     
     func saveData() -> ResumeExperience? {
@@ -52,6 +54,7 @@ class ExperianceTableViewCell: UITableViewCell {
         self.experince?.role = designationTF.text ?? ""
         self.experince?.startYear = startYearTF.text ?? ""
         self.experince?.endYear = endYearTF.text ?? ""
+        self.experince?.description = descriptionTA.textView.text ?? ""
         return self.experince
     }
     
@@ -79,6 +82,10 @@ class ExperianceTableViewCell: UITableViewCell {
         endYearTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
         endYearTF.sizeToFit()
         
+        descriptionTA.label.text = "Description"
+        descriptionTA.placeholder = "Description"
+        descriptionTA.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
+        descriptionTA.sizeToFit()
     }
     
 }

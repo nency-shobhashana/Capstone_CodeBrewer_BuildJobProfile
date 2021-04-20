@@ -1203,11 +1203,11 @@
                                     <action selector="addEducationClicked:" destination="YjJ-6G-7at" eventType="touchUpInside" id="e6S-a3-zi0"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="271" estimatedRowHeight="271" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r8G-Ld-QYz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r8G-Ld-QYz">
                                 <rect key="frame" x="0.0" y="64.5" width="375" height="602.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Eh7-6D-D6Y">
-                                    <rect key="frame" x="0.0" y="331" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="364.5" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFz-sf-tEM">
@@ -1234,57 +1234,68 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EducationTableViewCell" rowHeight="275" id="qB9-Cc-TYW" customClass="EducationTableViewCell" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="275"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EducationTableViewCell" id="qB9-Cc-TYW" customClass="EducationTableViewCell" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="308.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qB9-Cc-TYW" id="lTw-R2-rUv" customClass="MDCCard">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qB9-Cc-TYW" id="lTw-R2-rUv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="309"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JpM-yq-up8">
-                                                    <rect key="frame" x="16" y="11" width="343" height="253"/>
+                                                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOe-Wf-6Kd" customClass="MDCCard">
+                                                    <rect key="frame" x="12" y="12" width="351" height="284.5"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Institute Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PfV-gh-LEx" customClass="MDCOutlinedTextField">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="51.5"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JpM-yq-up8">
+                                                            <rect key="frame" x="12" y="12" width="327" height="260.5"/>
+                                                            <subviews>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Institute Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PfV-gh-LEx" customClass="MDCOutlinedTextField">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="OXQ-aO-foj"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Major" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVA-bJ-FI2" customClass="MDCOutlinedTextField">
+                                                                    <rect key="frame" x="0.0" y="70" width="327" height="50.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FEN-IP-RKx" customClass="MDCOutlinedTextField">
+                                                                    <rect key="frame" x="0.0" y="140.5" width="327" height="50"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Year (or expected)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3o4-uW-1BK" customClass="MDCOutlinedTextField">
+                                                                    <rect key="frame" x="0.0" y="210.5" width="327" height="50"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                                </textField>
+                                                            </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="OXQ-aO-foj"/>
+                                                                <constraint firstItem="FEN-IP-RKx" firstAttribute="height" secondItem="PfV-gh-LEx" secondAttribute="height" id="6hA-0e-7GL"/>
+                                                                <constraint firstItem="wVA-bJ-FI2" firstAttribute="height" secondItem="PfV-gh-LEx" secondAttribute="height" id="XOm-0b-bWI"/>
+                                                                <constraint firstItem="3o4-uW-1BK" firstAttribute="height" secondItem="PfV-gh-LEx" secondAttribute="height" id="jGM-I1-HqH"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Major" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVA-bJ-FI2" customClass="MDCOutlinedTextField">
-                                                            <rect key="frame" x="0.0" y="67.5" width="343" height="51"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FEN-IP-RKx" customClass="MDCOutlinedTextField">
-                                                            <rect key="frame" x="0.0" y="134.5" width="343" height="51.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                                        </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Year (or expected)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3o4-uW-1BK" customClass="MDCOutlinedTextField">
-                                                            <rect key="frame" x="0.0" y="202" width="343" height="51"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                                        </textField>
+                                                        </stackView>
                                                     </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="FEN-IP-RKx" firstAttribute="height" secondItem="PfV-gh-LEx" secondAttribute="height" id="6hA-0e-7GL"/>
-                                                        <constraint firstItem="wVA-bJ-FI2" firstAttribute="height" secondItem="PfV-gh-LEx" secondAttribute="height" id="XOm-0b-bWI"/>
-                                                        <constraint firstItem="3o4-uW-1BK" firstAttribute="height" secondItem="PfV-gh-LEx" secondAttribute="height" id="jGM-I1-HqH"/>
+                                                        <constraint firstItem="JpM-yq-up8" firstAttribute="width" secondItem="tOe-Wf-6Kd" secondAttribute="width" constant="-24" id="KUm-eG-3zh"/>
+                                                        <constraint firstItem="JpM-yq-up8" firstAttribute="height" secondItem="tOe-Wf-6Kd" secondAttribute="height" constant="-24" id="VIi-hj-nK3"/>
+                                                        <constraint firstItem="JpM-yq-up8" firstAttribute="centerY" secondItem="tOe-Wf-6Kd" secondAttribute="centerY" id="jWe-uO-8RN"/>
+                                                        <constraint firstItem="JpM-yq-up8" firstAttribute="centerX" secondItem="tOe-Wf-6Kd" secondAttribute="centerX" id="uP9-Vg-mP6"/>
                                                     </constraints>
-                                                </stackView>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="JpM-yq-up8" firstAttribute="top" secondItem="lTw-R2-rUv" secondAttribute="topMargin" id="0EF-H5-DsB"/>
-                                                <constraint firstItem="JpM-yq-up8" firstAttribute="centerX" secondItem="lTw-R2-rUv" secondAttribute="centerX" id="ahE-jU-30C"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="JpM-yq-up8" secondAttribute="bottom" id="gKp-cL-FVu"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="JpM-yq-up8" secondAttribute="trailing" id="ww8-0i-V2V"/>
-                                                <constraint firstItem="JpM-yq-up8" firstAttribute="leading" secondItem="lTw-R2-rUv" secondAttribute="leadingMargin" id="ylE-Rk-f7b"/>
+                                                <constraint firstItem="tOe-Wf-6Kd" firstAttribute="centerY" secondItem="lTw-R2-rUv" secondAttribute="centerY" id="3Fk-hE-awW"/>
+                                                <constraint firstItem="tOe-Wf-6Kd" firstAttribute="height" secondItem="lTw-R2-rUv" secondAttribute="height" constant="-24" id="FyC-Ng-ok6"/>
+                                                <constraint firstItem="tOe-Wf-6Kd" firstAttribute="centerX" secondItem="lTw-R2-rUv" secondAttribute="centerX" id="he3-FC-0ZP"/>
+                                                <constraint firstItem="tOe-Wf-6Kd" firstAttribute="width" secondItem="lTw-R2-rUv" secondAttribute="width" constant="-24" id="sAB-AX-eL7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="cardView" destination="lTw-R2-rUv" id="lUD-jm-5KZ"/>
+                                            <outlet property="cardView" destination="tOe-Wf-6Kd" id="WvM-rz-Tea"/>
                                             <outlet property="endYearTF" destination="3o4-uW-1BK" id="3c9-Yt-hqN"/>
                                             <outlet property="instituteNameTF" destination="PfV-gh-LEx" id="kha-aU-f7L"/>
                                             <outlet property="majorTF" destination="wVA-bJ-FI2" id="Bwj-vC-mk7"/>
@@ -1330,11 +1341,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="410" estimatedRowHeight="410" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-D6-cEP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-D6-cEP">
                                 <rect key="frame" x="0.0" y="64.5" width="375" height="602.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mMD-Ak-Zsg">
-                                    <rect key="frame" x="0.0" y="466" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="488.5" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ru-FY-bsP">
@@ -1362,63 +1373,76 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExperianceTableViewCell" id="ghH-0G-E6H" customClass="ExperianceTableViewCell" customModule="Capstone_CodeBrewer_BuildJobProfile" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="410"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="432.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ghH-0G-E6H" id="sf0-Ej-sfy" customClass="MDCCard">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ghH-0G-E6H" id="sf0-Ej-sfy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="432.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2KZ-zW-wkP">
-                                                    <rect key="frame" x="16" y="11" width="343" height="388"/>
+                                                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wR-TO-6jY" customClass="MDCCard">
+                                                    <rect key="frame" x="12" y="12" width="351" height="408.5"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLx-r4-weg" customClass="MDCOutlinedTextField">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2KZ-zW-wkP">
+                                                            <rect key="frame" x="12" y="12" width="327" height="384.5"/>
+                                                            <subviews>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLx-r4-weg" customClass="MDCOutlinedTextField">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="a5h-hr-M4n"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Degination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8nz-wP-mUA" customClass="MDCOutlinedTextField">
+                                                                    <rect key="frame" x="0.0" y="66" width="327" height="50"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPa-RJ-BzD" customClass="MDCOutlinedTextField">
+                                                                    <rect key="frame" x="0.0" y="132" width="327" height="50"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Year or current" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRp-en-s4T" customClass="MDCOutlinedTextField">
+                                                                    <rect key="frame" x="0.0" y="198" width="327" height="50"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                                </textField>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzb-n2-Qn9" customClass="MDCOutlinedTextArea">
+                                                                    <rect key="frame" x="0.0" y="264" width="327" height="120.5"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="120" id="N5h-j1-Ofa"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="a5h-hr-M4n"/>
+                                                                <constraint firstItem="8nz-wP-mUA" firstAttribute="height" secondItem="bLx-r4-weg" secondAttribute="height" id="2wd-CE-L0d"/>
+                                                                <constraint firstItem="iPa-RJ-BzD" firstAttribute="height" secondItem="bLx-r4-weg" secondAttribute="height" id="FUJ-DX-EPV"/>
+                                                                <constraint firstItem="GRp-en-s4T" firstAttribute="height" secondItem="bLx-r4-weg" secondAttribute="height" id="LgK-wo-GWn"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Degination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8nz-wP-mUA" customClass="MDCOutlinedTextField">
-                                                            <rect key="frame" x="0.0" y="66" width="343" height="50"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPa-RJ-BzD" customClass="MDCOutlinedTextField">
-                                                            <rect key="frame" x="0.0" y="132" width="343" height="50"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                                        </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Year or current" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRp-en-s4T" customClass="MDCOutlinedTextField">
-                                                            <rect key="frame" x="0.0" y="198" width="343" height="50"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                                        </textField>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzb-n2-Qn9" customClass="MDCOutlinedTextArea">
-                                                            <rect key="frame" x="0.0" y="264" width="343" height="124"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="120" id="N5h-j1-Ofa"/>
-                                                            </constraints>
-                                                        </view>
+                                                        </stackView>
                                                     </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="8nz-wP-mUA" firstAttribute="height" secondItem="bLx-r4-weg" secondAttribute="height" id="2wd-CE-L0d"/>
-                                                        <constraint firstItem="iPa-RJ-BzD" firstAttribute="height" secondItem="bLx-r4-weg" secondAttribute="height" id="FUJ-DX-EPV"/>
-                                                        <constraint firstItem="GRp-en-s4T" firstAttribute="height" secondItem="bLx-r4-weg" secondAttribute="height" id="LgK-wo-GWn"/>
+                                                        <constraint firstItem="2KZ-zW-wkP" firstAttribute="centerX" secondItem="3wR-TO-6jY" secondAttribute="centerX" id="0Cj-KM-43f"/>
+                                                        <constraint firstItem="2KZ-zW-wkP" firstAttribute="centerY" secondItem="3wR-TO-6jY" secondAttribute="centerY" id="6Ks-KL-GSI"/>
+                                                        <constraint firstItem="2KZ-zW-wkP" firstAttribute="height" secondItem="3wR-TO-6jY" secondAttribute="height" constant="-24" id="BBv-n1-r8n"/>
+                                                        <constraint firstItem="2KZ-zW-wkP" firstAttribute="width" secondItem="3wR-TO-6jY" secondAttribute="width" constant="-24" id="DII-q8-0i9"/>
                                                     </constraints>
-                                                </stackView>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="2KZ-zW-wkP" secondAttribute="bottom" id="hr0-m3-pVB"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="2KZ-zW-wkP" secondAttribute="trailing" id="n5r-qe-5Il"/>
-                                                <constraint firstItem="2KZ-zW-wkP" firstAttribute="top" secondItem="sf0-Ej-sfy" secondAttribute="topMargin" id="uu9-5d-95w"/>
-                                                <constraint firstItem="2KZ-zW-wkP" firstAttribute="leading" secondItem="sf0-Ej-sfy" secondAttribute="leadingMargin" id="vZ1-e9-19J"/>
+                                                <constraint firstItem="3wR-TO-6jY" firstAttribute="width" secondItem="sf0-Ej-sfy" secondAttribute="width" constant="-24" id="6eA-KV-Kla"/>
+                                                <constraint firstItem="3wR-TO-6jY" firstAttribute="centerX" secondItem="sf0-Ej-sfy" secondAttribute="centerX" id="XQE-xo-Rv8"/>
+                                                <constraint firstItem="3wR-TO-6jY" firstAttribute="height" secondItem="sf0-Ej-sfy" secondAttribute="height" constant="-24" id="aKz-nW-hZY"/>
+                                                <constraint firstItem="3wR-TO-6jY" firstAttribute="centerY" secondItem="sf0-Ej-sfy" secondAttribute="centerY" id="xJU-Ft-mqo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="cardView" destination="sf0-Ej-sfy" id="5Ed-eG-tc3"/>
+                                            <outlet property="cardView" destination="3wR-TO-6jY" id="oDe-80-C6d"/>
                                             <outlet property="companyNameTF" destination="bLx-r4-weg" id="LXr-lt-dS6"/>
+                                            <outlet property="descriptionTA" destination="yzb-n2-Qn9" id="WnZ-cP-QsU"/>
                                             <outlet property="designationTF" destination="8nz-wP-mUA" id="caA-BY-axv"/>
                                             <outlet property="endYearTF" destination="GRp-en-s4T" id="vdJ-pv-8dx"/>
                                             <outlet property="startYearTF" destination="iPa-RJ-BzD" id="VnK-Qg-PnH"/>

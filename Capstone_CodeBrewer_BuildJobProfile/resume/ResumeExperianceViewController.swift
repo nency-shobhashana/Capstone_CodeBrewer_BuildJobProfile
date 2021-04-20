@@ -21,9 +21,9 @@ class ResumeExperianceViewController: UIViewController, MDCBottomSheetMethod  {
 
         // Do any additional setup after loading the view.
         experience = (resumeDetailVC.resumeData["experience"] as? Array<Dictionary<String, String>>)?.map({ (data) -> ResumeExperience in
-                    return ResumeExperience(name: data["name"] ?? "", role: data["role"] ?? "", startYear: data["startYear"] ?? "", endYear: data["endYear"] ?? "")
+                    return ResumeExperience(name: data["name"] ?? "", role: data["role"] ?? "", startYear: data["startYear"] ?? "", endYear: data["endYear"] ?? "", description: data["description"] ?? "")
                     
-                }) ?? [ResumeExperience(name: "", role: "", startYear: "", endYear: "")]
+                }) ?? [ResumeExperience(name: "", role: "", startYear: "", endYear: "", description: "")]
 
         experinceTableView.dataSource = self
     }
@@ -36,12 +36,12 @@ class ResumeExperianceViewController: UIViewController, MDCBottomSheetMethod  {
                     
                 }
                 resumeDetailVC.resumeData["experience"] = experience.map({ (data) -> Dictionary<String, String> in
-                    ["name" : data.name, "role" : data.role, "startYear" : data.startYear, "endYear": data.endYear]
+                    ["name" : data.name, "role" : data.role, "startYear" : data.startYear, "endYear": data.endYear, "description" : data.description]
                 })
     }
     
     @IBAction func addEducationClicked(_ sender: Any) {
-        experience.append(ResumeExperience(name: "", role: "", startYear: "", endYear: ""))
+        experience.append(ResumeExperience(name: "", role: "", startYear: "", endYear: "", description: ""))
         experinceTableView.reloadData()
     }
     
