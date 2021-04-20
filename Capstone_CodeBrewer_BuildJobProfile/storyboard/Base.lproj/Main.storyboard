@@ -25,7 +25,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZjG-Ea-L7C">
-                                <rect key="frame" x="24" y="573" width="327" height="70"/>
+                                <rect key="frame" x="24" y="537" width="327" height="70"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFO-K4-l0u" customClass="GIDSignInButton">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
@@ -44,7 +44,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.058823529411764705" green="0.33725490196078434" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ZjG-Ea-L7C" secondAttribute="bottom" constant="24" id="BXS-W1-SVp"/>
+                            <constraint firstAttribute="bottom" secondItem="ZjG-Ea-L7C" secondAttribute="bottom" constant="60" id="BXS-W1-SVp"/>
                             <constraint firstItem="Mjq-Jt-nep" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sbf-3p-e4c"/>
                             <constraint firstItem="ZjG-Ea-L7C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ShX-bT-n6f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZjG-Ea-L7C" secondAttribute="trailing" constant="24" id="Ym9-re-A6Y"/>
