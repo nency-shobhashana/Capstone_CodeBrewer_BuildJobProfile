@@ -754,7 +754,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="AoG-ks-Bdo"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where you find Job post" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVp-gu-drw" customClass="MDCOutlinedTextField">
                                                 <rect key="frame" x="0.0" y="858" width="327" height="50"/>

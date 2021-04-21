@@ -133,28 +133,28 @@ class CoverLetterFieldFormViewController: UIViewController, MDCBottomSheetMethod
         addressTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
         addressTF.sizeToFit()
         
-        employerNameTF.label.text = "Employee Name"
-        employerNameTF.placeholder = "Employee name"
+        employerNameTF.label.text = "Hiring Person Name"
+        employerNameTF.placeholder = "Hiring Person name"
         employerNameTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
         employerNameTF.sizeToFit()
         
-        employerCompanyNameTF.label.text = "Employee Company Name"
-        employerCompanyNameTF.placeholder = "Employee Company Name"
+        employerCompanyNameTF.label.text = "Employer Company Name"
+        employerCompanyNameTF.placeholder = "Employer Company Name"
         employerCompanyNameTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
         employerCompanyNameTF.sizeToFit()
         
-        employerCompanyAddressNameTF.label.text = "Employee Company Address"
-        employerCompanyAddressNameTF.placeholder = "Employee Company Address"
+        employerCompanyAddressNameTF.label.text = "Employer Company Address"
+        employerCompanyAddressNameTF.placeholder = "Employer Company Address"
         employerCompanyAddressNameTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
         employerCompanyAddressNameTF.sizeToFit()
         
-        employerEmailTF.label.text = "Employee E-mail"
-        employerEmailTF.placeholder = "Employee E-mail"
+        employerEmailTF.label.text = "Employer E-mail"
+        employerEmailTF.placeholder = "Employer E-mail"
         employerEmailTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
         employerEmailTF.sizeToFit()
         
-        employerNumberNameTF.label.text = "Employee Number"
-        employerNumberNameTF.placeholder = "Employee Number"
+        employerNumberNameTF.label.text = "Employer Number"
+        employerNumberNameTF.placeholder = "Employer Number"
         employerNumberNameTF.setOutlineColor(UIColor.systemGreen, for: MDCTextControlState.editing)
         employerNumberNameTF.sizeToFit()
         
