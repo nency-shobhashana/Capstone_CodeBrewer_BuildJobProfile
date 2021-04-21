@@ -107,8 +107,8 @@ class ResumeSaveDownloadViewController: UIViewController {
         let pdfData = drawPDFUsingPrintPageRenderer(printPageRenderer: printPageRenderer)
         
         let folderURL = try FileManager.default.url(
-            for: .downloadsDirectory,
-            in: .allDomainsMask,
+            for: .documentDirectory,
+            in: .userDomainMask,
             appropriateFor: nil,
             create: true
         )

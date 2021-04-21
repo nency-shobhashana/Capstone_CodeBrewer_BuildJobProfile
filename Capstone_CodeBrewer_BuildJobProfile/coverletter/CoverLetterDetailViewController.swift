@@ -71,7 +71,7 @@ class CoverLetterDetailViewController: UIViewController  {
 
     // MARK: - Cover Letter Detail
     @IBAction func personalClicked(_ sender: Any) {
-        bottomSheet?.dismiss(animated: true, completion: nil)
+        bottomSheet?.attemptDismiss(animated: true)
         let bottomSheetVC = self.storyboard!.instantiateViewController(withIdentifier: "CoverLetterFieldFormViewController") as! CoverLetterFieldFormViewController
         bottomSheetVC.coverLetterDetailVC = self
         bottomSheet = SheetViewController(controller: bottomSheetVC, sizes: [.percent(0.5), .fullscreen])

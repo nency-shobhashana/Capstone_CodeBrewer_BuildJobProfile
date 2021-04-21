@@ -186,6 +186,6 @@ class CoverLetterFieldFormViewController: UIViewController, MDCBottomSheetMethod
     }
     
     @IBAction func nextClicked(_ sender: Any) {
-        coverLetterDetailVC.bottomSheet?.dismiss(animated: true, completion: nil)
+        coverLetterDetailVC.bottomSheet?.attemptDismiss(animated: true)
     }
 }

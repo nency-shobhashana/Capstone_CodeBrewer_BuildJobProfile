@@ -53,19 +53,23 @@ class ResumeDetailViewController: UIViewController {
     func isImpDataThere() -> Bool {
         return (resumeData["firstName"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false &&
             (resumeData["lastName"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false &&
-            (resumeData["email"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false &&
-            (resumeData["phoneNo"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false &&
+            (resumeData["email"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
+    }
+    
+    func isRequiredDataThere() -> Bool {
+        return (resumeData["phone"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false &&
             (resumeData["designation"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false &&
             (resumeData["professionalSummary"] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false &&
             ((resumeData["education"] as? Array<Dictionary<String,String>>)?[0]["major"])?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false &&
             ((resumeData["education"] as? Array<Dictionary<String,String>>)?[0]["name"])?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
-        
     }
     
     func saveDataOnSheetDismiss() {
         if resumeTitle != nil && isImpDataThere() {
             ref.child(resumeTitle!).setValue(resumeData)
-            nextButton.isEnabled = true
+            if isRequiredDataThere {
+                nextButton.isEnabled = true
+            }
         }
         bottomSheet = nil
     }
